@@ -19,7 +19,7 @@ paginate: true
 <p class="text-red-400">Text vermell suau</p>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-1)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/03-colors-fons/2_exemples.html#exemple-1)
 
 El llindar va de `50` (més clar) a `900` (més fosc).
 
@@ -35,7 +35,7 @@ El llindar va de `50` (més clar) a `900` (més fosc).
 <div class="bg-blue-600 text-white">Fons blau fosc amb text blanc</div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-2)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/03-colors-fons/2_exemples.html#exemple-2)
 
 ---
 
@@ -61,7 +61,7 @@ Cada família té 11 tonalitats (50, 100, 200... 900).
 <div class="bg-blue-500 opacity-0">invisible</div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/03-colors-fons/2_exemples.html#exemple-3)
 
 ---
 
@@ -74,7 +74,7 @@ Cada família té 11 tonalitats (50, 100, 200... 900).
 </div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-4)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/03-colors-fons/2_exemples.html#exemple-4)
 
 Nota: els gradients (`from-`, `to-`) es veuran a la lliçó de fons i imatges.
 
@@ -109,4 +109,4 @@ Alguns colors especials:
 </div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-5)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/03-colors-fons/2_exemples.html#exemple-5)

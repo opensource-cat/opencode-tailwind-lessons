@@ -30,7 +30,7 @@ paginate: true
 </nav>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-1)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/18-components/2_exemples.html#exemple-1)
 
 ---
 
@@ -59,7 +59,7 @@ paginate: true
 </section>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-2)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/18-components/2_exemples.html#exemple-2)
 
 ---
 
@@ -83,7 +83,7 @@ paginate: true
 </div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/18-components/2_exemples.html#exemple-3)
 
 ---
 
@@ -125,7 +125,7 @@ paginate: true
 </footer>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-4)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/18-components/2_exemples.html#exemple-4)
 
 ---
 
@@ -141,7 +141,7 @@ paginate: true
 </div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-5)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/18-components/2_exemples.html#exemple-5)
 
 ---
 
@@ -169,7 +169,7 @@ paginate: true
 </div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-6)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/18-components/2_exemples.html#exemple-6)
 
 ---
 
@@ -185,4 +185,4 @@ paginate: true
 </nav>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-7)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/18-components/2_exemples.html#exemple-7)

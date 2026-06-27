@@ -19,7 +19,7 @@ paginate: true
   <div>Col 4 — baixa a la segona fila</div>
 </div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-1)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/08-grid/2_exemples.html#exemple-1)
 
 `grid` activa el contenidor. `grid-cols-3` crea 3 columnes iguals.
 
@@ -32,7 +32,7 @@ paginate: true
   <!-- 4 columnes × 2 files = 8 cel·les potencials -->
 </div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-2)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/08-grid/2_exemples.html#exemple-2)
 
 `grid-cols-{1..12}` i `grid-rows-{1..6}`.
 
@@ -46,7 +46,7 @@ paginate: true
   <div>4</div><div>5</div><div>6</div>
 </div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/08-grid/2_exemples.html#exemple-3)
 
 `gap-{mida}` per a totes direccions, o `gap-x-{mida}` / `gap-y-{mida}` per separat.
 
@@ -60,7 +60,7 @@ paginate: true
   <div class="col-span-4">Sidebar (4/12)</div>
 </div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-4)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/08-grid/2_exemples.html#exemple-4)
 
 `col-span-{1..12}` per controlar quantes columnes ocupa un element.
 
@@ -78,7 +78,7 @@ paginate: true
   <div class="bg-green-200 p-4">Normal</div>
 </div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-5)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/08-grid/2_exemples.html#exemple-5)
 
 `row-span-{1..6}`
 
@@ -93,7 +93,7 @@ paginate: true
   </div>
 </div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-6)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/08-grid/2_exemples.html#exemple-6)
 
 `col-start-{1..12}`, `col-end-{1..12}`, `row-start-{1..6}`, `row-end-{1..6}`
 
@@ -114,6 +114,6 @@ paginate: true
   </footer>
 </div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-7)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/08-grid/2_exemples.html#exemple-7)
 
 Layout complet: header, nav, main, sidebar i footer amb grid.

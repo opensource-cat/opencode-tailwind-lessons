@@ -61,7 +61,7 @@ Amb Tailwind cada classe fa una sola cosa: no hi ha màgia ni estils ocults.
 
 Només un `<script>` al `<head>` i ja pots usar classes Tailwind.
 
-👉 [Obre l'exemple](2_exemples.html#cdn)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/01-introduccio/2_exemples.html#cdn)
 
 ---
 
@@ -107,4 +107,4 @@ Amb centenars de classes, no cal memoritzar-les totes. Hi ha tres recursos clau:
 Sense Tailwind: CSS a part, selectors, regles, i `:hover`.
 Amb Tailwind: tot es defineix al mateix lloc, al HTML.
 
-👉 [Obre l'exemple del botó](2_exemples.html#boto)
+👉 [Obre l'exemple del botó](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/01-introduccio/2_exemples.html#boto)

@@ -31,7 +31,7 @@ Tailwind és **mobile-first**: el que escrius sense prefix s'aplica a totes les 
   <!-- Mòbil: vertical. A partir de 768px: horitzontal -->
 </div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-1)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/11-responsive-breakpoints/2_exemples.html#exemple-1)
 
 ---
 
@@ -42,7 +42,7 @@ Tailwind és **mobile-first**: el que escrius sense prefix s'aplica a totes les 
   El text creix amb la pantalla.
 </p>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-2)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/11-responsive-breakpoints/2_exemples.html#exemple-2)
 
 - Mòbil: `text-sm` (14px)
 - Tablet+: `text-base` (16px)
@@ -58,7 +58,7 @@ Tailwind és **mobile-first**: el que escrius sense prefix s'aplica a totes les 
   <div class="w-full md:w-1/2 bg-green-200 p-4">Col 2</div>
 </div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/11-responsive-breakpoints/2_exemples.html#exemple-3)
 
 A mòbil: apilades verticalment (full width).
 A tablet+: una al costat de l'altra.
@@ -72,7 +72,7 @@ A tablet+: una al costat de l'altra.
   Títol
 </h1>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-4)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/11-responsive-breakpoints/2_exemples.html#exemple-4)
 
 A mòbil: centrat i petit.
 A partir de 640px: alineat a l'esquerra i més gran.
@@ -89,7 +89,7 @@ A partir de 640px: alineat a l'esquerra i més gran.
   <a href="#">Contacte</a>
 </nav>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-5)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/11-responsive-breakpoints/2_exemples.html#exemple-5)
 
 - Mòbil: es veu el botó ☰, el nav està amagat
 - Tablet+: el botó desapareix, el nav es mostra horitzontal
@@ -109,4 +109,4 @@ A partir de 640px: alineat a l'esquerra i més gran.
 <!-- Mal: escriptori primer (classe base innecessàriament gran) -->
 <div class="grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-1 gap-4">
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-6)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/11-responsive-breakpoints/2_exemples.html#exemple-6)

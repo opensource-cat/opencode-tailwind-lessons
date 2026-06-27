@@ -21,7 +21,7 @@ paginate: true
          placeholder="El teu nom">
 </div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-1)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/15-formularis/2_exemples.html#exemple-1)
 
 ---
 
@@ -33,7 +33,7 @@ paginate: true
   Envia
 </button>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-2)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/15-formularis/2_exemples.html#exemple-2)
 
 Variants:
 
@@ -54,7 +54,7 @@ Variants:
   <span class="text-sm text-gray-700">Accepto els termes</span>
 </label>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/15-formularis/2_exemples.html#exemple-3)
 
 `accent-{color}` per canviar el color nadiu del checkbox/radio.
 
@@ -70,7 +70,7 @@ Variants:
   <option>Opció 2</option>
 </select>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-4)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/15-formularis/2_exemples.html#exemple-4)
 
 ---
 
@@ -82,7 +82,7 @@ Variants:
                  placeholder:text-gray-400"
           rows="4" placeholder="Escriu aquí..."></textarea>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-5)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/15-formularis/2_exemples.html#exemple-5)
 
 ---
 
@@ -108,4 +108,4 @@ Variants:
   </button>
 </form>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-6)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/15-formularis/2_exemples.html#exemple-6)

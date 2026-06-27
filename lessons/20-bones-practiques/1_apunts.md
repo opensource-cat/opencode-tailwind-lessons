@@ -21,7 +21,7 @@ Dissenya primer per a mòbil, després afegeix breakpoints.
 <div class="flex flex-row md:flex-col">
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-1)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/20-bones-practiques/2_exemples.html#exemple-1)
 
 Els breakpoints han de **millorar** el disseny, no arreglar-lo.
 
@@ -45,7 +45,7 @@ function Button({ children, variant }) {
 }
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-2)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/20-bones-practiques/2_exemples.html#exemple-2)
 
 ---
 
@@ -60,7 +60,7 @@ function Button({ children, variant }) {
 }
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/20-bones-practiques/2_exemples.html#exemple-3)
 
 **Quan usar-lo:** en components molt grans i repetitius, o per integrar Tailwind en un projecte amb CSS existent. Com a excepció, no com a regla.
 
@@ -86,7 +86,7 @@ module.exports = {
 };
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-4)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/20-bones-practiques/2_exemples.html#exemple-4)
 
 ---
 
@@ -125,7 +125,7 @@ L'escala de Tailwind està dissenyada per cobrir el 95% dels casos.
 </div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-5)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/20-bones-practiques/2_exemples.html#exemple-5)
 
 ---
 
@@ -145,7 +145,7 @@ Un ordre coherent millora la llegibilitat:
 9. Transicions: transition, duration-300
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-6)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/20-bones-practiques/2_exemples.html#exemple-6)
 
 ---
 
@@ -161,7 +161,7 @@ Evita JavaScript per a interaccions simples:
 </div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-7)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/20-bones-practiques/2_exemples.html#exemple-7)
 
 ---
 
@@ -189,4 +189,4 @@ Si la resposta és sí a alguna, no cal CSS personalitzat.
 
 Tailwind cobrirà >95% de les teves necessitats d'estil.
 
-👉 [Obre l'exemple](2_exemples.html#exemple-8)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/20-bones-practiques/2_exemples.html#exemple-8)

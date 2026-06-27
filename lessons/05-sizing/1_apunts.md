@@ -20,7 +20,7 @@ Mateixa escala que spacing:
 <div class="w-auto">Ajustat al contingut</div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-1)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/05-sizing/2_exemples.html#exemple-1)
 
 ---
 
@@ -34,7 +34,7 @@ Mateixa escala que spacing:
 <div class="w-3/4">75%</div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-2)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/05-sizing/2_exemples.html#exemple-2)
 
 També `w-3/5`, `w-4/6`, `w-7/12`, etc.
 
@@ -49,7 +49,7 @@ També `w-3/5`, `w-4/6`, `w-7/12`, etc.
 <div class="h-auto">Ajustat al contingut</div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/05-sizing/2_exemples.html#exemple-3)
 
 ---
 
@@ -67,7 +67,7 @@ Limita l'ample màxim d'un element:
 
 Ideal per contenidors de text llegibles.
 
-👉 [Obre l'exemple](2_exemples.html#exemple-4)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/05-sizing/2_exemples.html#exemple-4)
 
 ---
 
@@ -80,7 +80,7 @@ Ideal per contenidors de text llegibles.
 </section>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-5)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/05-sizing/2_exemples.html#exemple-5)
 
 Molt útil per hero sections i landing pages.
 
@@ -100,4 +100,4 @@ Molt útil per hero sections i landing pages.
 </section>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-6)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/05-sizing/2_exemples.html#exemple-6)

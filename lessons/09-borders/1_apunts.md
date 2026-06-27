@@ -18,7 +18,7 @@ paginate: true
 <div class="border-8">Border de 8px</div>
 <div class="border-0">Sense border</div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-1)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/09-borders/2_exemples.html#exemple-1)
 
 ---
 
@@ -30,7 +30,7 @@ paginate: true
 <div class="border-l">Només esquerra</div>
 <div class="border-r">Només dreta</div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-2)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/09-borders/2_exemples.html#exemple-2)
 
 Es combinen: `border-t border-b` = només superior i inferior.
 
@@ -45,7 +45,7 @@ Es combinen: `border-t border-b` = només superior i inferior.
 <div class="border-2 border-red-400">Border vermell de 2px</div>
 <div class="border-b-4 border-green-600">Subratllat verd gruixut</div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/09-borders/2_exemples.html#exemple-3)
 
 ---
 
@@ -61,7 +61,7 @@ Es combinen: `border-t border-b` = només superior i inferior.
 <div class="rounded-3xl">  /* 24px */</div>
 <div class="rounded-full"> /* 9999px (cercle/píndola) */</div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-4)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/09-borders/2_exemples.html#exemple-4)
 
 ---
 
@@ -74,7 +74,7 @@ Es combinen: `border-t border-b` = només superior i inferior.
 <div class="rounded-r">   /* Dreta   */</div>
 <div class="rounded-t-lg">/* Superior + mida */</div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-5)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/09-borders/2_exemples.html#exemple-5)
 
 ---
 
@@ -89,7 +89,7 @@ Es combinen: `border-t border-b` = només superior i inferior.
 <div class="shadow-2xl">  /* Màxima */</div>
 <div class="shadow-none"> /* Sense ombra */</div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-6)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/09-borders/2_exemples.html#exemple-6)
 
 ---
 
@@ -107,4 +107,4 @@ Es combinen: `border-t border-b` = només superior i inferior.
   </div>
 </div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-7)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/09-borders/2_exemples.html#exemple-7)

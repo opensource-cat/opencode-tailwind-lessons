@@ -20,7 +20,7 @@ paginate: true
   -->
 </div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-1)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/12-responsive-patterns/2_exemples.html#exemple-1)
 
 Cal posar `flex flex-wrap` al pare.
 
@@ -43,7 +43,7 @@ Cal posar `flex flex-wrap` al pare.
   </div>
 </nav>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-2)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/12-responsive-patterns/2_exemples.html#exemple-2)
 
 ---
 
@@ -57,7 +57,7 @@ Cal posar `flex flex-wrap` al pare.
   <div class="bg-white p-4 shadow rounded">Element 4</div>
 </div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/12-responsive-patterns/2_exemples.html#exemple-3)
 
 De 1 a 4 columnes segons la pantalla.
 
@@ -73,7 +73,7 @@ De 1 a 4 columnes segons la pantalla.
   Paràgraf que s'adapta al dispositiu.
 </p>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-4)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/12-responsive-patterns/2_exemples.html#exemple-4)
 
 ---
 
@@ -88,7 +88,7 @@ De 1 a 4 columnes segons la pantalla.
   </div>
 </section>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-5)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/12-responsive-patterns/2_exemples.html#exemple-5)
 
 ---
 
@@ -105,6 +105,6 @@ De 1 a 4 columnes segons la pantalla.
   <!-- Més targetes... -->
 </div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-6)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/12-responsive-patterns/2_exemples.html#exemple-6)
 
 Cada targeta ocupa: 100% (mòbil) → 50% (tablet) → 33% (escriptori).

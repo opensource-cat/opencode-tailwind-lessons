@@ -19,7 +19,7 @@ paginate: true
   <li class="bg-white even:bg-gray-50 px-4 py-2">Element 4</li>
 </ul>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-1)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/14-pseudo-dark/2_exemples.html#exemple-1)
 
 `first:`, `last:`, `odd:`, `even:` per estilar posicions.
 
@@ -36,7 +36,7 @@ Amb `divide-y` ho pots fer encara més net.
   Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 </p>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-2)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/14-pseudo-dark/2_exemples.html#exemple-2)
 
 Estil de revista: primera lletra gran i primera línia en color diferent.
 
@@ -49,7 +49,7 @@ Estil de revista: primera lletra gran i primera línia en color diferent.
               placeholder:text-gray-400 placeholder:italic"
        type="text" placeholder="El teu nom...">
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/14-pseudo-dark/2_exemples.html#exemple-3)
 
 `placeholder:{classe}` per estilar el text de placeholder dels inputs.
 
@@ -67,7 +67,7 @@ Requereix `darkMode: 'class'` a `tailwind.config.js` (o `'media'` per sistema).
   </p>
 </div>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-4)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/14-pseudo-dark/2_exemples.html#exemple-4)
 
 `dark:{classe}` per sobreescriure qualsevol classe en mode fosc.
 
@@ -82,7 +82,7 @@ Requereix `darkMode: 'class'` a `tailwind.config.js` (o `'media'` per sistema).
   Envia
 </button>
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-5)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/14-pseudo-dark/2_exemples.html#exemple-5)
 
 `focus:ring-2 focus:ring-blue-500 focus:ring-offset-2` per a un anell de focus visible.
 
@@ -105,6 +105,6 @@ Millora l'accessibilitat per a navegació amb teclat.
               disabled:bg-gray-100 disabled:cursor-not-allowed"
        placeholder="usuari@exemple.com">
 ```
-👉 [Obre l'exemple](2_exemples.html#exemple-6)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/14-pseudo-dark/2_exemples.html#exemple-6)
 
 Combinació de dark mode, focus, placeholder i disabled.

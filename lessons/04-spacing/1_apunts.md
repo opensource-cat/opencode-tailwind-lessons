@@ -18,7 +18,7 @@ paginate: true
 <div class="px-6 py-3">Padding horitzontal 24px, vertical 12px</div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-1)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/04-spacing/2_exemples.html#exemple-1)
 
 `px-` = left + right, `py-` = top + bottom
 
@@ -33,7 +33,7 @@ paginate: true
 <div class="mx-auto">Centrat horitzontal</div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-2)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/04-spacing/2_exemples.html#exemple-2)
 
 `mx-auto` centra el contenidor.
 
@@ -59,7 +59,7 @@ De `0` a `96`, cada número equival a `0.25rem`:
 </section>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/04-spacing/2_exemples.html#exemple-3)
 
 ---
 
@@ -73,7 +73,7 @@ De `0` a `96`, cada número equival a `0.25rem`:
 </div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-4)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/04-spacing/2_exemples.html#exemple-4)
 
 `space-x-4` afegeix margin de 16px entre elements horitzontals.
 `space-y-4` fa el mateix però verticalment.
@@ -94,7 +94,7 @@ El margin pot ser negatiu: `-mt-4`, `-mx-2`, etc.
 </div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-5)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/04-spacing/2_exemples.html#exemple-5)
 
 ---
 
@@ -113,4 +113,4 @@ El margin pot ser negatiu: `-mt-4`, `-mx-2`, etc.
 </div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-6)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/04-spacing/2_exemples.html#exemple-6)

@@ -17,7 +17,7 @@ paginate: true
 
 Converteix el contenidor en un flex container.
 
-👉 [Obre l'exemple](2_exemples.html#exemple-1) Els fills es col·loquen en fila (horitzontal) per defecte.
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/06-flexbox-contenidor/2_exemples.html#exemple-1) Els fills es col·loquen en fila (horitzontal) per defecte.
 
 ---
 
@@ -30,7 +30,7 @@ Converteix el contenidor en un flex container.
 <div class="flex flex-col-reverse">Columna inversa</div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-2)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/06-flexbox-contenidor/2_exemples.html#exemple-2)
 
 ---
 
@@ -48,7 +48,7 @@ Converteix el contenidor en un flex container.
 </div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/06-flexbox-contenidor/2_exemples.html#exemple-3)
 
 ---
 
@@ -63,7 +63,7 @@ Converteix el contenidor en un flex container.
 <div class="flex justify-evenly">   /* espai igual         */</div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-4)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/06-flexbox-contenidor/2_exemples.html#exemple-4)
 
 ---
 
@@ -77,7 +77,7 @@ Converteix el contenidor en un flex container.
 <div class="flex items-baseline">  /* línia base del text */</div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-5)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/06-flexbox-contenidor/2_exemples.html#exemple-5)
 
 ---
 
@@ -94,6 +94,6 @@ Converteix el contenidor en un flex container.
 </div>
 ```
 
-👉 [Obre l'exemple](2_exemples.html#exemple-6)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/06-flexbox-contenidor/2_exemples.html#exemple-6)
 
 Un navbar senzill: logo a esquerra, enllaços a dreta, centrats verticalment.
