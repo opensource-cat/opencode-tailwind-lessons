@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lliçó 4 - Spacing: margin i padding</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; padding: 2rem; background: #f5f5f5; }
+    nav { margin-bottom: 2rem; }
+    nav a { margin-right: 1rem; }
+    section { margin-bottom: 2rem; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    hr { margin: 2rem 0; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#exemple-1">Exemple 1 - Padding</a>
+  <a href="#exemple-2">Exemple 2 - Margin</a>
+  <a href="#exemple-3">Exemple 3 - Secció espaiada</a>
+  <a href="#exemple-4">Exemple 4 - space-x</a>
+  <a href="#exemple-5">Exemple 5 - Margin negatiu</a>
+  <a href="#exemple-6">Exemple 6 - Targeta completa</a>
+</nav>
+
+<section id="exemple-1">
+  <h2>Exemple 1: Padding interior</h2>
+  <!-- INICI EXEMPLE 1 -->
+  <div class="p-4 bg-blue-100 border border-blue-300 mb-4">Padding 16px a tots els costats</div>
+  <div class="px-6 py-3 bg-blue-100 border border-blue-300">Padding horitzontal 24px, vertical 12px</div>
+  <!-- FI EXEMPLE 1 -->
+</section>
+
+<hr>
+
+<section id="exemple-2">
+  <h2>Exemple 2: Margin exterior</h2>
+  <!-- INICI EXEMPLE 2 -->
+  <div class="mb-4 bg-yellow-100 p-2">Margin inferior 16px</div>
+  <div class="mx-auto w-64 bg-yellow-100 p-2 text-center">Centrat horitzontal (mx-auto)</div>
+  <!-- FI EXEMPLE 2 -->
+</section>
+
+<hr>
+
+<section id="exemple-3">
+  <h2>Exemple 3: Exemples d'ús</h2>
+  <!-- INICI EXEMPLE 3 -->
+  <section class="px-4 py-8 bg-gray-50 rounded-lg">
+    <h2 class="text-xl font-bold mb-2">Títol</h2>
+    <p class="text-gray-600 mb-6">Paràgraf amb margin inferior</p>
+    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg">Botó espaiat</button>
+  </section>
+  <!-- FI EXEMPLE 3 -->
+</section>
+
+<hr>
+
+<section id="exemple-4">
+  <h2>Exemple 4: Separació entre fills amb space-x</h2>
+  <!-- INICI EXEMPLE 4 -->
+  <div class="flex space-x-4 bg-gray-100 p-4 rounded-lg">
+    <span class="bg-blue-200 px-3 py-1 rounded">Un</span>
+    <span class="bg-blue-200 px-3 py-1 rounded">Dos</span>
+    <span class="bg-blue-200 px-3 py-1 rounded">Tres</span>
+  </div>
+  <!-- FI EXEMPLE 4 -->
+</section>
+
+<hr>
+
+<section id="exemple-5">
+  <h2>Exemple 5: Valors negatius</h2>
+  <!-- INICI EXEMPLE 5 -->
+  <div class="bg-gray-100 p-6 relative rounded-lg overflow-visible" style="margin-top: 3rem;">
+    <div class="-mt-8 bg-blue-500 text-white p-4 rounded-lg">Aquesta caixa surt per sobre del contenidor</div>
+  </div>
+  <!-- FI EXEMPLE 5 -->
+</section>
+
+<hr>
+
+<section id="exemple-6">
+  <h2>Exemple 6: Exemple complet</h2>
+  <!-- INICI EXEMPLE 6 -->
+  <div class="max-w-md mx-auto bg-white shadow-lg rounded-xl p-8 border">
+    <h2 class="text-2xl font-bold mb-4">Espaiat</h2>
+    <div class="space-y-3">
+      <p class="bg-gray-50 p-2 rounded">Element amb separació automàtica</p>
+      <p class="bg-gray-50 p-2 rounded">Gràcies a <code>space-y-3</code></p>
+    </div>
+    <button class="mt-6 w-full bg-indigo-600 text-white py-3 rounded-lg">Acceptar</button>
+  </div>
+  <!-- FI EXEMPLE 6 -->
+</section>
+
+</body>
+</html>

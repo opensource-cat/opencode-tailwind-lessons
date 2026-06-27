@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>09 - Borders i border-radius</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; padding: 2rem; background: #f5f5f5; }
+    nav { background: #1e293b; padding: 1rem; border-radius: 0.5rem; margin-bottom: 2rem; }
+    nav a { color: white; text-decoration: none; margin-right: 1.5rem; font-size: 0.9rem; }
+    nav a:hover { text-decoration: underline; }
+    section { background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    h2 { margin-top: 0; color: #1e293b; font-size: 1.25rem; }
+    hr { border: none; border-top: 2px dashed #cbd5e1; margin: 2rem 0; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#exemple-1">Exemple 1</a>
+  <a href="#exemple-2">Exemple 2</a>
+  <a href="#exemple-3">Exemple 3</a>
+  <a href="#exemple-4">Exemple 4</a>
+  <a href="#exemple-5">Exemple 5</a>
+  <a href="#exemple-6">Exemple 6</a>
+  <a href="#exemple-7">Exemple 7</a>
+</nav>
+
+<h1 class="text-2xl font-bold mb-6">09 - Borders i border-radius</h1>
+
+<!-- EXEMPLE 1 -->
+<section id="exemple-1">
+  <h2>Exemple 1: Gruixos de border</h2>
+  <p class="text-gray-600 mb-4">Diferents gruixos: <code>border</code>, <code>border-2</code>, <code>border-4</code>, <code>border-8</code>, <code>border-0</code>.</p>
+  <!-- INICI EXEMPLE 1 -->
+  <div class="space-y-2">
+    <div class="border p-4 m-2 bg-gray-50">border (1px)</div>
+    <div class="border-2 p-4 m-2 bg-gray-50">border-2 (2px)</div>
+    <div class="border-4 p-4 m-2 bg-gray-50">border-4 (4px)</div>
+    <div class="border-8 p-4 m-2 bg-gray-50">border-8 (8px)</div>
+    <div class="border-0 p-4 m-2 bg-gray-50">border-0 (sense border)</div>
+  </div>
+  <!-- FI EXEMPLE 1 -->
+</section>
+
+<hr>
+
+<!-- EXEMPLE 2 -->
+<section id="exemple-2">
+  <h2>Exemple 2: Border per costats individuals</h2>
+  <p class="text-gray-600 mb-4"><code>border-t</code>, <code>border-b</code>, <code>border-l</code>, <code>border-r</code>, i combinacions.</p>
+  <!-- INICI EXEMPLE 2 -->
+  <div class="space-y-2">
+    <div class="border-t p-4 m-2 bg-gray-50">border-t (només superior)</div>
+    <div class="border-b p-4 m-2 bg-gray-50">border-b (només inferior)</div>
+    <div class="border-l p-4 m-2 bg-gray-50">border-l (només esquerra)</div>
+    <div class="border-r p-4 m-2 bg-gray-50">border-r (només dreta)</div>
+    <div class="border-t border-b p-4 m-2 bg-gray-50">border-t border-b (superior i inferior)</div>
+  </div>
+  <!-- FI EXEMPLE 2 -->
+</section>
+
+<hr>
+
+<!-- EXEMPLE 3 -->
+<section id="exemple-3">
+  <h2>Exemple 3: Colors de border</h2>
+  <p class="text-gray-600 mb-4">Combinació de gruix i color: <code>border-{color}</code>.</p>
+  <!-- INICI EXEMPLE 3 -->
+  <div class="space-y-2">
+    <div class="border border-blue-500 p-4 m-2 bg-gray-50">border border-blue-500</div>
+    <div class="border-2 border-red-400 p-4 m-2 bg-gray-50">border-2 border-red-400</div>
+    <div class="border-b-4 border-green-600 p-4 m-2 bg-gray-50">border-b-4 border-green-600 (subratllat verd)</div>
+  </div>
+  <!-- FI EXEMPLE 3 -->
+</section>
+
+<hr>
+
+<!-- EXEMPLE 4 -->
+<section id="exemple-4">
+  <h2>Exemple 4: Border-radius</h2>
+  <p class="text-gray-600 mb-4">Diferents graus d'arrodoniment: <code>rounded-sm</code> fins a <code>rounded-full</code>.</p>
+  <!-- INICI EXEMPLE 4 -->
+  <div class="flex flex-wrap gap-4">
+    <div class="rounded-sm bg-blue-200 p-8 m-2">rounded-sm</div>
+    <div class="rounded bg-blue-200 p-8 m-2">rounded</div>
+    <div class="rounded-md bg-blue-200 p-8 m-2">rounded-md</div>
+    <div class="rounded-lg bg-blue-200 p-8 m-2">rounded-lg</div>
+    <div class="rounded-xl bg-blue-200 p-8 m-2">rounded-xl</div>
+    <div class="rounded-2xl bg-blue-200 p-8 m-2">rounded-2xl</div>
+    <div class="rounded-3xl bg-blue-200 p-8 m-2">rounded-3xl</div>
+    <div class="rounded-full bg-blue-200 p-8 m-2">rounded-full</div>
+  </div>
+  <!-- FI EXEMPLE 4 -->
+</section>
+
+<hr>
+
+<!-- EXEMPLE 5 -->
+<section id="exemple-5">
+  <h2>Exemple 5: Cantonades individuals</h2>
+  <p class="text-gray-600 mb-4"><code>rounded-t</code>, <code>rounded-b</code>, <code>rounded-l</code>, <code>rounded-r</code>, <code>rounded-t-lg</code>.</p>
+  <!-- INICI EXEMPLE 5 -->
+  <div class="flex flex-wrap gap-4">
+    <div class="rounded-t bg-green-200 p-8 m-2">rounded-t</div>
+    <div class="rounded-b bg-green-200 p-8 m-2">rounded-b</div>
+    <div class="rounded-l bg-green-200 p-8 m-2">rounded-l</div>
+    <div class="rounded-r bg-green-200 p-8 m-2">rounded-r</div>
+    <div class="rounded-t-lg bg-green-200 p-8 m-2">rounded-t-lg</div>
+  </div>
+  <!-- FI EXEMPLE 5 -->
+</section>
+
+<hr>
+
+<!-- EXEMPLE 6 -->
+<section id="exemple-6">
+  <h2>Exemple 6: Ombres (box-shadow)</h2>
+  <p class="text-gray-600 mb-4"><code>shadow-sm</code>, <code>shadow</code>, <code>shadow-md</code>, <code>shadow-lg</code>, <code>shadow-xl</code>, <code>shadow-2xl</code>, <code>shadow-none</code>.</p>
+  <!-- INICI EXEMPLE 6 -->
+  <div class="flex flex-wrap gap-4">
+    <div class="shadow-sm bg-white p-8 m-2 rounded">shadow-sm</div>
+    <div class="shadow bg-white p-8 m-2 rounded">shadow</div>
+    <div class="shadow-md bg-white p-8 m-2 rounded">shadow-md</div>
+    <div class="shadow-lg bg-white p-8 m-2 rounded">shadow-lg</div>
+    <div class="shadow-xl bg-white p-8 m-2 rounded">shadow-xl</div>
+    <div class="shadow-2xl bg-white p-8 m-2 rounded">shadow-2xl</div>
+    <div class="shadow-none bg-white p-8 m-2 rounded border">shadow-none</div>
+  </div>
+  <!-- FI EXEMPLE 6 -->
+</section>
+
+<hr>
+
+<!-- EXEMPLE 7 -->
+<section id="exemple-7">
+  <h2>Exemple 7: Targeta amb border i ombra</h2>
+  <p class="text-gray-600 mb-4">Targeta clàssica amb imatge, border, ombra i botó.</p>
+  <!-- INICI EXEMPLE 7 -->
+  <div class="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden max-w-md">
+    <div class="h-48 bg-gray-300 flex items-center justify-center text-gray-500">
+      <img src="https://picsum.photos/seed/card/600/300" alt="Placeholder" class="w-full h-full object-cover">
+    </div>
+    <div class="p-6">
+      <h3 class="text-lg font-bold">Títol de la targeta</h3>
+      <p class="text-gray-600 mt-2">Contingut dins d'una targeta clàssica amb border, ombra i botó d'acció.</p>
+      <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Llegir més</button>
+    </div>
+  </div>
+  <!-- FI EXEMPLE 7 -->
+</section>
+
+</body>
+</html>

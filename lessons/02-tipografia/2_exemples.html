@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lliçó 2 - Tipografia i text</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; padding: 2rem; background: #f5f5f5; }
+    nav { margin-bottom: 2rem; }
+    nav a { margin-right: 1rem; }
+    section { margin-bottom: 2rem; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    hr { margin: 2rem 0; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#exemple-1">Exemple 1 - Alineació</a>
+  <a href="#exemple-2">Exemple 2 - Transformació</a>
+  <a href="#exemple-3">Exemple 3 - Exemple complet</a>
+</nav>
+
+<section id="exemple-1">
+  <h2>Exemple 1: Alineació del text</h2>
+  <!-- INICI EXEMPLE 1 -->
+  <p class="text-left bg-gray-100 p-2 mb-2">Alineat a l'esquerra</p>
+  <p class="text-center bg-gray-200 p-2 mb-2">Alineat al centre</p>
+  <p class="text-right bg-gray-100 p-2 mb-2">Alineat a la dreta</p>
+  <p class="text-justify bg-gray-200 p-2">Justificat (ambdues bandes rectes). Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+  <!-- FI EXEMPLE 1 -->
+</section>
+
+<hr>
+
+<section id="exemple-2">
+  <h2>Exemple 2: Transformació del text</h2>
+  <!-- INICI EXEMPLE 2 -->
+  <p class="uppercase bg-gray-100 p-2 mb-2">Tot en majúscules</p>
+  <p class="lowercase bg-gray-200 p-2 mb-2">TOT EN MINÚSCULES</p>
+  <p class="capitalize bg-gray-100 p-2">primera lletra de cada paraula en majúscula</p>
+  <!-- FI EXEMPLE 2 -->
+</section>
+
+<hr>
+
+<section id="exemple-3">
+  <h2>Exemple 3: Exemple complet</h2>
+  <!-- INICI EXEMPLE 3 -->
+  <h1 class="text-4xl font-bold text-center tracking-wide mb-4">Títol destacat</h1>
+  <p class="text-base leading-relaxed text-gray-700">Paràgraf amb espaiat còmode i color gris per a una lectura agradable.</p>
+  <!-- FI EXEMPLE 3 -->
+</section>
+
+</body>
+</html>
