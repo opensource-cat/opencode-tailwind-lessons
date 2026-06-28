@@ -21,6 +21,42 @@
   "instructions": [
     "AGENTS.md"
   ],
+  "agent": {
+    "tailwind-tutor": {
+      "description": "Tutor de Tailwind CSS que guia l'estudiant a través de les lliçons",
+      "mode": "primary",
+      "color": "#06b6d4"
+    },
+    "lesson-reader": {
+      "description": "Llegeix i resumeix el contingut de les lliçons de Tailwind",
+      "mode": "subagent"
+    },
+    "code-reviewer": {
+      "description": "Revisa codi HTML amb Tailwind i ofereix feedback",
+      "mode": "subagent"
+    },
+    "exercise-maker": {
+      "description": "Crea exercicis personalitzats de Tailwind",
+      "mode": "subagent"
+    },
+    "git-pusher": {
+      "description": "Ajuda l'estudiant a pujar les solucions al repositori Git",
+      "mode": "subagent"
+    }
+  },
+  "mcp": {
+    "playwright": {
+      "type": "local",
+      "command": ["npx", "-y", "@anthropic/mcp-playwright"],
+      "enabled": true
+    },
+    "tailwind-validator": {
+      "type": "local",
+      "command": ["node", "index.js"],
+      "cwd": ".opencode/mcp/tailwind-validator",
+      "enabled": true
+    }
+  },
   "provider": {
     "opencode": {
       "options": {
