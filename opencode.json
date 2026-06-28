@@ -1,8 +1,8 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "default_agent": "tailwind-tutor",
-  "model": "opencode/deepseek-v4-flash",
-  "enabled_providers": ["opencode", "deepseek"],
+  "model": "deepseek/deepseek-v4-flash",
+  "enabled_providers": ["deepseek", "opencode"],
   "permission": {
     "read": "allow",
     "grep": "allow",
@@ -22,6 +22,8 @@
     "AGENTS.md"
   ],
   "agent": {
+    "build": { "disable": true },
+    "plan": { "disable": true },
     "tailwind-tutor": {
       "description": "Tutor de Tailwind CSS que guia l'estudiant a través de les lliçons",
       "mode": "primary",
