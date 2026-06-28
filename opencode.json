@@ -1,8 +1,8 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "default_agent": "build",
-  "model": "deepseek/deepseek-v4-flash",
-  "enabled_providers": ["deepseek", "opencode"],
+  "default_agent": "tailwind-tutor",
+  "model": "opencode/deepseek-v4-flash",
+  "enabled_providers": ["opencode", "deepseek"],
   "permission": {
     "read": "allow",
     "grep": "allow",
@@ -60,14 +60,14 @@
   "provider": {
     "opencode": {
       "options": {
-        "apiKey": "{env:OPENCODE_ZEN_API_KEY}",
+        "apiKey": "{file:.opencode/keys/opencode-key.txt}",
         "timeout": 900000,
         "chunkTimeout": 600000
       }
     },
     "deepseek": {
       "options": {
-        "apiKey": "{env:DEEPSEEK_API_KEY}",
+        "apiKey": "{file:.opencode/keys/deepseek-key.txt}",
         "timeout": 900000,
         "chunkTimeout": 600000
       }

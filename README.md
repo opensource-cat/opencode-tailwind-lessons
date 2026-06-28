@@ -1,28 +1,144 @@
-# Projecte Tailwind
+# Aprendre Tailwind CSS
 
-Lliçons per aprendre Tailwind CSS des de zero. Cada lliçó conté apunts, exercicis i exemples interactius.
+Aquest projecte t'ajudarà a aprendre **Tailwind CSS** des de zero a través de 20 lliçons progressives. Està dissenyat per ser utilitzat amb **OpenCode**, l'assistent d'IA que et guiarà pas a pas.
 
-## Lliçons
+## Requisits
 
-| # | Lliçó | Apunts | Exemples | Exercicis |
-|---|-------|--------|----------|-----------|
-| 1 | Què és Tailwind i per què servir-lo? | [Llegeix](lessons/01-introduccio/1_apunts.md) | [Mostra](lessons/01-introduccio/2_exemples.html) | [Fes](lessons/01-introduccio/3_exercicis.md) |
-| 2 | Tipografia i text | [Llegeix](lessons/02-tipografia/1_apunts.md) | [Mostra](lessons/02-tipografia/2_exemples.html) | [Fes](lessons/02-tipografia/3_exercicis.md) |
-| 3 | Colors i fons | [Llegeix](lessons/03-colors-fons/1_apunts.md) | [Mostra](lessons/03-colors-fons/2_exemples.html) | [Fes](lessons/03-colors-fons/3_exercicis.md) |
-| 4 | Spacing: margin i padding | [Llegeix](lessons/04-spacing/1_apunts.md) | [Mostra](lessons/04-spacing/2_exemples.html) | [Fes](lessons/04-spacing/3_exercicis.md) |
-| 5 | Width i height | [Llegeix](lessons/05-sizing/1_apunts.md) | [Mostra](lessons/05-sizing/2_exemples.html) | [Fes](lessons/05-sizing/3_exercicis.md) |
-| 6 | Flexbox (Part 1): contenidor | [Llegeix](lessons/06-flexbox-contenidor/1_apunts.md) | [Mostra](lessons/06-flexbox-contenidor/2_exemples.html) | [Fes](lessons/06-flexbox-contenidor/3_exercicis.md) |
-| 7 | Flexbox (Part 2): elements fills | [Llegeix](lessons/07-flexbox-elements/1_apunts.md) | [Mostra](lessons/07-flexbox-elements/2_exemples.html) | [Fes](lessons/07-flexbox-elements/3_exercicis.md) |
-| 8 | Grid CSS | [Llegeix](lessons/08-grid/1_apunts.md) | [Mostra](lessons/08-grid/2_exemples.html) | [Fes](lessons/08-grid/3_exercicis.md) |
-| 9 | Borders i border-radius | [Llegeix](lessons/09-borders/1_apunts.md) | [Mostra](lessons/09-borders/2_exemples.html) | [Fes](lessons/09-borders/3_exercicis.md) |
-| 10 | Display i visibilitat | [Llegeix](lessons/10-display/1_apunts.md) | [Mostra](lessons/10-display/2_exemples.html) | [Fes](lessons/10-display/3_exercicis.md) |
-| 11 | Responsive Design (Part 1): breakpoints | [Llegeix](lessons/11-responsive-breakpoints/1_apunts.md) | [Mostra](lessons/11-responsive-breakpoints/2_exemples.html) | [Fes](lessons/11-responsive-breakpoints/3_exercicis.md) |
-| 12 | Responsive Design (Part 2): patterns pràctics | [Llegeix](lessons/12-responsive-patterns/1_apunts.md) | [Mostra](lessons/12-responsive-patterns/2_exemples.html) | [Fes](lessons/12-responsive-patterns/3_exercicis.md) |
-| 13 | Estats: hover, focus, active i more | [Llegeix](lessons/13-estats/1_apunts.md) | [Mostra](lessons/13-estats/2_exemples.html) | [Fes](lessons/13-estats/3_exercicis.md) |
-| 14 | Pseudo-classes i dark mode | [Llegeix](lessons/14-pseudo-dark/1_apunts.md) | [Mostra](lessons/14-pseudo-dark/2_exemples.html) | [Fes](lessons/14-pseudo-dark/3_exercicis.md) |
-| 15 | Formularis amb Tailwind | [Llegeix](lessons/15-formularis/1_apunts.md) | [Mostra](lessons/15-formularis/2_exemples.html) | [Fes](lessons/15-formularis/3_exercicis.md) |
-| 16 | Animacions i transicions | [Llegeix](lessons/16-animacions/1_apunts.md) | [Mostra](lessons/16-animacions/2_exemples.html) | [Fes](lessons/16-animacions/3_exercicis.md) |
-| 17 | Imatges i fons | [Llegeix](lessons/17-imatges/1_apunts.md) | [Mostra](lessons/17-imatges/2_exemples.html) | [Fes](lessons/17-imatges/3_exercicis.md) |
-| 18 | Components pràctics | [Llegeix](lessons/18-components/1_apunts.md) | [Mostra](lessons/18-components/2_exemples.html) | [Fes](lessons/18-components/3_exercicis.md) |
-| 19 | Positioning i valors arbitraris | [Llegeix](lessons/19-positioning/1_apunts.md) | [Mostra](lessons/19-positioning/2_exemples.html) | [Fes](lessons/19-positioning/3_exercicis.md) |
-| 20 | Bones pràctiques | [Llegeix](lessons/20-bones-practiques/1_apunts.md) | [Mostra](lessons/20-bones-practiques/2_exemples.html) | [Fes](lessons/20-bones-practiques/3_exercicis.md) |
+- Conèixer HTML i CSS bàsic
+- Tenir **OpenCode** instal·lat (`npm install -g opencode-ai`)
+- Disposar d'una API key per al model d'IA (OpenCode Zen, DeepSeek, etc.)
+
+## Configuració de les claus d'API
+
+El projecte llegeix les claus d'API directament de fitxers dins la carpeta `.opencode/keys/`, gràcies a la funcionalitat `{file:...}` d'OpenCode.
+
+1. Obre la carpeta del projecte a **Visual Studio Code**:
+   ```bash
+   code .
+   ```
+
+2. A `VS Code`, crea els fitxers de claus dins la carpeta `.opencode/keys/`:
+
+   - **`.opencode/keys/opencode-key.txt`** — La teva clau d'OpenCode Zen
+   - **`.opencode/keys/deepseek-key.txt`** — La teva clau de DeepSeek (opcional)
+
+   Assegura't que cada fitxer contingui **només la clau** (sense cometes, sense espais en blanc, sense salt de línia al final).
+
+   Pots obtenir una clau d'OpenCode Zen a [opencode.ai/zen](https://opencode.ai/zen) o una de DeepSeek a [platform.deepseek.com](https://platform.deepseek.com/).
+
+   > **Important**: Aquesta carpeta `.opencode/keys/` estaficada a `.gitignore` per no pujar les claus al repositori.
+
+## Com començar
+
+1. Obre la carpeta del projecte a **Visual Studio Code** (si no ho has fet ja):
+   ```bash
+   code .
+   ```
+
+2. Obre el terminal integrat de VS Code amb `Ctrl + ñ` o `Ctrl + J` (o des del menú *Terminal > New Terminal*).
+
+3. Assegura't que el terminal està al directori del projecte i executa:
+   ```bash
+   opencode
+   ```
+
+   OpenCode ja té accés a les claus d'API gràcies als fitxers de `.opencode/keys/`. No cal cap script ni variable d'entorn addicional.
+
+Un cop iniciat, OpenCode carregarà automàticament l'agent **tailwind-tutor**, que és el teu tutor personal. Ell t'explicarà els conceptes, et proposarà exercicis i revisarà el teu codi.
+
+Tria una lliçó per començar (recomanat: començar per la 01).
+
+## Lliçons disponibles
+
+| Lliçó | Tema |
+|-------|------|
+| 01 | Introducció a Tailwind |
+| 02 | Tipografia |
+| 03 | Colors i fons |
+| 04 | Spacing (margin i padding) |
+| 05 | Sizing (amplada i alçada) |
+| 06 | Flexbox (contenidor) |
+| 07 | Flexbox (elements) |
+| 08 | Grid |
+| 09 | Borders i ombres |
+| 10 | Display |
+| 11 | Responsive breakpoints |
+| 12 | Responsive patterns |
+| 13 | Estats (hover, focus, active) |
+| 14 | Pseudo-classes i dark mode |
+| 15 | Formularis |
+| 16 | Animacions i transicions |
+| 17 | Imatges |
+| 18 | Components (navbar, cards, etc.) |
+| 19 | Positioning |
+| 20 | Bones pràctiques |
+
+Cada lliçó conté:
+- **`1_apunts.md`** — Teoria i conceptes
+- **`2_exemples.html`** — Exemples pràctics
+- **`3_exercicis.md`** — Exercicis per practicar
+
+## Agents disponibles
+
+El projecte inclou diversos agents dins OpenCode:
+
+### Agent principal (per defecte)
+- **`tailwind-tutor`** — El teu tutor personal. Et guia per les lliçons, explica conceptes, proposa exercicis i revisa les solucions. És l'agent que s'activa automàticament en obrir OpenCode.
+
+### Subagents (@mention)
+Pots esmentar aquests agents enmig de la conversa:
+- **`@lesson-reader`** — Llegeix i resumeix el contingut de les lliçons
+- **`@code-reviewer`** — Revisa el teu codi HTML/Tailwind i t'ofereix feedback
+- **`@exercise-maker`** — Crea exercicis personalitzats si necessites més pràctica
+- **`@git-pusher`** — T'ajuda a pujar les solucions al repositori Git
+
+## Com funciona el flux d'aprenentatge
+
+1. **Tria una lliçó** — El tutor et recomana per on començar
+2. **Aprèn els conceptes** — El tutor llegeix els apunts i te'ls explica amb exemples
+3. **Fes els exercicis** — Crea els fitxers HTML dins `solucions/{tema}/` (p. ex. `solucions/04-spacing/exercici1.html`)
+4. **Rep feedback** — El tutor revisa el teu codi i et dona suggeriments per millorar
+5. **Repeteix** — Quan dominis una lliçó, passa a la següent
+
+## Estructura del projecte
+
+```
+lessons/              → Contingut de les lliçons (NO TOQUIS)
+  XX-tema/
+    1_apunts.md
+    2_exemples.html
+    3_exercicis.md
+
+solucions/            → Aquí guardes les teves solucions
+  XX-tema/
+    exercici1.html
+    exercici2.html
+
+.opencode/
+  agents/             → Configuració dels agents personalitzats
+  keys/               → Les teves claus d'API (NO pujar a git)
+  mcp/tailwind-validator/  → Eines de validació de Tailwind
+```
+
+## Regles importants
+
+- **No modiquis** els fitxers dins `lessons/`
+- **Guarda les solucions** sempre dins `solucions/{tema}/`
+- **Prova el codi** al navegador per veure el resultat
+- **Si t'encalles**, demana ajuda al tutor — ell et donarà pistes sense donar-te la solució
+
+## Eines addicionals
+
+El projecte inclou eines MCP que el tutor pot utilitzar:
+- **Validació de classes** — Comprova si les classes Tailwind que has escrit són correctes
+- **Descripció de classes** — Explica què fa una classe concreta de Tailwind
+- **Captura de pantalla** — Pot obrir el teu HTML al navegador i mostrar-te com queda
+
+## Consells
+
+- Comença per la lliçó 01 si ets principiant
+- Practica cada concepte abans de passar al següent
+- Fes commit dels teus exercicis amb `@git-pusher` per portar un registre del teu progrés
+- Pregunta qualsevol dubte al tutor en català
+
+Bon aprenentatge!
