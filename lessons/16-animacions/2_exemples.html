@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Animacions i transicions</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../tabs.js"></script>
-  <link rel="stylesheet" href="../tabs.css">
+  <script src="../exemples.js"></script>
+  <link rel="stylesheet" href="../exemples.css">
   <style>
     .demo-box { width: 80px; height: 80px; background: #3b82f6; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; }
   </style>
@@ -49,6 +49,12 @@
         Suau
       </button>
       <!-- FI EXEMPLE 1 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;button class=&quot;bg-blue-600 text-white px-4 py-2 rounded-lg transition hover:bg-blue-700&quot;&gt;
+        Suau
+      &lt;/button&gt;</code></pre>
+      </div>
     </section>
 
     <section id="tipus-transicio" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -62,6 +68,15 @@
         <div class="demo-box transition-shadow hover:shadow-xl">shadow</div>
       </div>
       <!-- FI EXEMPLE 2 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;div class=&quot;grid grid-cols-2 gap-4&quot;&gt;
+        &lt;div class=&quot;demo-box transition-colors hover:bg-green-500&quot;&gt;colors&lt;/div&gt;
+        &lt;div class=&quot;demo-box transition-transform hover:scale-110&quot;&gt;transform&lt;/div&gt;
+        &lt;div class=&quot;demo-box transition-opacity hover:opacity-50&quot;&gt;opacity&lt;/div&gt;
+        &lt;div class=&quot;demo-box transition-shadow hover:shadow-xl&quot;&gt;shadow&lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="durada" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -76,6 +91,16 @@
         <div class="demo-box transition duration-1000 hover:bg-green-500" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">duration-1000 (1000ms)</div>
       </div>
       <!-- FI EXEMPLE 3 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;div class=&quot;space-y-3&quot;&gt;
+        &lt;div class=&quot;demo-box transition duration-75 hover:bg-green-500&quot; style=&quot;width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;&quot;&gt;duration-75 (75ms)&lt;/div&gt;
+        &lt;div class=&quot;demo-box transition duration-150 hover:bg-green-500&quot; style=&quot;width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;&quot;&gt;duration-150 (150ms)&lt;/div&gt;
+        &lt;div class=&quot;demo-box transition duration-300 hover:bg-green-500&quot; style=&quot;width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;&quot;&gt;duration-300 (300ms)&lt;/div&gt;
+        &lt;div class=&quot;demo-box transition duration-500 hover:bg-green-500&quot; style=&quot;width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;&quot;&gt;duration-500 (500ms)&lt;/div&gt;
+        &lt;div class=&quot;demo-box transition duration-1000 hover:bg-green-500&quot; style=&quot;width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;&quot;&gt;duration-1000 (1000ms)&lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="easing" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -89,6 +114,15 @@
         <div class="demo-box transition ease-in-out duration-1000 hover:translate-x-12" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">ease-in-out</div>
       </div>
       <!-- FI EXEMPLE 4 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;div class=&quot;grid grid-cols-2 gap-4&quot;&gt;
+        &lt;div class=&quot;demo-box transition ease-linear duration-1000 hover:translate-x-12&quot; style=&quot;width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;&quot;&gt;ease-linear&lt;/div&gt;
+        &lt;div class=&quot;demo-box transition ease-in duration-1000 hover:translate-x-12&quot; style=&quot;width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;&quot;&gt;ease-in&lt;/div&gt;
+        &lt;div class=&quot;demo-box transition ease-out duration-1000 hover:translate-x-12&quot; style=&quot;width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;&quot;&gt;ease-out&lt;/div&gt;
+        &lt;div class=&quot;demo-box transition ease-in-out duration-1000 hover:translate-x-12&quot; style=&quot;width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;&quot;&gt;ease-in-out&lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="scale-translate" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -98,6 +132,12 @@
         Botó que es mou
       </button>
       <!-- FI EXEMPLE 5 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;button class=&quot;bg-blue-600 text-white px-4 py-2 rounded-lg transition-transform duration-200 hover:scale-105 hover:-translate-y-1&quot;&gt;
+        Botó que es mou
+      &lt;/button&gt;</code></pre>
+      </div>
     </section>
 
     <section id="animacions-predef" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -122,6 +162,27 @@
         </div>
       </div>
       <!-- FI EXEMPLE 6 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;div class=&quot;flex items-center gap-8 flex-wrap&quot;&gt;
+        &lt;div class=&quot;flex flex-col items-center gap-2&quot;&gt;
+          &lt;span class=&quot;animate-spin inline-block text-2xl&quot;&gt;⟳&lt;/span&gt;
+          &lt;span class=&quot;text-xs text-gray-500&quot;&gt;animate-spin&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;flex flex-col items-center gap-2&quot;&gt;
+          &lt;div class=&quot;animate-pulse bg-red-500 w-4 h-4 rounded-full&quot;&gt;&lt;/div&gt;
+          &lt;span class=&quot;text-xs text-gray-500&quot;&gt;animate-pulse&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;flex flex-col items-center gap-2&quot;&gt;
+          &lt;div class=&quot;animate-bounce bg-blue-500 w-4 h-4 rounded-full&quot;&gt;&lt;/div&gt;
+          &lt;span class=&quot;text-xs text-gray-500&quot;&gt;animate-bounce&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;flex flex-col items-center gap-2&quot;&gt;
+          &lt;div class=&quot;animate-ping bg-green-500 w-4 h-4 rounded-full&quot;&gt;&lt;/div&gt;
+          &lt;span class=&quot;text-xs text-gray-500&quot;&gt;animate-ping&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="targeta-animada" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -136,6 +197,17 @@
         </p>
       </div>
       <!-- FI EXEMPLE 7 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;div class=&quot;group bg-white p-6 rounded-xl shadow-md transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 cursor-pointer max-w-sm border&quot;&gt;
+        &lt;h3 class=&quot;text-lg font-bold transition-colors duration-200 group-hover:text-blue-600&quot;&gt;
+          Targeta interactiva
+        &lt;/h3&gt;
+        &lt;p class=&quot;text-gray-600 mt-2 transition-opacity duration-200 group-hover:text-gray-800&quot;&gt;
+          Text que es fa més fosc en hover.
+        &lt;/p&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
   </div>
 

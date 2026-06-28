@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>08 - Grid CSS</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../tabs.js"></script>
-  <link rel="stylesheet" href="../tabs.css">
+  <script src="../exemples.js"></script>
+  <link rel="stylesheet" href="../exemples.css">
 </head>
 <body class="bg-gray-50 min-h-screen">
   <div class="max-w-5xl mx-auto px-4 py-8">
@@ -50,6 +50,15 @@
         <div class="bg-yellow-400 text-white p-4 rounded">Col 4 — baixa a la segona fila</div>
       </div>
       <!-- FI EXEMPLE 1 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;grid grid-cols-3 gap-2&quot;&gt;
+        &lt;div class=&quot;bg-red-400 text-white p-4 rounded&quot;&gt;Col 1&lt;/div&gt;
+        &lt;div class=&quot;bg-green-400 text-white p-4 rounded&quot;&gt;Col 2&lt;/div&gt;
+        &lt;div class=&quot;bg-blue-400 text-white p-4 rounded&quot;&gt;Col 3&lt;/div&gt;
+        &lt;div class=&quot;bg-yellow-400 text-white p-4 rounded&quot;&gt;Col 4 — baixa a la segona fila&lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="cols-rows" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -67,6 +76,19 @@
         <div class="bg-purple-400 text-white p-4 rounded">8</div>
       </div>
       <!-- FI EXEMPLE 2 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;grid grid-cols-4 grid-rows-2 gap-2&quot;&gt;
+        &lt;div class=&quot;bg-indigo-400 text-white p-4 rounded&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;bg-indigo-400 text-white p-4 rounded&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;bg-indigo-400 text-white p-4 rounded&quot;&gt;3&lt;/div&gt;
+        &lt;div class=&quot;bg-indigo-400 text-white p-4 rounded&quot;&gt;4&lt;/div&gt;
+        &lt;div class=&quot;bg-purple-400 text-white p-4 rounded&quot;&gt;5&lt;/div&gt;
+        &lt;div class=&quot;bg-purple-400 text-white p-4 rounded&quot;&gt;6&lt;/div&gt;
+        &lt;div class=&quot;bg-purple-400 text-white p-4 rounded&quot;&gt;7&lt;/div&gt;
+        &lt;div class=&quot;bg-purple-400 text-white p-4 rounded&quot;&gt;8&lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="gap" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -82,6 +104,17 @@
         <div class="bg-cyan-400 text-white p-6 rounded text-center text-xl font-bold">6</div>
       </div>
       <!-- FI EXEMPLE 3 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;grid grid-cols-3 gap-4&quot;&gt;
+        &lt;div class=&quot;bg-teal-400 text-white p-6 rounded text-center text-xl font-bold&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;bg-teal-400 text-white p-6 rounded text-center text-xl font-bold&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;bg-teal-400 text-white p-6 rounded text-center text-xl font-bold&quot;&gt;3&lt;/div&gt;
+        &lt;div class=&quot;bg-cyan-400 text-white p-6 rounded text-center text-xl font-bold&quot;&gt;4&lt;/div&gt;
+        &lt;div class=&quot;bg-cyan-400 text-white p-6 rounded text-center text-xl font-bold&quot;&gt;5&lt;/div&gt;
+        &lt;div class=&quot;bg-cyan-400 text-white p-6 rounded text-center text-xl font-bold&quot;&gt;6&lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="col-span" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -99,6 +132,19 @@
         </div>
       </div>
       <!-- FI EXEMPLE 4 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;grid grid-cols-12 gap-4&quot;&gt;
+        &lt;div class=&quot;col-span-8 bg-sky-200 p-6 rounded&quot;&gt;
+          &lt;h3 class=&quot;font-bold text-lg&quot;&gt;Contingut principal (8/12)&lt;/h3&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-span-4 bg-amber-200 p-6 rounded&quot;&gt;
+          &lt;h3 class=&quot;font-bold text-lg&quot;&gt;Sidebar (4/12)&lt;/h3&gt;
+          &lt;p&gt;Informació adicional.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="row-span" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -115,6 +161,18 @@
         <div class="bg-green-200 p-4 rounded">Normal</div>
       </div>
       <!-- FI EXEMPLE 5 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;grid grid-cols-3 gap-4&quot;&gt;
+        &lt;div class=&quot;row-span-2 bg-blue-200 p-4 rounded&quot;&gt;
+          &lt;strong&gt;Ocupa 2 files&lt;/strong&gt;&lt;br&gt;
+          Lorem ipsum dolor sit amet.
+        &lt;/div&gt;
+        &lt;div class=&quot;bg-green-200 p-4 rounded&quot;&gt;Normal&lt;/div&gt;
+        &lt;div class=&quot;bg-green-200 p-4 rounded&quot;&gt;Normal&lt;/div&gt;
+        &lt;div class=&quot;bg-green-200 p-4 rounded&quot;&gt;Normal&lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="col-start-end" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -127,6 +185,14 @@
         <div class="bg-gray-200 p-4 rounded">Col 4</div>
       </div>
       <!-- FI EXEMPLE 6 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;grid grid-cols-4 gap-4&quot;&gt;
+        &lt;div class=&quot;bg-gray-200 p-4 rounded&quot;&gt;Col 1&lt;/div&gt;
+        &lt;div class=&quot;col-start-2 col-end-4 bg-yellow-200 p-4 rounded font-bold&quot;&gt;Comença a la col 2, acaba a la 4&lt;/div&gt;
+        &lt;div class=&quot;bg-gray-200 p-4 rounded&quot;&gt;Col 4&lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="layout-complet" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -142,6 +208,16 @@
         <footer class="col-span-12 bg-gray-900 text-white p-4">Peu de pàgina</footer>
       </div>
       <!-- FI EXEMPLE 7 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;grid grid-cols-12 grid-rows-[auto_1fr_auto] h-full border border-gray-300 rounded-lg overflow-hidden&quot;&gt;
+        &lt;header class=&quot;col-span-12 bg-blue-600 text-white p-4 font-bold&quot;&gt;Capçalera&lt;/header&gt;
+        &lt;nav class=&quot;col-span-2 bg-gray-100 p-4 border-r border-gray-300&quot;&gt;Nav&lt;/nav&gt;
+        &lt;main class=&quot;col-span-8 p-4 bg-white&quot;&gt;Contingut principal&lt;/main&gt;
+        &lt;aside class=&quot;col-span-2 bg-gray-50 p-4 border-l border-gray-300&quot;&gt;Sidebar&lt;/aside&gt;
+        &lt;footer class=&quot;col-span-12 bg-gray-900 text-white p-4&quot;&gt;Peu de pàgina&lt;/footer&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
       </div>
     </section>
   </div>

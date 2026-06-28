@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>10 - Display i visibilitat</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../tabs.js"></script>
-  <link rel="stylesheet" href="../tabs.css">
+  <script src="../exemples.js"></script>
+  <link rel="stylesheet" href="../exemples.css">
 </head>
 <body class="bg-gray-50 min-h-screen">
   <div class="max-w-5xl mx-auto px-4 py-8">
@@ -54,6 +54,25 @@
         </div>
       </div>
       <!-- FI EXEMPLE 1 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;space-y-2&quot;&gt;
+        &lt;div class=&quot;block bg-sky-200 p-3 rounded&quot;&gt;block — ocupa tota l&#x27;amplada&lt;/div&gt;
+        &lt;div&gt;
+          &lt;span class=&quot;inline-block bg-green-200 p-3 rounded w-48&quot;&gt;inline-block — respecta w/h (amplada 12rem)&lt;/span&gt;
+          &lt;span class=&quot;inline-block bg-green-200 p-3 rounded&quot;&gt;inline-block adjacent&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;span class=&quot;inline bg-yellow-200 p-3 rounded&quot;&gt;inline — en línia&lt;/span&gt;
+          &lt;span class=&quot;inline bg-yellow-200 p-3 rounded&quot;&gt;no respecta w/h&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+          &lt;span class=&quot;border border-gray-400 p-2&quot;&gt;Text abans&lt;/span&gt;
+          &lt;div class=&quot;hidden bg-red-200 p-3 rounded&quot;&gt;hidden — no es veu ni ocupa espai&lt;/div&gt;
+          &lt;span class=&quot;border border-gray-400 p-2&quot;&gt;Text després (sense forat)&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="visibilitat" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -77,6 +96,25 @@
         <p class="text-sm text-gray-500">El div hidden no ocupa gens d'espai.</p>
       </div>
       <!-- FI EXEMPLE 2 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;space-y-4&quot;&gt;
+        &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+          &lt;div class=&quot;visible bg-blue-200 p-4 rounded&quot;&gt;visible&lt;/div&gt;
+          &lt;div class=&quot;border border-dashed border-gray-400 p-0&quot;&gt;
+            &lt;div class=&quot;invisible bg-blue-200 p-4 rounded&quot;&gt;invisible — ocupa espai&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;visible bg-blue-200 p-4 rounded&quot;&gt;visible&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;text-sm text-gray-500&quot;&gt;El div invisible ocupa espai (marcat amb border) però no es veu.&lt;/p&gt;
+        &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+          &lt;div class=&quot;visible bg-orange-200 p-4 rounded&quot;&gt;visible&lt;/div&gt;
+          &lt;div class=&quot;hidden bg-orange-200 p-4 rounded&quot;&gt;hidden — no ocupa espai&lt;/div&gt;
+          &lt;div class=&quot;visible bg-orange-200 p-4 rounded&quot;&gt;visible&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;text-sm text-gray-500&quot;&gt;El div hidden no ocupa gens d&#x27;espai.&lt;/p&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="overflow" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -110,6 +148,35 @@
         </div>
       </div>
       <!-- FI EXEMPLE 3 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;grid grid-cols-2 gap-6&quot;&gt;
+        &lt;div&gt;
+          &lt;p class=&quot;font-semibold mb-1&quot;&gt;overflow-hidden&lt;/p&gt;
+          &lt;div class=&quot;overflow-hidden bg-gray-100 p-2 rounded border&quot; style=&quot;height: 80px;&quot;&gt;
+            &lt;div style=&quot;height: 120px;&quot; class=&quot;bg-red-200 p-2&quot;&gt;Contingut alt de 120px dins d&#x27;un contenidor de 80px. Aquest text es retalla.&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;p class=&quot;font-semibold mb-1&quot;&gt;overflow-auto&lt;/p&gt;
+          &lt;div class=&quot;overflow-auto bg-gray-100 p-2 rounded border&quot; style=&quot;height: 80px;&quot;&gt;
+            &lt;div style=&quot;height: 120px;&quot; class=&quot;bg-green-200 p-2&quot;&gt;Contingut alt de 120px. Apareix scroll només quan cal. Lorem ipsum dolor sit amet.&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;p class=&quot;font-semibold mb-1&quot;&gt;overflow-scroll&lt;/p&gt;
+          &lt;div class=&quot;overflow-scroll bg-gray-100 p-2 rounded border&quot; style=&quot;height: 80px;&quot;&gt;
+            &lt;div style=&quot;height: 120px;&quot; class=&quot;bg-blue-200 p-2&quot;&gt;Contingut alt de 120px. Scroll visible sempre, fins i tot si no cal.&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;p class=&quot;font-semibold mb-1&quot;&gt;overflow-visible&lt;/p&gt;
+          &lt;div class=&quot;overflow-visible bg-gray-100 p-2 rounded border&quot; style=&quot;height: 80px;&quot;&gt;
+            &lt;div style=&quot;height: 120px;&quot; class=&quot;bg-yellow-200 p-2&quot;&gt;Contingut alt de 120px. Es deixa veure el que sobresurt del contenidor.&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="z-index" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -125,6 +192,17 @@
         </div>
       </div>
       <!-- FI EXEMPLE 4 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;relative h-40 w-full bg-gray-100 rounded border&quot;&gt;
+        &lt;div class=&quot;absolute z-10 bg-white border-2 border-blue-500 p-4 rounded shadow-lg&quot; style=&quot;top: 10px; left: 30px;&quot;&gt;
+          &lt;strong&gt;z-10&lt;/strong&gt; — Per sobre
+        &lt;/div&gt;
+        &lt;div class=&quot;absolute z-0 bg-gray-300 border-2 border-gray-500 p-4 rounded&quot; style=&quot;top: 40px; left: 60px;&quot;&gt;
+          &lt;strong&gt;z-0&lt;/strong&gt; — Per sota
+        &lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="badge-display" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -139,6 +217,16 @@
       </div>
       <p class="mt-2 text-sm text-gray-500">Badge vermell amb número 3, posicionat absolutament sobre la cantonada superior dreta.</p>
       <!-- FI EXEMPLE 5 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;relative inline-block&quot;&gt;
+        &lt;div class=&quot;w-24 h-24 bg-gray-300 rounded-lg&quot;&gt;&lt;/div&gt;
+        &lt;span class=&quot;absolute -top-2 -right-2 bg-red-500 text-white text-xs w-6 h-6 rounded-full flex items-center justify-center font-bold&quot;&gt;
+          3
+        &lt;/span&gt;
+      &lt;/div&gt;
+      &lt;p class=&quot;mt-2 text-sm text-gray-500&quot;&gt;Badge vermell amb número 3, posicionat absolutament sobre la cantonada superior dreta.&lt;/p&gt;</code></pre>
+      </div>
     </section>
   </div>
 

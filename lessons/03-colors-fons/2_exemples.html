@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lliçó 3 - Colors i fons</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../tabs.js"></script>
-  <link rel="stylesheet" href="../tabs.css">
+  <script src="../exemples.js"></script>
+  <link rel="stylesheet" href="../exemples.css">
 </head>
 <body class="bg-gray-50 min-h-screen">
   <div class="max-w-5xl mx-auto px-4 py-8">
@@ -40,6 +40,12 @@
       <p class="text-gray-900">Text gris molt fosc</p>
       <p class="text-red-400">Text vermell suau</p>
       <!-- FI EXEMPLE 1 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;p class=&quot;text-blue-500&quot;&gt;Text blau mitjà&lt;/p&gt;
+      &lt;p class=&quot;text-gray-900&quot;&gt;Text gris molt fosc&lt;/p&gt;
+      &lt;p class=&quot;text-red-400&quot;&gt;Text vermell suau&lt;/p&gt;</code></pre>
+      </div>
     </section>
 
     <section id="bg-color" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -49,6 +55,12 @@
       <div class="bg-gray-100 p-4 mb-2 border">Fons gris clar</div>
       <div class="bg-blue-600 text-white p-4">Fons blau fosc amb text blanc</div>
       <!-- FI EXEMPLE 2 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;div class=&quot;bg-white p-4 mb-2 border&quot;&gt;Fons blanc&lt;/div&gt;
+      &lt;div class=&quot;bg-gray-100 p-4 mb-2 border&quot;&gt;Fons gris clar&lt;/div&gt;
+      &lt;div class=&quot;bg-blue-600 text-white p-4&quot;&gt;Fons blau fosc amb text blanc&lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="opacitat" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -60,6 +72,14 @@
       <div class="bg-blue-500 opacity-25 p-4 mb-2 text-white">25% opac</div>
       <div class="bg-blue-500 opacity-0 p-4 text-white">invisible</div>
       <!-- FI EXEMPLE 3 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;div class=&quot;bg-blue-500 opacity-100 p-4 mb-2 text-white&quot;&gt;100% opac&lt;/div&gt;
+      &lt;div class=&quot;bg-blue-500 opacity-75 p-4 mb-2 text-white&quot;&gt;75% opac&lt;/div&gt;
+      &lt;div class=&quot;bg-blue-500 opacity-50 p-4 mb-2 text-white&quot;&gt;50% opac&lt;/div&gt;
+      &lt;div class=&quot;bg-blue-500 opacity-25 p-4 mb-2 text-white&quot;&gt;25% opac&lt;/div&gt;
+      &lt;div class=&quot;bg-blue-500 opacity-0 p-4 text-white&quot;&gt;invisible&lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="gradient" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -70,6 +90,13 @@
         <p class="text-white/80">Text blanc amb 80% d'opacitat</p>
       </div>
       <!-- FI EXEMPLE 4 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;div class=&quot;bg-gradient-to-r from-blue-500 to-purple-600 text-white p-8 rounded-lg text-center&quot;&gt;
+        &lt;h2 class=&quot;text-3xl font-bold text-yellow-300&quot;&gt;Títol amb accent groc&lt;/h2&gt;
+        &lt;p class=&quot;text-white/80&quot;&gt;Text blanc amb 80% d&#x27;opacitat&lt;/p&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="practic-colors" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -81,6 +108,14 @@
         <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Novetat</span>
       </div>
       <!-- FI EXEMPLE 5 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;div class=&quot;bg-gray-50 p-6 rounded-xl shadow-sm&quot;&gt;
+        &lt;h2 class=&quot;text-indigo-700 text-2xl font-bold&quot;&gt;Notícia destacada&lt;/h2&gt;
+        &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;Lorem ipsum amb colors de la família indigo i gray.&lt;/p&gt;
+        &lt;span class=&quot;bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full&quot;&gt;Novetat&lt;/span&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
   </div>
 

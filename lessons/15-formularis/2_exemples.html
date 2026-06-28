@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formularis amb Tailwind</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../tabs.js"></script>
-  <link rel="stylesheet" href="../tabs.css">
+  <script src="../exemples.js"></script>
+  <link rel="stylesheet" href="../exemples.css">
 </head>
 <body class="bg-gray-50 min-h-screen">
   <div class="max-w-5xl mx-auto px-4 py-8">
@@ -46,6 +46,15 @@
                placeholder="El teu nom">
       </div>
       <!-- FI EXEMPLE 1 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;div class=&quot;mb-4&quot;&gt;
+        &lt;label class=&quot;block text-sm font-medium text-gray-700 mb-1&quot;&gt;Nom&lt;/label&gt;
+        &lt;input type=&quot;text&quot;
+               class=&quot;w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-400&quot;
+               placeholder=&quot;El teu nom&quot;&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="botons-form" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -66,6 +75,23 @@
         </button>
       </div>
       <!-- FI EXEMPLE 2 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;div class=&quot;flex flex-wrap gap-4 items-center&quot;&gt;
+        &lt;button class=&quot;bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500&quot;&gt;
+          Envia
+        &lt;/button&gt;
+        &lt;button class=&quot;bg-gray-200 text-gray-800 font-semibold py-2 px-6 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400&quot;&gt;
+          Secundari
+        &lt;/button&gt;
+        &lt;button class=&quot;bg-red-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500&quot;&gt;
+          Perill
+        &lt;/button&gt;
+        &lt;button class=&quot;bg-transparent border border-blue-600 text-blue-600 font-semibold py-2 px-6 rounded-lg hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500&quot;&gt;
+          Outline
+        &lt;/button&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="checkbox-radio" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -76,6 +102,13 @@
         <span class="text-sm text-gray-700">Accepto els termes</span>
       </label>
       <!-- FI EXEMPLE 3 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;label class=&quot;flex items-center space-x-2&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; class=&quot;rounded border-gray-300 text-blue-600 focus:ring-blue-500&quot;&gt;
+        &lt;span class=&quot;text-sm text-gray-700&quot;&gt;Accepto els termes&lt;/span&gt;
+      &lt;/label&gt;</code></pre>
+      </div>
     </section>
 
     <section id="select" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -87,6 +120,14 @@
         <option>Opció 2</option>
       </select>
       <!-- FI EXEMPLE 4 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;select class=&quot;w-full border border-gray-300 rounded-md px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500&quot;&gt;
+        &lt;option&gt;Selecciona una opció&lt;/option&gt;
+        &lt;option&gt;Opció 1&lt;/option&gt;
+        &lt;option&gt;Opció 2&lt;/option&gt;
+      &lt;/select&gt;</code></pre>
+      </div>
     </section>
 
     <section id="textarea" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -95,6 +136,11 @@
       <textarea class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-400"
                 rows="4" placeholder="Escriu aquí..."></textarea>
       <!-- FI EXEMPLE 5 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;textarea class=&quot;w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-400&quot;
+                rows=&quot;4&quot; placeholder=&quot;Escriu aquí...&quot;&gt;&lt;/textarea&gt;</code></pre>
+      </div>
     </section>
 
     <section id="formulari-complet" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -116,6 +162,24 @@
         </button>
       </form>
       <!-- FI EXEMPLE 6 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;form class=&quot;max-w-lg mx-auto bg-white p-8 shadow-lg rounded-xl space-y-6 border&quot;&gt;
+        &lt;div&gt;
+          &lt;label class=&quot;block text-sm font-medium text-gray-700&quot;&gt;Nom complet&lt;/label&gt;
+          &lt;input type=&quot;text&quot; class=&quot;mt-1 w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500&quot;&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;label class=&quot;block text-sm font-medium text-gray-700&quot;&gt;Missatge&lt;/label&gt;
+          &lt;textarea class=&quot;mt-1 w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;submit&quot;
+                class=&quot;w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed&quot;
+                disabled&gt;
+          Enviar (deshabilitat)
+        &lt;/button&gt;
+      &lt;/form&gt;</code></pre>
+      </div>
     </section>
   </div>
 

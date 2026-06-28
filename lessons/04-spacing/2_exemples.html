@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lliçó 4 - Spacing: margin i padding</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../tabs.js"></script>
-  <link rel="stylesheet" href="../tabs.css">
+  <script src="../exemples.js"></script>
+  <link rel="stylesheet" href="../exemples.css">
 </head>
 <body class="bg-gray-50 min-h-screen">
   <div class="max-w-5xl mx-auto px-4 py-8">
@@ -42,6 +42,11 @@
       <div class="p-4 bg-blue-100 border border-blue-300 mb-4">Padding 16px a tots els costats</div>
       <div class="px-6 py-3 bg-blue-100 border border-blue-300">Padding horitzontal 24px, vertical 12px</div>
       <!-- FI EXEMPLE 1 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;div class=&quot;p-4 bg-blue-100 border border-blue-300 mb-4&quot;&gt;Padding 16px a tots els costats&lt;/div&gt;
+      &lt;div class=&quot;px-6 py-3 bg-blue-100 border border-blue-300&quot;&gt;Padding horitzontal 24px, vertical 12px&lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="margin" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -50,6 +55,11 @@
       <div class="mb-4 bg-yellow-100 p-2">Margin inferior 16px</div>
       <div class="mx-auto w-64 bg-yellow-100 p-2 text-center">Centrat horitzontal (mx-auto)</div>
       <!-- FI EXEMPLE 2 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;div class=&quot;mb-4 bg-yellow-100 p-2&quot;&gt;Margin inferior 16px&lt;/div&gt;
+      &lt;div class=&quot;mx-auto w-64 bg-yellow-100 p-2 text-center&quot;&gt;Centrat horitzontal (mx-auto)&lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="us-spacing" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -61,6 +71,14 @@
         <button class="bg-blue-600 text-white px-6 py-3 rounded-lg">Botó espaiat</button>
       </section>
       <!-- FI EXEMPLE 3 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;section class=&quot;px-4 py-8 bg-gray-50 rounded-lg&quot;&gt;
+        &lt;h2 class=&quot;text-xl font-bold mb-2&quot;&gt;Títol&lt;/h2&gt;
+        &lt;p class=&quot;text-gray-600 mb-6&quot;&gt;Paràgraf amb margin inferior&lt;/p&gt;
+        &lt;button class=&quot;bg-blue-600 text-white px-6 py-3 rounded-lg&quot;&gt;Botó espaiat&lt;/button&gt;
+      &lt;/section&gt;</code></pre>
+      </div>
     </section>
 
     <section id="space-x" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -72,6 +90,14 @@
         <span class="bg-blue-200 px-3 py-1 rounded">Tres</span>
       </div>
       <!-- FI EXEMPLE 4 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;div class=&quot;flex space-x-4 bg-gray-100 p-4 rounded-lg&quot;&gt;
+        &lt;span class=&quot;bg-blue-200 px-3 py-1 rounded&quot;&gt;Un&lt;/span&gt;
+        &lt;span class=&quot;bg-blue-200 px-3 py-1 rounded&quot;&gt;Dos&lt;/span&gt;
+        &lt;span class=&quot;bg-blue-200 px-3 py-1 rounded&quot;&gt;Tres&lt;/span&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="negatiu" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -81,6 +107,12 @@
         <div class="-mt-8 bg-blue-500 text-white p-4 rounded-lg">Aquesta caixa surt per sobre del contenidor</div>
       </div>
       <!-- FI EXEMPLE 5 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;div class=&quot;bg-gray-100 p-6 relative rounded-lg overflow-visible&quot; style=&quot;margin-top: 3rem;&quot;&gt;
+        &lt;div class=&quot;-mt-8 bg-blue-500 text-white p-4 rounded-lg&quot;&gt;Aquesta caixa surt per sobre del contenidor&lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <section id="targeta-spacing" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
@@ -95,6 +127,17 @@
         <button class="mt-6 w-full bg-indigo-600 text-white py-3 rounded-lg">Acceptar</button>
       </div>
       <!-- FI EXEMPLE 6 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>&lt;div class=&quot;max-w-md mx-auto bg-white shadow-lg rounded-xl p-8 border&quot;&gt;
+        &lt;h2 class=&quot;text-2xl font-bold mb-4&quot;&gt;Espaiat&lt;/h2&gt;
+        &lt;div class=&quot;space-y-3&quot;&gt;
+          &lt;p class=&quot;bg-gray-50 p-2 rounded&quot;&gt;Element amb separació automàtica&lt;/p&gt;
+          &lt;p class=&quot;bg-gray-50 p-2 rounded&quot;&gt;Gràcies a &lt;code&gt;space-y-3&lt;/code&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;button class=&quot;mt-6 w-full bg-indigo-600 text-white py-3 rounded-lg&quot;&gt;Acceptar&lt;/button&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
     </section>
   </div>
 

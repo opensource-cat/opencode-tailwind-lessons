@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lliçó 6 - Flexbox (Part 1): contenidor</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../tabs.js"></script>
-  <link rel="stylesheet" href="../tabs.css">
+  <script src="../exemples.js"></script>
+  <link rel="stylesheet" href="../exemples.css">
   <style>
     .child { padding: 0.75rem; border-radius: 0.25rem; text-align: center; font-weight: 600; }
   </style>
@@ -48,6 +48,14 @@
         <div class="child bg-blue-300 flex-1">Fill 3</div>
       </div>
       <!-- FI EXEMPLE 1 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;flex border-2 border-gray-400 p-2 gap-2&quot;&gt;
+        &lt;div class=&quot;child bg-red-300 flex-1&quot;&gt;Fill 1&lt;/div&gt;
+        &lt;div class=&quot;child bg-green-300 flex-1&quot;&gt;Fill 2&lt;/div&gt;
+        &lt;div class=&quot;child bg-blue-300 flex-1&quot;&gt;Fill 3&lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
       <p class="text-sm text-gray-600 mt-1">Contenidor <code>flex</code>: els fills es col·loquen en fila.</p>
     </section>
 
@@ -78,6 +86,29 @@
             <div class="child bg-blue-300">3 — flex-col-reverse</div>
           </div>
           <!-- FI EXEMPLE 2 -->
+          <div class="mt-6 border-t border-gray-200 pt-4">
+            <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+            <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>          &lt;div class=&quot;flex flex-row border-2 border-gray-400 p-2 gap-2&quot;&gt;
+            &lt;div class=&quot;child bg-red-300&quot;&gt;1&lt;/div&gt;
+            &lt;div class=&quot;child bg-green-300&quot;&gt;2&lt;/div&gt;
+            &lt;div class=&quot;child bg-blue-300&quot;&gt;3&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;flex flex-col border-2 border-gray-400 p-2 gap-2 mt-2&quot;&gt;
+            &lt;div class=&quot;child bg-red-300&quot;&gt;1 — flex-col&lt;/div&gt;
+            &lt;div class=&quot;child bg-green-300&quot;&gt;2 — flex-col&lt;/div&gt;
+            &lt;div class=&quot;child bg-blue-300&quot;&gt;3 — flex-col&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;flex flex-row-reverse border-2 border-gray-400 p-2 gap-2 mt-2&quot;&gt;
+            &lt;div class=&quot;child bg-red-300&quot;&gt;1 — flex-row-reverse&lt;/div&gt;
+            &lt;div class=&quot;child bg-green-300&quot;&gt;2 — flex-row-reverse&lt;/div&gt;
+            &lt;div class=&quot;child bg-blue-300&quot;&gt;3 — flex-row-reverse&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;flex flex-col-reverse border-2 border-gray-400 p-2 gap-2 mt-2&quot;&gt;
+            &lt;div class=&quot;child bg-red-300&quot;&gt;1 — flex-col-reverse&lt;/div&gt;
+            &lt;div class=&quot;child bg-green-300&quot;&gt;2 — flex-col-reverse&lt;/div&gt;
+            &lt;div class=&quot;child bg-blue-300&quot;&gt;3 — flex-col-reverse&lt;/div&gt;
+          &lt;/div&gt;</code></pre>
+          </div>
         </div>
       </div>
     </section>
@@ -115,6 +146,36 @@
           <div class="child bg-cyan-200 w-32">Item 7</div>
         </div>
         <!-- FI EXEMPLE 3 -->
+        <div class="mt-6 border-t border-gray-200 pt-4">
+          <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+          <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>        &lt;p class=&quot;font-medium&quot;&gt;flex-wrap:&lt;/p&gt;
+        &lt;div class=&quot;flex flex-wrap border-2 border-gray-400 p-2 gap-2&quot;&gt;
+          &lt;div class=&quot;child bg-yellow-200 w-32&quot;&gt;Item 1&lt;/div&gt;
+          &lt;div class=&quot;child bg-yellow-300 w-32&quot;&gt;Item 2&lt;/div&gt;
+          &lt;div class=&quot;child bg-yellow-200 w-32&quot;&gt;Item 3&lt;/div&gt;
+          &lt;div class=&quot;child bg-yellow-300 w-32&quot;&gt;Item 4&lt;/div&gt;
+          &lt;div class=&quot;child bg-yellow-200 w-32&quot;&gt;Item 5&lt;/div&gt;
+          &lt;div class=&quot;child bg-yellow-300 w-32&quot;&gt;Item 6&lt;/div&gt;
+          &lt;div class=&quot;child bg-yellow-200 w-32&quot;&gt;Item 7&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;font-medium mt-2&quot;&gt;flex-nowrap (per defecte):&lt;/p&gt;
+        &lt;div class=&quot;flex flex-nowrap border-2 border-gray-400 p-2 gap-2 overflow-x-auto&quot;&gt;
+          &lt;div class=&quot;child bg-orange-200 w-40&quot;&gt;Item llarg 1&lt;/div&gt;
+          &lt;div class=&quot;child bg-orange-300 w-40&quot;&gt;Item llarg 2&lt;/div&gt;
+          &lt;div class=&quot;child bg-orange-200 w-40&quot;&gt;Item llarg 3&lt;/div&gt;
+          &lt;div class=&quot;child bg-orange-300 w-40&quot;&gt;Item llarg 4&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;font-medium mt-2&quot;&gt;flex-wrap-reverse:&lt;/p&gt;
+        &lt;div class=&quot;flex flex-wrap-reverse border-2 border-gray-400 p-2 gap-2&quot;&gt;
+          &lt;div class=&quot;child bg-cyan-200 w-32&quot;&gt;Item 1&lt;/div&gt;
+          &lt;div class=&quot;child bg-cyan-300 w-32&quot;&gt;Item 2&lt;/div&gt;
+          &lt;div class=&quot;child bg-cyan-200 w-32&quot;&gt;Item 3&lt;/div&gt;
+          &lt;div class=&quot;child bg-cyan-300 w-32&quot;&gt;Item 4&lt;/div&gt;
+          &lt;div class=&quot;child bg-cyan-200 w-32&quot;&gt;Item 5&lt;/div&gt;
+          &lt;div class=&quot;child bg-cyan-300 w-32&quot;&gt;Item 6&lt;/div&gt;
+          &lt;div class=&quot;child bg-cyan-200 w-32&quot;&gt;Item 7&lt;/div&gt;
+        &lt;/div&gt;</code></pre>
+        </div>
       </div>
     </section>
 
@@ -171,6 +232,57 @@
           </div>
         </div>
         <!-- FI EXEMPLE 4 -->
+        <div class="mt-6 border-t border-gray-200 pt-4">
+          <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+          <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>        &lt;div&gt;
+          &lt;p class=&quot;text-sm font-medium mb-1&quot;&gt;justify-start:&lt;/p&gt;
+          &lt;div class=&quot;flex justify-start border-2 border-gray-400 p-2 gap-2&quot;&gt;
+            &lt;div class=&quot;child bg-red-200 w-20&quot;&gt;1&lt;/div&gt;
+            &lt;div class=&quot;child bg-blue-200 w-20&quot;&gt;2&lt;/div&gt;
+            &lt;div class=&quot;child bg-green-200 w-20&quot;&gt;3&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;p class=&quot;text-sm font-medium mb-1&quot;&gt;justify-center:&lt;/p&gt;
+          &lt;div class=&quot;flex justify-center border-2 border-gray-400 p-2 gap-2&quot;&gt;
+            &lt;div class=&quot;child bg-red-200 w-20&quot;&gt;1&lt;/div&gt;
+            &lt;div class=&quot;child bg-blue-200 w-20&quot;&gt;2&lt;/div&gt;
+            &lt;div class=&quot;child bg-green-200 w-20&quot;&gt;3&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;p class=&quot;text-sm font-medium mb-1&quot;&gt;justify-end:&lt;/p&gt;
+          &lt;div class=&quot;flex justify-end border-2 border-gray-400 p-2 gap-2&quot;&gt;
+            &lt;div class=&quot;child bg-red-200 w-20&quot;&gt;1&lt;/div&gt;
+            &lt;div class=&quot;child bg-blue-200 w-20&quot;&gt;2&lt;/div&gt;
+            &lt;div class=&quot;child bg-green-200 w-20&quot;&gt;3&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;p class=&quot;text-sm font-medium mb-1&quot;&gt;justify-between:&lt;/p&gt;
+          &lt;div class=&quot;flex justify-between border-2 border-gray-400 p-2 gap-2&quot;&gt;
+            &lt;div class=&quot;child bg-red-200 w-20&quot;&gt;1&lt;/div&gt;
+            &lt;div class=&quot;child bg-blue-200 w-20&quot;&gt;2&lt;/div&gt;
+            &lt;div class=&quot;child bg-green-200 w-20&quot;&gt;3&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;p class=&quot;text-sm font-medium mb-1&quot;&gt;justify-around:&lt;/p&gt;
+          &lt;div class=&quot;flex justify-around border-2 border-gray-400 p-2 gap-2&quot;&gt;
+            &lt;div class=&quot;child bg-red-200 w-20&quot;&gt;1&lt;/div&gt;
+            &lt;div class=&quot;child bg-blue-200 w-20&quot;&gt;2&lt;/div&gt;
+            &lt;div class=&quot;child bg-green-200 w-20&quot;&gt;3&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;p class=&quot;text-sm font-medium mb-1&quot;&gt;justify-evenly:&lt;/p&gt;
+          &lt;div class=&quot;flex justify-evenly border-2 border-gray-400 p-2 gap-2&quot;&gt;
+            &lt;div class=&quot;child bg-red-200 w-20&quot;&gt;1&lt;/div&gt;
+            &lt;div class=&quot;child bg-blue-200 w-20&quot;&gt;2&lt;/div&gt;
+            &lt;div class=&quot;child bg-green-200 w-20&quot;&gt;3&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;</code></pre>
+        </div>
       </div>
     </section>
 
@@ -219,6 +331,49 @@
           </div>
         </div>
         <!-- FI EXEMPLE 5 -->
+        <div class="mt-6 border-t border-gray-200 pt-4">
+          <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+          <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>        &lt;div&gt;
+          &lt;p class=&quot;text-sm font-medium mb-1&quot;&gt;items-start:&lt;/p&gt;
+          &lt;div class=&quot;flex items-start border-2 border-gray-400 p-2 gap-2 h-24&quot;&gt;
+            &lt;div class=&quot;child bg-red-200&quot;&gt;Item curt&lt;/div&gt;
+            &lt;div class=&quot;child bg-blue-200 h-16&quot;&gt;Item alt&lt;/div&gt;
+            &lt;div class=&quot;child bg-green-200&quot;&gt;Item curt&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;p class=&quot;text-sm font-medium mb-1&quot;&gt;items-center:&lt;/p&gt;
+          &lt;div class=&quot;flex items-center border-2 border-gray-400 p-2 gap-2 h-24&quot;&gt;
+            &lt;div class=&quot;child bg-red-200&quot;&gt;Item curt&lt;/div&gt;
+            &lt;div class=&quot;child bg-blue-200 h-16&quot;&gt;Item alt&lt;/div&gt;
+            &lt;div class=&quot;child bg-green-200&quot;&gt;Item curt&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;p class=&quot;text-sm font-medium mb-1&quot;&gt;items-end:&lt;/p&gt;
+          &lt;div class=&quot;flex items-end border-2 border-gray-400 p-2 gap-2 h-24&quot;&gt;
+            &lt;div class=&quot;child bg-red-200&quot;&gt;Item curt&lt;/div&gt;
+            &lt;div class=&quot;child bg-blue-200 h-16&quot;&gt;Item alt&lt;/div&gt;
+            &lt;div class=&quot;child bg-green-200&quot;&gt;Item curt&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;p class=&quot;text-sm font-medium mb-1&quot;&gt;items-stretch (per defecte):&lt;/p&gt;
+          &lt;div class=&quot;flex items-stretch border-2 border-gray-400 p-2 gap-2 h-24&quot;&gt;
+            &lt;div class=&quot;child bg-red-200&quot;&gt;Item 1&lt;/div&gt;
+            &lt;div class=&quot;child bg-blue-200&quot;&gt;Item 2&lt;/div&gt;
+            &lt;div class=&quot;child bg-green-200&quot;&gt;Item 3&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;p class=&quot;text-sm font-medium mb-1&quot;&gt;items-baseline:&lt;/p&gt;
+          &lt;div class=&quot;flex items-baseline border-2 border-gray-400 p-2 gap-2 h-24&quot;&gt;
+            &lt;div class=&quot;child bg-red-200 text-lg&quot;&gt;Item gran&lt;/div&gt;
+            &lt;div class=&quot;child bg-blue-200 text-sm&quot;&gt;Item petit&lt;/div&gt;
+            &lt;div class=&quot;child bg-green-200 text-2xl&quot;&gt;Item enorme&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;</code></pre>
+        </div>
       </div>
     </section>
 
@@ -234,6 +389,17 @@
         </nav>
       </div>
       <!-- FI EXEMPLE 6 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;flex justify-between items-center p-4 bg-gray-100 rounded-lg&quot;&gt;
+        &lt;h2 class=&quot;text-xl font-bold&quot;&gt;Logo&lt;/h2&gt;
+        &lt;nav class=&quot;flex space-x-6&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;text-blue-600 hover:underline&quot;&gt;Inici&lt;/a&gt;
+          &lt;a href=&quot;#&quot; class=&quot;text-blue-600 hover:underline&quot;&gt;Serveis&lt;/a&gt;
+          &lt;a href=&quot;#&quot; class=&quot;text-blue-600 hover:underline&quot;&gt;Contacte&lt;/a&gt;
+        &lt;/nav&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
       <p class="text-sm text-gray-600 mt-1">Navbar senzill amb logo a esquerra i enllaços a dreta, centrats verticalment.</p>
     </section>
   </div>

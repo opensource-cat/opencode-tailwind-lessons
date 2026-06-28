@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lliçó 7 - Flexbox (Part 2): elements fills</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../tabs.js"></script>
-  <link rel="stylesheet" href="../tabs.css">
+  <script src="../exemples.js"></script>
+  <link rel="stylesheet" href="../exemples.css">
   <style>
     .child { padding: 0.75rem; border-radius: 0.25rem; text-align: center; font-weight: 600; }
   </style>
@@ -47,6 +47,13 @@
         <div class="flex-1 child bg-blue-300">flex-1</div>
       </div>
       <!-- FI EXEMPLE 1 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;flex border-2 border-gray-400 p-2 gap-2&quot;&gt;
+        &lt;div class=&quot;flex-1 child bg-red-300&quot;&gt;flex-1&lt;/div&gt;
+        &lt;div class=&quot;flex-1 child bg-blue-300&quot;&gt;flex-1&lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
       <p class="text-sm text-gray-600 mt-1">Cada fill ocupa la meitat de l'espai disponible gràcies a <code>flex-1</code>.</p>
     </section>
 
@@ -60,6 +67,15 @@
         <div class="flex-none child bg-yellow-200">flex-none</div>
       </div>
       <!-- FI EXEMPLE 2 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;flex border-2 border-gray-400 p-2 gap-2&quot;&gt;
+        &lt;div class=&quot;flex-1 child bg-red-200&quot;&gt;flex-1&lt;/div&gt;
+        &lt;div class=&quot;flex-auto child bg-green-200&quot;&gt;flex-auto&lt;/div&gt;
+        &lt;div class=&quot;flex-initial child bg-blue-200&quot;&gt;flex-initial&lt;/div&gt;
+        &lt;div class=&quot;flex-none child bg-yellow-200&quot;&gt;flex-none&lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
       <p class="text-sm text-gray-600 mt-1"><code>flex-1</code>: base 0, creix. <code>flex-auto</code>: base auto, creix. <code>flex-initial</code>: base auto, no creix. <code>flex-none</code>: mida fixa.</p>
     </section>
 
@@ -72,6 +88,14 @@
         <div class="order-2 child bg-blue-300">3r HTML · 2n visual</div>
       </div>
       <!-- FI EXEMPLE 3 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;flex border-2 border-gray-400 p-2 gap-2&quot;&gt;
+        &lt;div class=&quot;order-3 child bg-red-300&quot;&gt;1r HTML · 3r visual&lt;/div&gt;
+        &lt;div class=&quot;order-1 child bg-green-300&quot;&gt;2n HTML · 1r visual&lt;/div&gt;
+        &lt;div class=&quot;order-2 child bg-blue-300&quot;&gt;3r HTML · 2n visual&lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
       <p class="text-sm text-gray-600 mt-1">L'ordre visual es reordena amb <code>order-1</code>, <code>order-2</code>, <code>order-3</code>.</p>
     </section>
 
@@ -85,6 +109,15 @@
         <div class="self-stretch child bg-yellow-200">self-stretch</div>
       </div>
       <!-- FI EXEMPLE 4 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;flex items-start h-40 border-2 border-gray-400 p-2 gap-2&quot;&gt;
+        &lt;div class=&quot;self-start child bg-red-200&quot;&gt;self-start&lt;/div&gt;
+        &lt;div class=&quot;self-center child bg-green-200&quot;&gt;self-center&lt;/div&gt;
+        &lt;div class=&quot;self-end child bg-blue-200&quot;&gt;self-end&lt;/div&gt;
+        &lt;div class=&quot;self-stretch child bg-yellow-200&quot;&gt;self-stretch&lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
       <p class="text-sm text-gray-600 mt-1">Cada fill pot sobrescriure l'<code>align-items</code> del pare.</p>
     </section>
 
@@ -98,6 +131,15 @@
         <div class="shrink-0 child bg-yellow-200 w-32">shrink-0 (w-32)</div>
       </div>
       <!-- FI EXEMPLE 5 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;flex border-2 border-gray-400 p-2 gap-2&quot;&gt;
+        &lt;div class=&quot;grow child bg-red-200&quot;&gt;grow&lt;/div&gt;
+        &lt;div class=&quot;grow-0 child bg-green-200&quot;&gt;grow-0&lt;/div&gt;
+        &lt;div class=&quot;shrink child bg-blue-200&quot;&gt;shrink&lt;/div&gt;
+        &lt;div class=&quot;shrink-0 child bg-yellow-200 w-32&quot;&gt;shrink-0 (w-32)&lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
       <p class="text-sm text-gray-600 mt-1"><code>grow</code> creix si hi ha espai. <code>grow-0</code> no creix. <code>shrink</code> es pot encongir. <code>shrink-0</code> no s'encongeix.</p>
     </section>
 
@@ -119,6 +161,23 @@
         </div>
       </div>
       <!-- FI EXEMPLE 6 -->
+      <div class="mt-6 border-t border-gray-200 pt-4">
+        <button onclick="toggleCode(this)" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">Veure codi</button>
+        <pre class="code-preview mt-3 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed"><code>      &lt;div class=&quot;flex flex-wrap gap-4 border-2 border-gray-400 p-4&quot;&gt;
+        &lt;div class=&quot;flex-1 min-w-[250px] bg-white p-4 shadow rounded&quot;&gt;
+          &lt;h3 class=&quot;font-bold text-lg&quot;&gt;Targeta 1&lt;/h3&gt;
+          &lt;p class=&quot;text-gray-600&quot;&gt;S&#x27;adapta a l&#x27;ample disponible gràcies a &lt;code&gt;flex-1&lt;/code&gt; i &lt;code&gt;min-w-[250px]&lt;/code&gt;.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;flex-1 min-w-[250px] bg-white p-4 shadow rounded&quot;&gt;
+          &lt;h3 class=&quot;font-bold text-lg&quot;&gt;Targeta 2&lt;/h3&gt;
+          &lt;p class=&quot;text-gray-600&quot;&gt;Aquesta targeta té el mateix comportament responsive.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;flex-1 min-w-[250px] bg-white p-4 shadow rounded&quot;&gt;
+          &lt;h3 class=&quot;font-bold text-lg&quot;&gt;Targeta 3&lt;/h3&gt;
+          &lt;p class=&quot;text-gray-600&quot;&gt;Quan no hi cap, baixa a la següent línia.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+      </div>
       <p class="text-sm text-gray-600 mt-1">Targetes responsives sense media queries: <code>flex-1</code> + <code>min-w-[250px]</code> + <code>flex-wrap</code>.</p>
     </section>
   </div>
