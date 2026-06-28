@@ -5,114 +5,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lliçó 5 - Width i height</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { font-family: system-ui, sans-serif; max-width: 960px; margin: 0 auto; padding: 1rem; }
-    nav a { margin-right: 0.75rem; }
-    hr { margin: 2rem 0; }
-    section { margin-bottom: 1.5rem; }
-    .demo-box { border: 1px dashed #999; padding: 0.5rem; margin-bottom: 0.5rem; }
-  </style>
+  <script src="../tabs.js"></script>
+  <link rel="stylesheet" href="../tabs.css">
 </head>
-<body>
-
-<h1 class="text-2xl font-bold mb-4">Lliçó 5 — Width i height</h1>
-
-<nav class="mb-6 p-3 bg-gray-100 rounded">
-  <a href="#exemple-1" class="text-blue-600 underline">Exemple 1: Width</a>
-  <a href="#exemple-2" class="text-blue-600 underline">Exemple 2: Percentatges</a>
-  <a href="#exemple-3" class="text-blue-600 underline">Exemple 3: Height</a>
-  <a href="#exemple-4" class="text-blue-600 underline">Exemple 4: Max-width</a>
-  <a href="#exemple-5" class="text-blue-600 underline">Exemple 5: Min-height</a>
-  <a href="#exemple-6" class="text-blue-600 underline">Exemple 6: Complet</a>
-</nav>
-
-<section id="exemple-1">
-  <h2 class="text-xl font-semibold mb-2">Exemple 1: Valors d'amplada (width)</h2>
-  <div class="border-2 border-gray-400 p-2">
-    <!-- INICI EXEMPLE 1 -->
-    <div class="w-64 bg-blue-200 border border-blue-600 mb-2 p-1">w-64 (256px)</div>
-    <div class="w-full bg-blue-300 border border-blue-600 mb-2 p-1">w-full (100% del contenidor)</div>
-    <div class="w-screen bg-blue-100 border border-blue-600 mb-2 p-1">w-screen (100% viewport)</div>
-    <div class="w-auto bg-blue-200 border border-blue-600 p-1">w-auto (ajustat al contingut)</div>
-    <!-- FI EXEMPLE 1 -->
-  </div>
-</section>
-
-<hr>
-
-<section id="exemple-2">
-  <h2 class="text-xl font-semibold mb-2">Exemple 2: Percentatges d'amplada</h2>
-  <div class="border-2 border-gray-400 p-2">
-    <!-- INICI EXEMPLE 2 -->
-    <div class="w-1/2 bg-red-200 border border-red-600 mb-1 p-1">w-1/2 (50%)</div>
-    <div class="w-1/3 bg-green-200 border border-green-600 mb-1 p-1">w-1/3 (33.333%)</div>
-    <div class="w-2/3 bg-yellow-200 border border-yellow-600 mb-1 p-1">w-2/3 (66.666%)</div>
-    <div class="w-1/4 bg-purple-200 border border-purple-600 mb-1 p-1">w-1/4 (25%)</div>
-    <div class="w-3/4 bg-pink-200 border border-pink-600 p-1">w-3/4 (75%)</div>
-    <!-- FI EXEMPLE 2 -->
-  </div>
-</section>
-
-<hr>
-
-<section id="exemple-3">
-  <h2 class="text-xl font-semibold mb-2">Exemple 3: Alçada (height)</h2>
-  <div class="border-2 border-gray-400 p-2">
-    <!-- INICI EXEMPLE 3 -->
-    <div class="h-16 bg-teal-200 border border-teal-600 mb-2 p-1 flex items-center">h-16 (64px)</div>
-    <div class="h-32 border border-gray-600 mb-2 p-1" style="position: relative;">
-      <span class="text-xs">Contenidor h-32 (128px)</span>
-      <div class="h-full bg-teal-300 border border-teal-700 p-1" style="width: 50%;">h-full (100% del pare)</div>
+<body class="bg-gray-50 min-h-screen">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900">Lliçó 5: Width i height</h1>
+      <p class="text-gray-600 mt-1">Exemples pràctics</p>
     </div>
-    <div class="h-16 bg-teal-100 border border-teal-600 mb-2 p-1 flex items-center overflow-auto">
-      <span>h-auto — contingut llarg: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+
+    <div class="flex flex-wrap gap-1 border-b border-gray-300 mb-6" role="tablist">
+      <a href="#width"
+         onclick="obrirTab(event, 'width')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Width</a>
+      <a href="#percentatges"
+         onclick="obrirTab(event, 'percentatges')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Percentatges</a>
+      <a href="#height"
+         onclick="obrirTab(event, 'height')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Height</a>
+      <a href="#max-width"
+         onclick="obrirTab(event, 'max-width')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Max-width</a>
+      <a href="#min-height"
+         onclick="obrirTab(event, 'min-height')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Min-height</a>
+      <a href="#complet-sizing"
+         onclick="obrirTab(event, 'complet-sizing')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Exemple complet</a>
     </div>
-    <p class="text-sm text-gray-500">h-screen no es mostra per evitar ocupar tota la pantalla, però funciona igual que w-screen.</p>
-    <!-- FI EXEMPLE 3 -->
-  </div>
-</section>
 
-<hr>
-
-<section id="exemple-4">
-  <h2 class="text-xl font-semibold mb-2">Exemple 4: Amplada màxima (max-width)</h2>
-  <p class="text-sm text-gray-600 mb-2">Cada div té un max-width diferent; si la finestra és més ampla, el div no supera el límit.</p>
-  <div class="space-y-2">
-    <!-- INICI EXEMPLE 4 -->
-    <div class="max-w-md bg-indigo-100 border border-indigo-500 p-2 mx-auto">max-w-md (28rem / 448px)</div>
-    <div class="max-w-lg bg-indigo-200 border border-indigo-500 p-2 mx-auto">max-w-lg (32rem / 512px)</div>
-    <div class="max-w-xl bg-indigo-300 border border-indigo-500 p-2 mx-auto">max-w-xl (36rem / 576px)</div>
-    <!-- FI EXEMPLE 4 -->
-  </div>
-</section>
-
-<hr>
-
-<section id="exemple-5">
-  <h2 class="text-xl font-semibold mb-2">Exemple 5: Alçada mínima (min-height)</h2>
-  <!-- INICI EXEMPLE 5 -->
-  <section class="min-h-screen bg-gray-50 border-2 border-dashed border-gray-400 p-4">
-    <p>Aquesta secció té <strong>min-h-screen</strong>. Ocupa com a mínim tota l'alçada de la pantalla.</p>
-    <p class="mt-4">Molt útil per hero sections i landing pages.</p>
-  </section>
-  <!-- FI EXEMPLE 5 -->
-</section>
-
-<hr>
-
-<section id="exemple-6">
-  <h2 class="text-xl font-semibold mb-2">Exemple 6: Exemple complet</h2>
-  <!-- INICI EXEMPLE 6 -->
-  <section class="min-h-screen bg-gray-50 flex items-center border-2 border-dashed border-gray-400">
-    <div class="max-w-4xl mx-auto w-full px-4">
-      <div class="w-1/2 bg-white p-8 shadow-lg rounded-xl">
-        <h2 class="text-2xl font-bold">Contingut centrat amb ample controlat</h2>
-        <p class="mt-2 text-gray-600">Aquest és un exemple complet que combina min-h-screen, flex, max-w-4xl, mx-auto, w-1/2, padding, shadow i rounded.</p>
+    <section id="width" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Valors d'amplada (width)</h2>
+      <div class="border-2 border-gray-400 p-2">
+        <!-- INICI EXEMPLE 1 -->
+        <div class="w-64 bg-blue-200 border border-blue-600 mb-2 p-1">w-64 (256px)</div>
+        <div class="w-full bg-blue-300 border border-blue-600 mb-2 p-1">w-full (100% del contenidor)</div>
+        <div class="w-screen bg-blue-100 border border-blue-600 mb-2 p-1">w-screen (100% viewport)</div>
+        <div class="w-auto bg-blue-200 border border-blue-600 p-1">w-auto (ajustat al contingut)</div>
+        <!-- FI EXEMPLE 1 -->
       </div>
-    </div>
-  </section>
-  <!-- FI EXEMPLE 6 -->
-</section>
+    </section>
+
+    <section id="percentatges" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Percentatges d'amplada</h2>
+      <div class="border-2 border-gray-400 p-2">
+        <!-- INICI EXEMPLE 2 -->
+        <div class="w-1/2 bg-red-200 border border-red-600 mb-1 p-1">w-1/2 (50%)</div>
+        <div class="w-1/3 bg-green-200 border border-green-600 mb-1 p-1">w-1/3 (33.333%)</div>
+        <div class="w-2/3 bg-yellow-200 border border-yellow-600 mb-1 p-1">w-2/3 (66.666%)</div>
+        <div class="w-1/4 bg-purple-200 border border-purple-600 mb-1 p-1">w-1/4 (25%)</div>
+        <div class="w-3/4 bg-pink-200 border border-pink-600 p-1">w-3/4 (75%)</div>
+        <!-- FI EXEMPLE 2 -->
+      </div>
+    </section>
+
+    <section id="height" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Alçada (height)</h2>
+      <div class="border-2 border-gray-400 p-2">
+        <!-- INICI EXEMPLE 3 -->
+        <div class="h-16 bg-teal-200 border border-teal-600 mb-2 p-1 flex items-center">h-16 (64px)</div>
+        <div class="h-32 border border-gray-600 mb-2 p-1" style="position: relative;">
+          <span class="text-xs">Contenidor h-32 (128px)</span>
+          <div class="h-full bg-teal-300 border border-teal-700 p-1" style="width: 50%;">h-full (100% del pare)</div>
+        </div>
+        <div class="h-16 bg-teal-100 border border-teal-600 mb-2 p-1 flex items-center overflow-auto">
+          <span>h-auto — contingut llarg: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+        </div>
+        <p class="text-sm text-gray-500">h-screen no es mostra per evitar ocupar tota la pantalla, però funciona igual que w-screen.</p>
+        <!-- FI EXEMPLE 3 -->
+      </div>
+    </section>
+
+    <section id="max-width" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Amplada màxima (max-width)</h2>
+      <p class="text-sm text-gray-600 mb-2">Cada div té un max-width diferent; si la finestra és més ampla, el div no supera el límit.</p>
+      <div class="space-y-2">
+        <!-- INICI EXEMPLE 4 -->
+        <div class="max-w-md bg-indigo-100 border border-indigo-500 p-2 mx-auto">max-w-md (28rem / 448px)</div>
+        <div class="max-w-lg bg-indigo-200 border border-indigo-500 p-2 mx-auto">max-w-lg (32rem / 512px)</div>
+        <div class="max-w-xl bg-indigo-300 border border-indigo-500 p-2 mx-auto">max-w-xl (36rem / 576px)</div>
+        <!-- FI EXEMPLE 4 -->
+      </div>
+    </section>
+
+    <section id="min-height" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Alçada mínima (min-height)</h2>
+      <!-- INICI EXEMPLE 5 -->
+      <section class="min-h-screen bg-gray-50 border-2 border-dashed border-gray-400 p-4">
+        <p>Aquesta secció té <strong>min-h-screen</strong>. Ocupa com a mínim tota l'alçada de la pantalla.</p>
+        <p class="mt-4">Molt útil per hero sections i landing pages.</p>
+      </section>
+      <!-- FI EXEMPLE 5 -->
+    </section>
+
+    <section id="complet-sizing" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Exemple complet sizing</h2>
+      <!-- INICI EXEMPLE 6 -->
+      <section class="min-h-screen bg-gray-50 flex items-center border-2 border-dashed border-gray-400">
+        <div class="max-w-4xl mx-auto w-full px-4">
+          <div class="w-1/2 bg-white p-8 shadow-lg rounded-xl">
+            <h2 class="text-2xl font-bold">Contingut centrat amb ample controlat</h2>
+            <p class="mt-2 text-gray-600">Aquest és un exemple complet que combina min-h-screen, flex, max-w-4xl, mx-auto, w-1/2, padding, shadow i rounded.</p>
+          </div>
+        </div>
+      </section>
+      <!-- FI EXEMPLE 6 -->
+    </section>
+  </div>
+
 
 </body>
 </html>

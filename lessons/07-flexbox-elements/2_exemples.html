@@ -5,119 +5,124 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lliçó 7 - Flexbox (Part 2): elements fills</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tabs.js"></script>
+  <link rel="stylesheet" href="../tabs.css">
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 960px; margin: 0 auto; padding: 1rem; }
-    nav a { margin-right: 0.75rem; }
-    hr { margin: 2rem 0; }
-    section { margin-bottom: 1.5rem; }
     .child { padding: 0.75rem; border-radius: 0.25rem; text-align: center; font-weight: 600; }
   </style>
 </head>
-<body>
-
-<h1 class="text-2xl font-bold mb-4">Lliçó 7 — Flexbox (Part 2): elements fills</h1>
-
-<nav class="mb-6 p-3 bg-gray-100 rounded">
-  <a href="#exemple-1" class="text-blue-600 underline">Exemple 1: flex-1</a>
-  <a href="#exemple-2" class="text-blue-600 underline">Exemple 2: Variants flex</a>
-  <a href="#exemple-3" class="text-blue-600 underline">Exemple 3: Order</a>
-  <a href="#exemple-4" class="text-blue-600 underline">Exemple 4: Self alignment</a>
-  <a href="#exemple-5" class="text-blue-600 underline">Exemple 5: Grow/shrink</a>
-  <a href="#exemple-6" class="text-blue-600 underline">Exemple 6: Cards flex-wrap</a>
-</nav>
-
-<section id="exemple-1">
-  <h2 class="text-xl font-semibold mb-2">Exemple 1: flex-1 (créixer per igual)</h2>
-  <!-- INICI EXEMPLE 1 -->
-  <div class="flex border-2 border-gray-400 p-2 gap-2">
-    <div class="flex-1 child bg-red-300">flex-1</div>
-    <div class="flex-1 child bg-blue-300">flex-1</div>
-  </div>
-  <!-- FI EXEMPLE 1 -->
-  <p class="text-sm text-gray-600 mt-1">Cada fill ocupa la meitat de l'espai disponible gràcies a <code>flex-1</code>.</p>
-</section>
-
-<hr>
-
-<section id="exemple-2">
-  <h2 class="text-xl font-semibold mb-2">Exemple 2: Variants de flex</h2>
-  <!-- INICI EXEMPLE 2 -->
-  <div class="flex border-2 border-gray-400 p-2 gap-2">
-    <div class="flex-1 child bg-red-200">flex-1</div>
-    <div class="flex-auto child bg-green-200">flex-auto</div>
-    <div class="flex-initial child bg-blue-200">flex-initial</div>
-    <div class="flex-none child bg-yellow-200">flex-none</div>
-  </div>
-  <!-- FI EXEMPLE 2 -->
-  <p class="text-sm text-gray-600 mt-1"><code>flex-1</code>: base 0, creix. <code>flex-auto</code>: base auto, creix. <code>flex-initial</code>: base auto, no creix. <code>flex-none</code>: mida fixa.</p>
-</section>
-
-<hr>
-
-<section id="exemple-3">
-  <h2 class="text-xl font-semibold mb-2">Exemple 3: Order (ordre visual)</h2>
-  <!-- INICI EXEMPLE 3 -->
-  <div class="flex border-2 border-gray-400 p-2 gap-2">
-    <div class="order-3 child bg-red-300">1r HTML · 3r visual</div>
-    <div class="order-1 child bg-green-300">2n HTML · 1r visual</div>
-    <div class="order-2 child bg-blue-300">3r HTML · 2n visual</div>
-  </div>
-  <!-- FI EXEMPLE 3 -->
-  <p class="text-sm text-gray-600 mt-1">L'ordre visual es reordena amb <code>order-1</code>, <code>order-2</code>, <code>order-3</code>.</p>
-</section>
-
-<hr>
-
-<section id="exemple-4">
-  <h2 class="text-xl font-semibold mb-2">Exemple 4: Self alignment (alineació individual)</h2>
-  <!-- INICI EXEMPLE 4 -->
-  <div class="flex items-start h-40 border-2 border-gray-400 p-2 gap-2">
-    <div class="self-start child bg-red-200">self-start</div>
-    <div class="self-center child bg-green-200">self-center</div>
-    <div class="self-end child bg-blue-200">self-end</div>
-    <div class="self-stretch child bg-yellow-200">self-stretch</div>
-  </div>
-  <!-- FI EXEMPLE 4 -->
-  <p class="text-sm text-gray-600 mt-1">Cada fill pot sobrescriure l'<code>align-items</code> del pare.</p>
-</section>
-
-<hr>
-
-<section id="exemple-5">
-  <h2 class="text-xl font-semibold mb-2">Exemple 5: Grow i shrink individuals</h2>
-  <!-- INICI EXEMPLE 5 -->
-  <div class="flex border-2 border-gray-400 p-2 gap-2">
-    <div class="grow child bg-red-200">grow</div>
-    <div class="grow-0 child bg-green-200">grow-0</div>
-    <div class="shrink child bg-blue-200">shrink</div>
-    <div class="shrink-0 child bg-yellow-200 w-32">shrink-0 (w-32)</div>
-  </div>
-  <!-- FI EXEMPLE 5 -->
-  <p class="text-sm text-gray-600 mt-1"><code>grow</code> creix si hi ha espai. <code>grow-0</code> no creix. <code>shrink</code> es pot encongir. <code>shrink-0</code> no s'encongeix.</p>
-</section>
-
-<hr>
-
-<section id="exemple-6">
-  <h2 class="text-xl font-semibold mb-2">Exemple 6: Targetes responsives amb flex-wrap</h2>
-  <!-- INICI EXEMPLE 6 -->
-  <div class="flex flex-wrap gap-4 border-2 border-gray-400 p-4">
-    <div class="flex-1 min-w-[250px] bg-white p-4 shadow rounded">
-      <h3 class="font-bold text-lg">Targeta 1</h3>
-      <p class="text-gray-600">S'adapta a l'ample disponible gràcies a <code>flex-1</code> i <code>min-w-[250px]</code>.</p>
+<body class="bg-gray-50 min-h-screen">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900">Lliçó 7 — Flexbox (Part 2): elements fills</h1>
+      <p class="text-gray-600 mt-1">Exemples pràctics</p>
     </div>
-    <div class="flex-1 min-w-[250px] bg-white p-4 shadow rounded">
-      <h3 class="font-bold text-lg">Targeta 2</h3>
-      <p class="text-gray-600">Aquesta targeta té el mateix comportament responsive.</p>
+
+    <div class="flex flex-wrap gap-1 border-b border-gray-300 mb-6" role="tablist">
+      <a href="#flex-1"
+         onclick="obrirTab(event, 'flex-1')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Flex-1</a>
+      <a href="#variants-flex"
+         onclick="obrirTab(event, 'variants-flex')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Variants flex</a>
+      <a href="#order"
+         onclick="obrirTab(event, 'order')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Order</a>
+      <a href="#self-align"
+         onclick="obrirTab(event, 'self-align')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Self alignment</a>
+      <a href="#grow-shrink"
+         onclick="obrirTab(event, 'grow-shrink')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Grow i shrink</a>
+      <a href="#cards-flex"
+         onclick="obrirTab(event, 'cards-flex')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Cards flex-wrap</a>
     </div>
-    <div class="flex-1 min-w-[250px] bg-white p-4 shadow rounded">
-      <h3 class="font-bold text-lg">Targeta 3</h3>
-      <p class="text-gray-600">Quan no hi cap, baixa a la següent línia.</p>
-    </div>
+
+    <section id="flex-1" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">flex-1 (créixer per igual)</h2>
+      <!-- INICI EXEMPLE 1 -->
+      <div class="flex border-2 border-gray-400 p-2 gap-2">
+        <div class="flex-1 child bg-red-300">flex-1</div>
+        <div class="flex-1 child bg-blue-300">flex-1</div>
+      </div>
+      <!-- FI EXEMPLE 1 -->
+      <p class="text-sm text-gray-600 mt-1">Cada fill ocupa la meitat de l'espai disponible gràcies a <code>flex-1</code>.</p>
+    </section>
+
+    <section id="variants-flex" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Variants de flex</h2>
+      <!-- INICI EXEMPLE 2 -->
+      <div class="flex border-2 border-gray-400 p-2 gap-2">
+        <div class="flex-1 child bg-red-200">flex-1</div>
+        <div class="flex-auto child bg-green-200">flex-auto</div>
+        <div class="flex-initial child bg-blue-200">flex-initial</div>
+        <div class="flex-none child bg-yellow-200">flex-none</div>
+      </div>
+      <!-- FI EXEMPLE 2 -->
+      <p class="text-sm text-gray-600 mt-1"><code>flex-1</code>: base 0, creix. <code>flex-auto</code>: base auto, creix. <code>flex-initial</code>: base auto, no creix. <code>flex-none</code>: mida fixa.</p>
+    </section>
+
+    <section id="order" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Order (ordre visual)</h2>
+      <!-- INICI EXEMPLE 3 -->
+      <div class="flex border-2 border-gray-400 p-2 gap-2">
+        <div class="order-3 child bg-red-300">1r HTML · 3r visual</div>
+        <div class="order-1 child bg-green-300">2n HTML · 1r visual</div>
+        <div class="order-2 child bg-blue-300">3r HTML · 2n visual</div>
+      </div>
+      <!-- FI EXEMPLE 3 -->
+      <p class="text-sm text-gray-600 mt-1">L'ordre visual es reordena amb <code>order-1</code>, <code>order-2</code>, <code>order-3</code>.</p>
+    </section>
+
+    <section id="self-align" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Self alignment</h2>
+      <!-- INICI EXEMPLE 4 -->
+      <div class="flex items-start h-40 border-2 border-gray-400 p-2 gap-2">
+        <div class="self-start child bg-red-200">self-start</div>
+        <div class="self-center child bg-green-200">self-center</div>
+        <div class="self-end child bg-blue-200">self-end</div>
+        <div class="self-stretch child bg-yellow-200">self-stretch</div>
+      </div>
+      <!-- FI EXEMPLE 4 -->
+      <p class="text-sm text-gray-600 mt-1">Cada fill pot sobrescriure l'<code>align-items</code> del pare.</p>
+    </section>
+
+    <section id="grow-shrink" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Grow i shrink individuals</h2>
+      <!-- INICI EXEMPLE 5 -->
+      <div class="flex border-2 border-gray-400 p-2 gap-2">
+        <div class="grow child bg-red-200">grow</div>
+        <div class="grow-0 child bg-green-200">grow-0</div>
+        <div class="shrink child bg-blue-200">shrink</div>
+        <div class="shrink-0 child bg-yellow-200 w-32">shrink-0 (w-32)</div>
+      </div>
+      <!-- FI EXEMPLE 5 -->
+      <p class="text-sm text-gray-600 mt-1"><code>grow</code> creix si hi ha espai. <code>grow-0</code> no creix. <code>shrink</code> es pot encongir. <code>shrink-0</code> no s'encongeix.</p>
+    </section>
+
+    <section id="cards-flex" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Targetes responsives amb flex-wrap</h2>
+      <!-- INICI EXEMPLE 6 -->
+      <div class="flex flex-wrap gap-4 border-2 border-gray-400 p-4">
+        <div class="flex-1 min-w-[250px] bg-white p-4 shadow rounded">
+          <h3 class="font-bold text-lg">Targeta 1</h3>
+          <p class="text-gray-600">S'adapta a l'ample disponible gràcies a <code>flex-1</code> i <code>min-w-[250px]</code>.</p>
+        </div>
+        <div class="flex-1 min-w-[250px] bg-white p-4 shadow rounded">
+          <h3 class="font-bold text-lg">Targeta 2</h3>
+          <p class="text-gray-600">Aquesta targeta té el mateix comportament responsive.</p>
+        </div>
+        <div class="flex-1 min-w-[250px] bg-white p-4 shadow rounded">
+          <h3 class="font-bold text-lg">Targeta 3</h3>
+          <p class="text-gray-600">Quan no hi cap, baixa a la següent línia.</p>
+        </div>
+      </div>
+      <!-- FI EXEMPLE 6 -->
+      <p class="text-sm text-gray-600 mt-1">Targetes responsives sense media queries: <code>flex-1</code> + <code>min-w-[250px]</code> + <code>flex-wrap</code>.</p>
+    </section>
   </div>
-  <!-- FI EXEMPLE 6 -->
-  <p class="text-sm text-gray-600 mt-1">Targetes responsives sense media queries: <code>flex-1</code> + <code>min-w-[250px]</code> + <code>flex-wrap</code>.</p>
-</section>
+
 
 </body>
 </html>

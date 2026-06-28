@@ -18,7 +18,7 @@ paginate: true
 <div class="sticky">...</div>       /* Fixat dins del seu contenidor en scroll */
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/19-positioning/2_exemples.html#exemple-1)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/19-positioning/2_exemples.html#position-basics)
 
 ---
 
@@ -30,7 +30,7 @@ paginate: true
 <div class="absolute bottom-0 right-0">Cantonada inferior dreta</div>
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/19-positioning/2_exemples.html#exemple-2)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/19-positioning/2_exemples.html#controls-posicio)
 
 `top-{mida}`, `right-{mida}`, `bottom-{mida}`, `left-{mida}`.
 
@@ -44,7 +44,7 @@ paginate: true
 <div class="absolute inset-y-0">Només vertical (top=0, bottom=0)</div>
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/19-positioning/2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/19-positioning/2_exemples.html#inset)
 
 `inset-0` és equivalent a `top-0 right-0 bottom-0 left-0`.
 
@@ -65,7 +65,7 @@ paginate: true
 </div>
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/19-positioning/2_exemples.html#exemple-4)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/19-positioning/2_exemples.html#modal)
 
 ---
 
@@ -82,7 +82,7 @@ paginate: true
 </div>
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/19-positioning/2_exemples.html#exemple-5)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/19-positioning/2_exemples.html#badge-posicio)
 
 `-translate-y-1/2 translate-x-1/2` per centrar el badge sobre la cantonada.
 
@@ -97,7 +97,7 @@ paginate: true
 </header>
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/19-positioning/2_exemples.html#exemple-6)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/19-positioning/2_exemples.html#sticky-header)
 
 `sticky top-0` = es comporta com relative fins que el scroll el situa a top:0, llavors es queda fixat.
 
@@ -115,7 +115,7 @@ Quan l'escala de Tailwind no té el valor exacte:
 <div class="bg-[url('/img/foto.jpg')]">Imatge de fons</div>
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/19-positioning/2_exemples.html#exemple-7)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/19-positioning/2_exemples.html#valors-arbitraris)
 
 ---
 
@@ -136,4 +136,4 @@ Quan l'escala de Tailwind no té el valor exacte:
 <!-- Millor configurar-ho a tailwind.config.js si es repeteix -->
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/19-positioning/2_exemples.html#exemple-8)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/19-positioning/2_exemples.html#quan-usar-arbitraris)

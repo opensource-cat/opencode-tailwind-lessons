@@ -49,7 +49,7 @@ De `xs` a `9xl`:
 <p class="text-justify">Justificat (ambdues bandes rectes)</p>
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/02-tipografia/2_exemples.html#exemple-1)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/02-tipografia/2_exemples.html#alineacio)
 
 ---
 
@@ -61,7 +61,7 @@ De `xs` a `9xl`:
 <p class="capitalize">Primera Lletra De Cada Paraula En Majúscula</p>
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/02-tipografia/2_exemples.html#exemple-2)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/02-tipografia/2_exemples.html#transformacio)
 
 ---
 
@@ -103,4 +103,4 @@ De `xs` a `9xl`:
 </p>
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/02-tipografia/2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/02-tipografia/2_exemples.html#complet-tipografia)

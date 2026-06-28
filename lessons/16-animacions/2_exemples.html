@@ -5,135 +5,140 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Animacions i transicions</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tabs.js"></script>
+  <link rel="stylesheet" href="../tabs.css">
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 0 auto; padding: 2rem; background: #f9fafb; color: #111827; }
-    nav a { margin-right: 0.75rem; color: #2563eb; text-decoration: none; }
-    nav a:hover { text-decoration: underline; }
-    section { margin: 2rem 0; padding: 1.5rem; background: white; border-radius: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-    h1 { font-size: 1.875rem; font-weight: 700; }
-    h2 { font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; }
-    hr { border: none; border-top: 2px solid #e5e7eb; margin: 2rem 0; }
     .demo-box { width: 80px; height: 80px; background: #3b82f6; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; }
   </style>
 </head>
-<body>
-  <h1>Animacions i transicions</h1>
-  <nav>
-    <a href="#exemple-1">Transició bàsica</a>
-    <a href="#exemple-2">Tipus de transició</a>
-    <a href="#exemple-3">Durada</a>
-    <a href="#exemple-4">Easing</a>
-    <a href="#exemple-5">Scale / translate</a>
-    <a href="#exemple-6">Animacions predefinides</a>
-    <a href="#exemple-7">Targeta animada</a>
-  </nav>
-
-  <section id="exemple-1">
-    <h2>1. Transició bàsica</h2>
-    <!-- INICI EXEMPLE 1 -->
-    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg transition hover:bg-blue-700">
-      Suau
-    </button>
-    <!-- FI EXEMPLE 1 -->
-  </section>
-
-  <hr>
-
-  <section id="exemple-2">
-    <h2>2. Tipus de transició</h2>
-    <p class="text-sm text-gray-500 mb-3">Passa el ratolí per sobre de cada caixa per veure l'efecte.</p>
-    <!-- INICI EXEMPLE 2 -->
-    <div class="grid grid-cols-2 gap-4">
-      <div class="demo-box transition-colors hover:bg-green-500">colors</div>
-      <div class="demo-box transition-transform hover:scale-110">transform</div>
-      <div class="demo-box transition-opacity hover:opacity-50">opacity</div>
-      <div class="demo-box transition-shadow hover:shadow-xl">shadow</div>
+<body class="bg-gray-50 min-h-screen">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900">Animacions i transicions</h1>
+      <p class="text-gray-600 mt-1">Exemples pràctics</p>
     </div>
-    <!-- FI EXEMPLE 2 -->
-  </section>
 
-  <hr>
-
-  <section id="exemple-3">
-    <h2>3. Durada</h2>
-    <p class="text-sm text-gray-500 mb-3">Cada div té una durada de transició diferent (passa el ratolí per sobre).</p>
-    <!-- INICI EXEMPLE 3 -->
-    <div class="space-y-3">
-      <div class="demo-box transition duration-75 hover:bg-green-500" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">duration-75 (75ms)</div>
-      <div class="demo-box transition duration-150 hover:bg-green-500" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">duration-150 (150ms)</div>
-      <div class="demo-box transition duration-300 hover:bg-green-500" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">duration-300 (300ms)</div>
-      <div class="demo-box transition duration-500 hover:bg-green-500" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">duration-500 (500ms)</div>
-      <div class="demo-box transition duration-1000 hover:bg-green-500" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">duration-1000 (1000ms)</div>
+    <div class="flex flex-wrap gap-1 border-b border-gray-300 mb-6" role="tablist">
+      <a href="#transicio-basica"
+         onclick="obrirTab(event, 'transicio-basica')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Transició bàsica</a>
+      <a href="#tipus-transicio"
+         onclick="obrirTab(event, 'tipus-transicio')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Tipus transició</a>
+      <a href="#durada"
+         onclick="obrirTab(event, 'durada')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Durada</a>
+      <a href="#easing"
+         onclick="obrirTab(event, 'easing')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Easing</a>
+      <a href="#scale-translate"
+         onclick="obrirTab(event, 'scale-translate')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Scale/translate</a>
+      <a href="#animacions-predef"
+         onclick="obrirTab(event, 'animacions-predef')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Animacions</a>
+      <a href="#targeta-animada"
+         onclick="obrirTab(event, 'targeta-animada')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Targeta animada</a>
     </div>
-    <!-- FI EXEMPLE 3 -->
-  </section>
 
-  <hr>
+    <section id="transicio-basica" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Transició bàsica</h2>
+      <!-- INICI EXEMPLE 1 -->
+      <button class="bg-blue-600 text-white px-4 py-2 rounded-lg transition hover:bg-blue-700">
+        Suau
+      </button>
+      <!-- FI EXEMPLE 1 -->
+    </section>
 
-  <section id="exemple-4">
-    <h2>4. Corbes d'easing</h2>
-    <p class="text-sm text-gray-500 mb-3">Totes duren 1s. Passa el ratolí per sobre per veure la diferència.</p>
-    <!-- INICI EXEMPLE 4 -->
-    <div class="grid grid-cols-2 gap-4">
-      <div class="demo-box transition ease-linear duration-1000 hover:translate-x-12" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">ease-linear</div>
-      <div class="demo-box transition ease-in duration-1000 hover:translate-x-12" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">ease-in</div>
-      <div class="demo-box transition ease-out duration-1000 hover:translate-x-12" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">ease-out</div>
-      <div class="demo-box transition ease-in-out duration-1000 hover:translate-x-12" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">ease-in-out</div>
-    </div>
-    <!-- FI EXEMPLE 4 -->
-  </section>
-
-  <hr>
-
-  <section id="exemple-5">
-    <h2>5. Scale / translate</h2>
-    <!-- INICI EXEMPLE 5 -->
-    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg transition-transform duration-200 hover:scale-105 hover:-translate-y-1">
-      Botó que es mou
-    </button>
-    <!-- FI EXEMPLE 5 -->
-  </section>
-
-  <hr>
-
-  <section id="exemple-6">
-    <h2>6. Animacions predefinides</h2>
-    <!-- INICI EXEMPLE 6 -->
-    <div class="flex items-center gap-8 flex-wrap">
-      <div class="flex flex-col items-center gap-2">
-        <span class="animate-spin inline-block text-2xl">⟳</span>
-        <span class="text-xs text-gray-500">animate-spin</span>
+    <section id="tipus-transicio" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Tipus de transició</h2>
+      <p class="text-sm text-gray-500 mb-3">Passa el ratolí per sobre de cada caixa per veure l'efecte.</p>
+      <!-- INICI EXEMPLE 2 -->
+      <div class="grid grid-cols-2 gap-4">
+        <div class="demo-box transition-colors hover:bg-green-500">colors</div>
+        <div class="demo-box transition-transform hover:scale-110">transform</div>
+        <div class="demo-box transition-opacity hover:opacity-50">opacity</div>
+        <div class="demo-box transition-shadow hover:shadow-xl">shadow</div>
       </div>
-      <div class="flex flex-col items-center gap-2">
-        <div class="animate-pulse bg-red-500 w-4 h-4 rounded-full"></div>
-        <span class="text-xs text-gray-500">animate-pulse</span>
-      </div>
-      <div class="flex flex-col items-center gap-2">
-        <div class="animate-bounce bg-blue-500 w-4 h-4 rounded-full"></div>
-        <span class="text-xs text-gray-500">animate-bounce</span>
-      </div>
-      <div class="flex flex-col items-center gap-2">
-        <div class="animate-ping bg-green-500 w-4 h-4 rounded-full"></div>
-        <span class="text-xs text-gray-500">animate-ping</span>
-      </div>
-    </div>
-    <!-- FI EXEMPLE 6 -->
-  </section>
+      <!-- FI EXEMPLE 2 -->
+    </section>
 
-  <hr>
+    <section id="durada" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Durada de transició</h2>
+      <p class="text-sm text-gray-500 mb-3">Cada div té una durada de transició diferent (passa el ratolí per sobre).</p>
+      <!-- INICI EXEMPLE 3 -->
+      <div class="space-y-3">
+        <div class="demo-box transition duration-75 hover:bg-green-500" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">duration-75 (75ms)</div>
+        <div class="demo-box transition duration-150 hover:bg-green-500" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">duration-150 (150ms)</div>
+        <div class="demo-box transition duration-300 hover:bg-green-500" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">duration-300 (300ms)</div>
+        <div class="demo-box transition duration-500 hover:bg-green-500" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">duration-500 (500ms)</div>
+        <div class="demo-box transition duration-1000 hover:bg-green-500" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">duration-1000 (1000ms)</div>
+      </div>
+      <!-- FI EXEMPLE 3 -->
+    </section>
 
-  <section id="exemple-7">
-    <h2>7. Targeta animada</h2>
-    <!-- INICI EXEMPLE 7 -->
-    <div class="group bg-white p-6 rounded-xl shadow-md transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 cursor-pointer max-w-sm border">
-      <h3 class="text-lg font-bold transition-colors duration-200 group-hover:text-blue-600">
-        Targeta interactiva
-      </h3>
-      <p class="text-gray-600 mt-2 transition-opacity duration-200 group-hover:text-gray-800">
-        Text que es fa més fosc en hover.
-      </p>
-    </div>
-    <!-- FI EXEMPLE 7 -->
-  </section>
+    <section id="easing" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Corbes d'easing</h2>
+      <p class="text-sm text-gray-500 mb-3">Totes duren 1s. Passa el ratolí per sobre per veure la diferència.</p>
+      <!-- INICI EXEMPLE 4 -->
+      <div class="grid grid-cols-2 gap-4">
+        <div class="demo-box transition ease-linear duration-1000 hover:translate-x-12" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">ease-linear</div>
+        <div class="demo-box transition ease-in duration-1000 hover:translate-x-12" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">ease-in</div>
+        <div class="demo-box transition ease-out duration-1000 hover:translate-x-12" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">ease-out</div>
+        <div class="demo-box transition ease-in-out duration-1000 hover:translate-x-12" style="width:auto; padding:0 1rem; height:2.5rem; font-size:0.875rem;">ease-in-out</div>
+      </div>
+      <!-- FI EXEMPLE 4 -->
+    </section>
+
+    <section id="scale-translate" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Scale / translate</h2>
+      <!-- INICI EXEMPLE 5 -->
+      <button class="bg-blue-600 text-white px-4 py-2 rounded-lg transition-transform duration-200 hover:scale-105 hover:-translate-y-1">
+        Botó que es mou
+      </button>
+      <!-- FI EXEMPLE 5 -->
+    </section>
+
+    <section id="animacions-predef" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Animacions predefinides</h2>
+      <!-- INICI EXEMPLE 6 -->
+      <div class="flex items-center gap-8 flex-wrap">
+        <div class="flex flex-col items-center gap-2">
+          <span class="animate-spin inline-block text-2xl">⟳</span>
+          <span class="text-xs text-gray-500">animate-spin</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="animate-pulse bg-red-500 w-4 h-4 rounded-full"></div>
+          <span class="text-xs text-gray-500">animate-pulse</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="animate-bounce bg-blue-500 w-4 h-4 rounded-full"></div>
+          <span class="text-xs text-gray-500">animate-bounce</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="animate-ping bg-green-500 w-4 h-4 rounded-full"></div>
+          <span class="text-xs text-gray-500">animate-ping</span>
+        </div>
+      </div>
+      <!-- FI EXEMPLE 6 -->
+    </section>
+
+    <section id="targeta-animada" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Targeta animada</h2>
+      <!-- INICI EXEMPLE 7 -->
+      <div class="group bg-white p-6 rounded-xl shadow-md transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 cursor-pointer max-w-sm border">
+        <h3 class="text-lg font-bold transition-colors duration-200 group-hover:text-blue-600">
+          Targeta interactiva
+        </h3>
+        <p class="text-gray-600 mt-2 transition-opacity duration-200 group-hover:text-gray-800">
+          Text que es fa més fosc en hover.
+        </p>
+      </div>
+      <!-- FI EXEMPLE 7 -->
+    </section>
+  </div>
+
+
 </body>
 </html>

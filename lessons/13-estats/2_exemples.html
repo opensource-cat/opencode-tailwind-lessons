@@ -5,102 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lliçó 13 – Estats: hover, focus, active i més</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tabs.js"></script>
+  <link rel="stylesheet" href="../tabs.css">
   <style>
-    body { font-family: system-ui, sans-serif; padding: 2rem; background: #f3f4f6; }
-    nav a { margin-right: 1rem; }
-    hr { margin: 2rem 0; border: 1px solid #d1d5db; }
-    section { background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 1rem; }
     .note { background: #dbeafe; padding: 0.5rem 1rem; border-radius: 0.375rem; margin-top: 1rem; font-size: 0.875rem; }
   </style>
 </head>
-<body>
-
-  <h1 class="text-3xl font-bold mb-4">Lliçó 13 – Estats: hover, focus, active i més</h1>
-
-  <nav class="mb-6 p-4 bg-white rounded shadow">
-    <a href="#exemple-1" class="text-blue-600 underline">Exemple 1</a>
-    <a href="#exemple-2" class="text-blue-600 underline">Exemple 2</a>
-    <a href="#exemple-3" class="text-blue-600 underline">Exemple 3</a>
-    <a href="#exemple-4" class="text-blue-600 underline">Exemple 4</a>
-    <a href="#exemple-5" class="text-blue-600 underline">Exemple 5</a>
-    <a href="#exemple-6" class="text-blue-600 underline">Exemple 6</a>
-  </nav>
-
-  <section id="exemple-1">
-    <h2 class="text-xl font-bold mb-2">Exemple 1: Hover</h2>
-    <p class="mb-4 text-gray-600">Passa el ratolí per sobre per veure el canvi de color.</p>
-    <!-- INICI EXEMPLE 1 -->
-    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
-      Acceptar
-    </button>
-    <!-- FI EXEMPLE 1 -->
-    <div class="note">Passa el ratolí per sobre del botó per veure l'efecte hover.</div>
-  </section>
-
-  <hr>
-
-  <section id="exemple-2">
-    <h2 class="text-xl font-bold mb-2">Exemple 2: Focus</h2>
-    <p class="mb-4 text-gray-600">Fes clic o tabula fins a l'input per veure l'anell de focus.</p>
-    <!-- INICI EXEMPLE 2 -->
-    <input class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-           type="text" placeholder="Escriu aquí...">
-    <!-- FI EXEMPLE 2 -->
-    <div class="note">Fes clic al camp per veure l'efecte focus.</div>
-  </section>
-
-  <hr>
-
-  <section id="exemple-3">
-    <h2 class="text-xl font-bold mb-2">Exemple 3: Active</h2>
-    <p class="mb-4 text-gray-600">Prem i mantén el botó per veure l'estat active.</p>
-    <!-- INICI EXEMPLE 3 -->
-    <button class="bg-green-500 hover:bg-green-600 active:bg-green-700 text-white px-6 py-3 rounded-lg">
-      Envia
-    </button>
-    <!-- FI EXEMPLE 3 -->
-    <div class="note">Prem i mantén premut el botó per veure l'efecte active.</div>
-  </section>
-
-  <hr>
-
-  <section id="exemple-4">
-    <h2 class="text-xl font-bold mb-2">Exemple 4: Disabled</h2>
-    <p class="mb-4 text-gray-600">Botó deshabilitat amb opacitat reduïda i cursor not-allowed.</p>
-    <!-- INICI EXEMPLE 4 -->
-    <button disabled class="bg-gray-300 text-gray-500 px-4 py-2 rounded cursor-not-allowed disabled:opacity-50">
-      Deshabilitat
-    </button>
-    <!-- FI EXEMPLE 4 -->
-    <div class="note">El botó està deshabilitat i no es pot fer clic.</div>
-  </section>
-
-  <hr>
-
-  <section id="exemple-5">
-    <h2 class="text-xl font-bold mb-2">Exemple 5: Group hover</h2>
-    <p class="mb-4 text-gray-600">Passa el ratolí per sobre de la targeta: el títol i el text canvien.</p>
-    <!-- INICI EXEMPLE 5 -->
-    <div class="group bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-      <h3 class="text-lg font-bold group-hover:text-blue-600">Títol</h3>
-      <p class="text-gray-600 group-hover:text-gray-900">Text descriptiu</p>
+<body class="bg-gray-50 min-h-screen">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900">Lliçó 13 – Estats: hover, focus, active i més</h1>
+      <p class="text-gray-600 mt-1">Exemples pràctics</p>
     </div>
-    <!-- FI EXEMPLE 5 -->
-    <div class="note">Passa el ratolí per sobre de la targeta per veure l'efecte group-hover.</div>
-  </section>
 
-  <hr>
+    <div class="flex flex-wrap gap-1 border-b border-gray-300 mb-6" role="tablist">
+      <a href="#hover"
+         onclick="obrirTab(event, 'hover')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Hover</a>
+      <a href="#focus"
+         onclick="obrirTab(event, 'focus')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Focus</a>
+      <a href="#active"
+         onclick="obrirTab(event, 'active')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Active</a>
+      <a href="#disabled"
+         onclick="obrirTab(event, 'disabled')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Disabled</a>
+      <a href="#group-hover"
+         onclick="obrirTab(event, 'group-hover')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Group hover</a>
+      <a href="#combinats"
+         onclick="obrirTab(event, 'combinats')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Combinats</a>
+    </div>
 
-  <section id="exemple-6">
-    <h2 class="text-xl font-bold mb-2">Exemple 6: Múltiples estats combinats</h2>
-    <p class="mb-4 text-gray-600">Botó amb hover, active, focus i disabled combinats.</p>
-    <!-- INICI EXEMPLE 6 -->
-    <button class="bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-400 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-2 px-6 rounded-lg transition">
-      Acceptar
-    </button>
-    <!-- FI EXEMPLE 6 -->
-    <div class="note">Passa el ratolí, prem, o fes tab per veure els diferents estats.</div>
-  </section>
+    <section id="hover" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Hover</h2>
+      <p class="mb-4 text-gray-600">Passa el ratolí per sobre per veure el canvi de color.</p>
+      <!-- INICI EXEMPLE 1 -->
+      <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+        Acceptar
+      </button>
+      <!-- FI EXEMPLE 1 -->
+      <div class="note">Passa el ratolí per sobre del botó per veure l'efecte hover.</div>
+    </section>
+
+    <section id="focus" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Focus</h2>
+      <p class="mb-4 text-gray-600">Fes clic o tabula fins a l'input per veure l'anell de focus.</p>
+      <!-- INICI EXEMPLE 2 -->
+      <input class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+             type="text" placeholder="Escriu aquí...">
+      <!-- FI EXEMPLE 2 -->
+      <div class="note">Fes clic al camp per veure l'efecte focus.</div>
+    </section>
+
+    <section id="active" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Active</h2>
+      <p class="mb-4 text-gray-600">Prem i mantén el botó per veure l'estat active.</p>
+      <!-- INICI EXEMPLE 3 -->
+      <button class="bg-green-500 hover:bg-green-600 active:bg-green-700 text-white px-6 py-3 rounded-lg">
+        Envia
+      </button>
+      <!-- FI EXEMPLE 3 -->
+      <div class="note">Prem i mantén premut el botó per veure l'efecte active.</div>
+    </section>
+
+    <section id="disabled" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Disabled</h2>
+      <p class="mb-4 text-gray-600">Botó deshabilitat amb opacitat reduïda i cursor not-allowed.</p>
+      <!-- INICI EXEMPLE 4 -->
+      <button disabled class="bg-gray-300 text-gray-500 px-4 py-2 rounded cursor-not-allowed disabled:opacity-50">
+        Deshabilitat
+      </button>
+      <!-- FI EXEMPLE 4 -->
+      <div class="note">El botó està deshabilitat i no es pot fer clic.</div>
+    </section>
+
+    <section id="group-hover" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Group hover</h2>
+      <p class="mb-4 text-gray-600">Passa el ratolí per sobre de la targeta: el títol i el text canvien.</p>
+      <!-- INICI EXEMPLE 5 -->
+      <div class="group bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-bold group-hover:text-blue-600">Títol</h3>
+        <p class="text-gray-600 group-hover:text-gray-900">Text descriptiu</p>
+      </div>
+      <!-- FI EXEMPLE 5 -->
+      <div class="note">Passa el ratolí per sobre de la targeta per veure l'efecte group-hover.</div>
+    </section>
+
+    <section id="combinats" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Múltiples estats combinats</h2>
+      <p class="mb-4 text-gray-600">Botó amb hover, active, focus i disabled combinats.</p>
+      <!-- INICI EXEMPLE 6 -->
+      <button class="bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-400 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-2 px-6 rounded-lg transition">
+        Acceptar
+      </button>
+      <!-- FI EXEMPLE 6 -->
+      <div class="note">Passa el ratolí, prem, o fes tab per veure els diferents estats.</div>
+    </section>
+  </div>
+
 
 </body>
 </html>

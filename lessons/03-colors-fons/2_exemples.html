@@ -5,81 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lliçó 3 - Colors i fons</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; padding: 2rem; background: #f5f5f5; }
-    nav { margin-bottom: 2rem; }
-    nav a { margin-right: 1rem; }
-    section { margin-bottom: 2rem; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-    hr { margin: 2rem 0; }
-  </style>
+  <script src="../tabs.js"></script>
+  <link rel="stylesheet" href="../tabs.css">
 </head>
-<body>
+<body class="bg-gray-50 min-h-screen">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900">Lliçó 3: Colors i fons</h1>
+      <p class="text-gray-600 mt-1">Exemples pràctics</p>
+    </div>
 
-<nav>
-  <a href="#exemple-1">Exemple 1 - Text amb color</a>
-  <a href="#exemple-2">Exemple 2 - Fons amb color</a>
-  <a href="#exemple-3">Exemple 3 - Opacitat</a>
-  <a href="#exemple-4">Exemple 4 - Gradient</a>
-  <a href="#exemple-5">Exemple 5 - Exemple pràctic</a>
-</nav>
+    <div class="flex flex-wrap gap-1 border-b border-gray-300 mb-6" role="tablist">
+      <a href="#text-color"
+         onclick="obrirTab(event, 'text-color')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Text amb color</a>
+      <a href="#bg-color"
+         onclick="obrirTab(event, 'bg-color')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Fons amb color</a>
+      <a href="#opacitat"
+         onclick="obrirTab(event, 'opacitat')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Opacitat</a>
+      <a href="#gradient"
+         onclick="obrirTab(event, 'gradient')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Gradient</a>
+      <a href="#practic-colors"
+         onclick="obrirTab(event, 'practic-colors')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Exemple pràctic</a>
+    </div>
 
-<section id="exemple-1">
-  <h2>Exemple 1: Text amb color</h2>
-  <!-- INICI EXEMPLE 1 -->
-  <p class="text-blue-500">Text blau mitjà</p>
-  <p class="text-gray-900">Text gris molt fosc</p>
-  <p class="text-red-400">Text vermell suau</p>
-  <!-- FI EXEMPLE 1 -->
-</section>
+    <section id="text-color" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Text amb color</h2>
+      <!-- INICI EXEMPLE 1 -->
+      <p class="text-blue-500">Text blau mitjà</p>
+      <p class="text-gray-900">Text gris molt fosc</p>
+      <p class="text-red-400">Text vermell suau</p>
+      <!-- FI EXEMPLE 1 -->
+    </section>
 
-<hr>
+    <section id="bg-color" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Fons amb color</h2>
+      <!-- INICI EXEMPLE 2 -->
+      <div class="bg-white p-4 mb-2 border">Fons blanc</div>
+      <div class="bg-gray-100 p-4 mb-2 border">Fons gris clar</div>
+      <div class="bg-blue-600 text-white p-4">Fons blau fosc amb text blanc</div>
+      <!-- FI EXEMPLE 2 -->
+    </section>
 
-<section id="exemple-2">
-  <h2>Exemple 2: Fons amb color</h2>
-  <!-- INICI EXEMPLE 2 -->
-  <div class="bg-white p-4 mb-2 border">Fons blanc</div>
-  <div class="bg-gray-100 p-4 mb-2 border">Fons gris clar</div>
-  <div class="bg-blue-600 text-white p-4">Fons blau fosc amb text blanc</div>
-  <!-- FI EXEMPLE 2 -->
-</section>
+    <section id="opacitat" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Opacitat</h2>
+      <!-- INICI EXEMPLE 3 -->
+      <div class="bg-blue-500 opacity-100 p-4 mb-2 text-white">100% opac</div>
+      <div class="bg-blue-500 opacity-75 p-4 mb-2 text-white">75% opac</div>
+      <div class="bg-blue-500 opacity-50 p-4 mb-2 text-white">50% opac</div>
+      <div class="bg-blue-500 opacity-25 p-4 mb-2 text-white">25% opac</div>
+      <div class="bg-blue-500 opacity-0 p-4 text-white">invisible</div>
+      <!-- FI EXEMPLE 3 -->
+    </section>
 
-<hr>
+    <section id="gradient" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Gradient</h2>
+      <!-- INICI EXEMPLE 4 -->
+      <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-8 rounded-lg text-center">
+        <h2 class="text-3xl font-bold text-yellow-300">Títol amb accent groc</h2>
+        <p class="text-white/80">Text blanc amb 80% d'opacitat</p>
+      </div>
+      <!-- FI EXEMPLE 4 -->
+    </section>
 
-<section id="exemple-3">
-  <h2>Exemple 3: Opacitat</h2>
-  <!-- INICI EXEMPLE 3 -->
-  <div class="bg-blue-500 opacity-100 p-4 mb-2 text-white">100% opac</div>
-  <div class="bg-blue-500 opacity-75 p-4 mb-2 text-white">75% opac</div>
-  <div class="bg-blue-500 opacity-50 p-4 mb-2 text-white">50% opac</div>
-  <div class="bg-blue-500 opacity-25 p-4 mb-2 text-white">25% opac</div>
-  <div class="bg-blue-500 opacity-0 p-4 text-white">invisible</div>
-  <!-- FI EXEMPLE 3 -->
-</section>
-
-<hr>
-
-<section id="exemple-4">
-  <h2>Exemple 4: Combinació de color i fons (gradient)</h2>
-  <!-- INICI EXEMPLE 4 -->
-  <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-8 rounded-lg text-center">
-    <h2 class="text-3xl font-bold text-yellow-300">Títol amb accent groc</h2>
-    <p class="text-white/80">Text blanc amb 80% d'opacitat</p>
+    <section id="practic-colors" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Exemple pràctic</h2>
+      <!-- INICI EXEMPLE 5 -->
+      <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+        <h2 class="text-indigo-700 text-2xl font-bold">Notícia destacada</h2>
+        <p class="text-gray-600 mt-2">Lorem ipsum amb colors de la família indigo i gray.</p>
+        <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Novetat</span>
+      </div>
+      <!-- FI EXEMPLE 5 -->
+    </section>
   </div>
-  <!-- FI EXEMPLE 4 -->
-</section>
 
-<hr>
-
-<section id="exemple-5">
-  <h2>Exemple 5: Exemple pràctic</h2>
-  <!-- INICI EXEMPLE 5 -->
-  <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
-    <h2 class="text-indigo-700 text-2xl font-bold">Notícia destacada</h2>
-    <p class="text-gray-600 mt-2">Lorem ipsum amb colors de la família indigo i gray.</p>
-    <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Novetat</span>
-  </div>
-  <!-- FI EXEMPLE 5 -->
-</section>
 
 </body>
 </html>

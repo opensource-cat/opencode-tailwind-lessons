@@ -17,7 +17,7 @@ paginate: true
 <span class="inline">En línia, no respecta width/height</span>
 <div class="hidden">No es mostra, com si no existís</div>
 ```
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/10-display/2_exemples.html#exemple-1)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/10-display/2_exemples.html#display-basic)
 
 ---
 
@@ -38,7 +38,7 @@ paginate: true
 <div class="visible">Visible (per defecte)</div>
 <div class="invisible">Ocupa espai però no es veu</div>
 ```
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/10-display/2_exemples.html#exemple-2)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/10-display/2_exemples.html#visibilitat)
 
 `invisible` → `visibility: hidden` (l'element ocupa el seu lloc).
 `hidden` → `display: none` (l'element no ocupa espai).
@@ -53,7 +53,7 @@ paginate: true
 <div class="overflow-scroll">  /* Scroll sempre visible      */</div>
 <div class="overflow-visible"> /* Es deixa veure el que surt */</div>
 ```
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/10-display/2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/10-display/2_exemples.html#overflow)
 
 Per eixos individuals: `overflow-x-hidden`, `overflow-y-auto`.
 
@@ -67,7 +67,7 @@ Per eixos individuals: `overflow-x-hidden`, `overflow-y-auto`.
   <div class="absolute z-0 bg-gray-200">Per sota</div>
 </div>
 ```
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/10-display/2_exemples.html#exemple-4)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/10-display/2_exemples.html#z-index)
 
 `z-{0..50}`. Per defecte tots els elements tenen `z-0`.
 Només funciona en elements posicionats (relative, absolute, fixed, sticky).
@@ -84,6 +84,6 @@ Només funciona en elements posicionats (relative, absolute, fixed, sticky).
   </span>
 </div>
 ```
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/10-display/2_exemples.html#exemple-5)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/10-display/2_exemples.html#badge-display)
 
 Ús combinat de `relative`, `absolute`, `inline-block` i z-index.

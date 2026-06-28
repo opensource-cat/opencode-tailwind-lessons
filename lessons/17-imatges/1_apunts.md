@@ -15,7 +15,7 @@ paginate: true
 <img src="foto.jpg" class="w-full h-64 object-cover">
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/17-imatges/2_exemples.html#exemple-1)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/17-imatges/2_exemples.html#object-fit)
 
 | Classe | Comportament |
 |---|---|
@@ -35,7 +35,7 @@ paginate: true
 <img src="foto.jpg" class="w-full h-64 object-cover object-bottom">
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/17-imatges/2_exemples.html#exemple-2)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/17-imatges/2_exemples.html#object-position)
 
 `object-top`, `object-center`, `object-bottom`, `object-left`, `object-right`.
 
@@ -51,7 +51,7 @@ Controla quina part de la imatge es veu.
 </div>
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/17-imatges/2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/17-imatges/2_exemples.html#fons-imatge)
 
 | Classe | Efecte |
 |---|---|
@@ -79,7 +79,7 @@ Controla quina part de la imatge es veu.
 </section>
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/17-imatges/2_exemples.html#exemple-4)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/17-imatges/2_exemples.html#hero-overlay)
 
 Overlay `bg-black/50` + contingut amb `z-10`.
 
@@ -99,6 +99,6 @@ Overlay `bg-black/50` + contingut amb `z-10`.
 </div>
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/17-imatges/2_exemples.html#exemple-5)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/17-imatges/2_exemples.html#card-imatge)
 
 `overflow-hidden` al pare perquè la imatge no surti de les cantonades `rounded-xl`.

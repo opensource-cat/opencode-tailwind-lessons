@@ -18,7 +18,7 @@ paginate: true
 </div>
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/07-flexbox-elements/2_exemples.html#exemple-1)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/07-flexbox-elements/2_exemples.html#flex-1)
 
 `flex-1` → creix per igual entre tots els elements que el portin.
 
@@ -33,7 +33,7 @@ paginate: true
 | `flex-initial` | `flex: 0 1 auto` — mida natural, pot encongir |
 | `flex-none` | `flex: 0 0 auto` — mida fixa, no canvia |
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/07-flexbox-elements/2_exemples.html#exemple-2)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/07-flexbox-elements/2_exemples.html#variants-flex)
 
 ---
 
@@ -51,7 +51,7 @@ paginate: true
 `order-last` → `order: 9999`
 `order-1` a `order-12`
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/07-flexbox-elements/2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/07-flexbox-elements/2_exemples.html#order)
 
 ---
 
@@ -66,7 +66,7 @@ paginate: true
 </div>
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/07-flexbox-elements/2_exemples.html#exemple-4)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/07-flexbox-elements/2_exemples.html#self-align)
 
 Sobrescriu l'`align-items` del pare per a un fill concret.
 
@@ -83,7 +83,7 @@ Sobrescriu l'`align-items` del pare per a un fill concret.
 </div>
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/07-flexbox-elements/2_exemples.html#exemple-5)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/07-flexbox-elements/2_exemples.html#grow-shrink)
 
 ---
 
@@ -103,6 +103,6 @@ Sobrescriu l'`align-items` del pare per a un fill concret.
 </div>
 ```
 
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/07-flexbox-elements/2_exemples.html#exemple-6)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/07-flexbox-elements/2_exemples.html#cards-flex)
 
 `flex-1` + `min-w-[250px]` + `flex-wrap` = targetes responsives sense media queries.

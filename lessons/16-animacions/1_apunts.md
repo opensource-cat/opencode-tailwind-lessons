@@ -17,7 +17,7 @@ paginate: true
   Suau
 </button>
 ```
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/16-animacions/2_exemples.html#exemple-1)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/16-animacions/2_exemples.html#transicio-basica)
 
 `transition` activa la transició en totes les propietats que canvien.
 
@@ -46,7 +46,7 @@ paginate: true
 <div class="transition duration-500">  /* 500ms */</div>
 <div class="transition duration-1000"> /* 1s    */</div>
 ```
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/16-animacions/2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/16-animacions/2_exemples.html#durada)
 
 ---
 
@@ -70,7 +70,7 @@ paginate: true
   Botó que es mou
 </button>
 ```
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/16-animacions/2_exemples.html#exemple-5)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/16-animacions/2_exemples.html#scale-translate)
 
 `hover:scale-110`, `hover:scale-105`, `hover:-translate-y-1`.
 
@@ -90,7 +90,7 @@ paginate: true
 <span class="animate-spin inline-block">⟳</span>
 <div class="animate-pulse bg-red-500 w-4 h-4 rounded-full"></div>
 ```
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/16-animacions/2_exemples.html#exemple-6)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/16-animacions/2_exemples.html#animacions-predef)
 
 ---
 
@@ -110,6 +110,6 @@ paginate: true
   </p>
 </div>
 ```
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/16-animacions/2_exemples.html#exemple-7)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/16-animacions/2_exemples.html#targeta-animada)
 
 Combinació de `transition`, `group-hover`, `duration` i `ease`.

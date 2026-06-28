@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exemples - Lliçó 1: Tailwind</title>
+  <title>Lliçó 1 - Introducció a Tailwind CSS</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { font-family: system-ui, sans-serif; }
-    nav a { transition: color 0.15s; }
-  </style>
+  <script src="../tabs.js"></script>
+  <link rel="stylesheet" href="../tabs.css">
 </head>
-<body class="bg-gray-50">
-  <header class="bg-white shadow mb-8">
-    <div class="max-w-3xl mx-auto px-4 py-6">
-      <h1 class="text-2xl font-bold text-gray-900">Exemples de la Lliçó 1</h1>
-      <nav class="mt-3 space-x-6 text-sm">
-        <a href="#cdn" class="text-blue-600 hover:text-blue-800 font-medium">Instal·lació via CDN</a>
-        <a href="#boto" class="text-blue-600 hover:text-blue-800 font-medium">Botó pràctic</a>
-      </nav>
+<body class="bg-gray-50 min-h-screen">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900">Lliçó 1: Introducció a Tailwind CSS</h1>
+      <p class="text-gray-600 mt-1">Exemples pràctics</p>
     </div>
-  </header>
 
-  <main class="max-w-3xl mx-auto px-4 space-y-12 pb-12">
+    <div class="flex flex-wrap gap-1 border-b border-gray-300 mb-6" role="tablist">
+      <a href="#cdn"
+         onclick="obrirTab(event, 'cdn')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">CDN</a>
+      <a href="#boto"
+         onclick="obrirTab(event, 'boto')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Botó hover</a>
+    </div>
 
-    <section id="cdn">
-      <h2 class="text-xl font-bold text-gray-900 mb-2">Instal·lació via CDN</h2>
+    <section id="cdn" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Instal·lació via CDN</h2>
       <p class="text-sm text-gray-500 mb-4">Pàgina completa amb Tailwind carregat des de la CDN.</p>
-
       <!-- INICI EXEMPLE CDN -->
       <div class="bg-white border border-gray-200 rounded-xl p-8 flex items-center justify-center min-h-[200px]">
         <h1 class="text-3xl font-bold text-blue-600">Hola, Tailwind!</h1>
@@ -34,12 +34,9 @@
       <!-- FI EXEMPLE CDN -->
     </section>
 
-    <hr class="border-gray-300">
-
-    <section id="boto">
-      <h2 class="text-xl font-bold text-gray-900 mb-2">Botó pràctic</h2>
+    <section id="boto" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Botó pràctic amb hover</h2>
       <p class="text-sm text-gray-500 mb-4">Botó amb classes atòmiques de Tailwind i canvi d'estat en hover.</p>
-
       <!-- INICI EXEMPLE BOTO -->
       <div class="bg-white border border-gray-200 rounded-xl p-8 flex items-center justify-center min-h-[200px]">
         <button class="bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700">
@@ -48,7 +45,8 @@
       </div>
       <!-- FI EXEMPLE BOTO -->
     </section>
+  </div>
 
-  </main>
+
 </body>
 </html>

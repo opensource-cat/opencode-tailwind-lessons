@@ -16,7 +16,7 @@ paginate: true
   Acceptar
 </button>
 ```
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/13-estats/2_exemples.html#exemple-1)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/13-estats/2_exemples.html#hover)
 
 Quan el ratolí passa per sobre, el fons es torna més fosc.
 Qualsevol classe pot anar darrere de `hover:`.
@@ -30,7 +30,7 @@ Qualsevol classe pot anar darrere de `hover:`.
               focus:outline-none focus:ring-2 focus:ring-blue-500"
        type="text" placeholder="Escriu aquí...">
 ```
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/13-estats/2_exemples.html#exemple-2)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/13-estats/2_exemples.html#focus)
 
 `focus:ring-2` afegeix un anell de focus visible — millora l'accessibilitat.
 
@@ -44,7 +44,7 @@ Qualsevol classe pot anar darrere de `hover:`.
   Envia
 </button>
 ```
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/13-estats/2_exemples.html#exemple-3)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/13-estats/2_exemples.html#active)
 
 `active:` només s'aplica mentre el botó està pressionat.
 
@@ -58,7 +58,7 @@ Qualsevol classe pot anar darrere de `hover:`.
   Deshabilitat
 </button>
 ```
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/13-estats/2_exemples.html#exemple-4)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/13-estats/2_exemples.html#disabled)
 
 `disabled:opacity-50 disabled:cursor-not-allowed` per feedback visual.
 
@@ -72,7 +72,7 @@ Qualsevol classe pot anar darrere de `hover:`.
   <p class="text-gray-600 group-hover:text-gray-900">Text descriptiu</p>
 </div>
 ```
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/13-estats/2_exemples.html#exemple-5)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/13-estats/2_exemples.html#group-hover)
 
 `group` al pare + `group-hover:` als fills = el fill canvia quan el pare té hover.
 
@@ -90,6 +90,6 @@ Sense JavaScript!
   Acceptar
 </button>
 ```
-👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/13-estats/2_exemples.html#exemple-6)
+👉 [Obre l'exemple](https://opensource-cat.github.io/opencode-tailwind-lessons/lessons/13-estats/2_exemples.html#combinats)
 
 `hover:`, `active:`, `focus:`, `disabled:` — tot es combina al mateix element.

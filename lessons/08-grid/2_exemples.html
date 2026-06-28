@@ -5,154 +5,147 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>08 - Grid CSS</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { font-family: system-ui, sans-serif; margin: 0; padding: 2rem; background: #f5f5f5; }
-    nav { background: #1e293b; padding: 1rem; border-radius: 0.5rem; margin-bottom: 2rem; }
-    nav a { color: white; text-decoration: none; margin-right: 1.5rem; font-size: 0.9rem; }
-    nav a:hover { text-decoration: underline; }
-    section { background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-    h2 { margin-top: 0; color: #1e293b; font-size: 1.25rem; }
-    hr { border: none; border-top: 2px dashed #cbd5e1; margin: 2rem 0; }
-  </style>
+  <script src="../tabs.js"></script>
+  <link rel="stylesheet" href="../tabs.css">
 </head>
-<body>
-
-<nav>
-  <a href="#exemple-1">Exemple 1</a>
-  <a href="#exemple-2">Exemple 2</a>
-  <a href="#exemple-3">Exemple 3</a>
-  <a href="#exemple-4">Exemple 4</a>
-  <a href="#exemple-5">Exemple 5</a>
-  <a href="#exemple-6">Exemple 6</a>
-  <a href="#exemple-7">Exemple 7</a>
-</nav>
-
-<h1 class="text-2xl font-bold mb-6">08 - Grid CSS</h1>
-
-<!-- EXEMPLE 1 -->
-<section id="exemple-1">
-  <h2>Exemple 1: Graella bàsica amb grid-cols-3</h2>
-  <p class="text-gray-600 mb-4"><code>grid grid-cols-3</code> — 3 columnes, 4 elements, el 4t baixa a la segona fila.</p>
-  <!-- INICI EXEMPLE 1 -->
-  <div class="grid grid-cols-3 gap-2">
-    <div class="bg-red-400 text-white p-4 rounded">Col 1</div>
-    <div class="bg-green-400 text-white p-4 rounded">Col 2</div>
-    <div class="bg-blue-400 text-white p-4 rounded">Col 3</div>
-    <div class="bg-yellow-400 text-white p-4 rounded">Col 4 — baixa a la segona fila</div>
-  </div>
-  <!-- FI EXEMPLE 1 -->
-</section>
-
-<hr>
-
-<!-- EXEMPLE 2 -->
-<section id="exemple-2">
-  <h2>Exemple 2: Columnes i files explícites</h2>
-  <p class="text-gray-600 mb-4"><code>grid grid-cols-4 grid-rows-2</code> — 4 columnes × 2 files = 8 cel·les.</p>
-  <!-- INICI EXEMPLE 2 -->
-  <div class="grid grid-cols-4 grid-rows-2 gap-2">
-    <div class="bg-indigo-400 text-white p-4 rounded">1</div>
-    <div class="bg-indigo-400 text-white p-4 rounded">2</div>
-    <div class="bg-indigo-400 text-white p-4 rounded">3</div>
-    <div class="bg-indigo-400 text-white p-4 rounded">4</div>
-    <div class="bg-purple-400 text-white p-4 rounded">5</div>
-    <div class="bg-purple-400 text-white p-4 rounded">6</div>
-    <div class="bg-purple-400 text-white p-4 rounded">7</div>
-    <div class="bg-purple-400 text-white p-4 rounded">8</div>
-  </div>
-  <!-- FI EXEMPLE 2 -->
-</section>
-
-<hr>
-
-<!-- EXEMPLE 3 -->
-<section id="exemple-3">
-  <h2>Exemple 3: Gap (espai entre cel·les)</h2>
-  <p class="text-gray-600 mb-4"><code>grid grid-cols-3 gap-4</code> — espai de 1rem entre cel·les.</p>
-  <!-- INICI EXEMPLE 3 -->
-  <div class="grid grid-cols-3 gap-4">
-    <div class="bg-teal-400 text-white p-6 rounded text-center text-xl font-bold">1</div>
-    <div class="bg-teal-400 text-white p-6 rounded text-center text-xl font-bold">2</div>
-    <div class="bg-teal-400 text-white p-6 rounded text-center text-xl font-bold">3</div>
-    <div class="bg-cyan-400 text-white p-6 rounded text-center text-xl font-bold">4</div>
-    <div class="bg-cyan-400 text-white p-6 rounded text-center text-xl font-bold">5</div>
-    <div class="bg-cyan-400 text-white p-6 rounded text-center text-xl font-bold">6</div>
-  </div>
-  <!-- FI EXEMPLE 3 -->
-</section>
-
-<hr>
-
-<!-- EXEMPLE 4 -->
-<section id="exemple-4">
-  <h2>Exemple 4: Ocupar múltiples columnes (col-span)</h2>
-  <p class="text-gray-600 mb-4"><code>grid grid-cols-12 gap-4</code> — main 8/12, sidebar 4/12.</p>
-  <!-- INICI EXEMPLE 4 -->
-  <div class="grid grid-cols-12 gap-4">
-    <div class="col-span-8 bg-sky-200 p-6 rounded">
-      <h3 class="font-bold text-lg">Contingut principal (8/12)</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<body class="bg-gray-50 min-h-screen">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900">08 — Grid CSS</h1>
+      <p class="text-gray-600 mt-1">Exemples pràctics</p>
     </div>
-    <div class="col-span-4 bg-amber-200 p-6 rounded">
-      <h3 class="font-bold text-lg">Sidebar (4/12)</h3>
-      <p>Informació adicional.</p>
+
+    <div class="flex flex-wrap gap-1 border-b border-gray-300 mb-6" role="tablist">
+      <a href="#grid-basic"
+         onclick="obrirTab(event, 'grid-basic')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Graella bàsica</a>
+      <a href="#cols-rows"
+         onclick="obrirTab(event, 'cols-rows')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Columnes i files</a>
+      <a href="#gap"
+         onclick="obrirTab(event, 'gap')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Gap</a>
+      <a href="#col-span"
+         onclick="obrirTab(event, 'col-span')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Col-span</a>
+      <a href="#row-span"
+         onclick="obrirTab(event, 'row-span')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Row-span</a>
+      <a href="#col-start-end"
+         onclick="obrirTab(event, 'col-start-end')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Posicionament</a>
+      <a href="#layout-complet"
+         onclick="obrirTab(event, 'layout-complet')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Layout complet</a>
     </div>
+
+    <section id="grid-basic" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Graella bàsica (grid-cols-3)</h2>
+      <p class="text-gray-600 mb-4"><code>grid grid-cols-3</code> — 3 columnes, 4 elements, el 4t baixa a la segona fila.</p>
+      <!-- INICI EXEMPLE 1 -->
+      <div class="grid grid-cols-3 gap-2">
+        <div class="bg-red-400 text-white p-4 rounded">Col 1</div>
+        <div class="bg-green-400 text-white p-4 rounded">Col 2</div>
+        <div class="bg-blue-400 text-white p-4 rounded">Col 3</div>
+        <div class="bg-yellow-400 text-white p-4 rounded">Col 4 — baixa a la segona fila</div>
+      </div>
+      <!-- FI EXEMPLE 1 -->
+    </section>
+
+    <section id="cols-rows" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Columnes i files explícites</h2>
+      <p class="text-gray-600 mb-4"><code>grid grid-cols-4 grid-rows-2</code> — 4 columnes × 2 files = 8 cel·les.</p>
+      <!-- INICI EXEMPLE 2 -->
+      <div class="grid grid-cols-4 grid-rows-2 gap-2">
+        <div class="bg-indigo-400 text-white p-4 rounded">1</div>
+        <div class="bg-indigo-400 text-white p-4 rounded">2</div>
+        <div class="bg-indigo-400 text-white p-4 rounded">3</div>
+        <div class="bg-indigo-400 text-white p-4 rounded">4</div>
+        <div class="bg-purple-400 text-white p-4 rounded">5</div>
+        <div class="bg-purple-400 text-white p-4 rounded">6</div>
+        <div class="bg-purple-400 text-white p-4 rounded">7</div>
+        <div class="bg-purple-400 text-white p-4 rounded">8</div>
+      </div>
+      <!-- FI EXEMPLE 2 -->
+    </section>
+
+    <section id="gap" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Gap (espai entre cel·les)</h2>
+      <p class="text-gray-600 mb-4"><code>grid grid-cols-3 gap-4</code> — espai de 1rem entre cel·les.</p>
+      <!-- INICI EXEMPLE 3 -->
+      <div class="grid grid-cols-3 gap-4">
+        <div class="bg-teal-400 text-white p-6 rounded text-center text-xl font-bold">1</div>
+        <div class="bg-teal-400 text-white p-6 rounded text-center text-xl font-bold">2</div>
+        <div class="bg-teal-400 text-white p-6 rounded text-center text-xl font-bold">3</div>
+        <div class="bg-cyan-400 text-white p-6 rounded text-center text-xl font-bold">4</div>
+        <div class="bg-cyan-400 text-white p-6 rounded text-center text-xl font-bold">5</div>
+        <div class="bg-cyan-400 text-white p-6 rounded text-center text-xl font-bold">6</div>
+      </div>
+      <!-- FI EXEMPLE 3 -->
+    </section>
+
+    <section id="col-span" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Ocupar múltiples columnes</h2>
+      <p class="text-gray-600 mb-4"><code>grid grid-cols-12 gap-4</code> — main 8/12, sidebar 4/12.</p>
+      <!-- INICI EXEMPLE 4 -->
+      <div class="grid grid-cols-12 gap-4">
+        <div class="col-span-8 bg-sky-200 p-6 rounded">
+          <h3 class="font-bold text-lg">Contingut principal (8/12)</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="col-span-4 bg-amber-200 p-6 rounded">
+          <h3 class="font-bold text-lg">Sidebar (4/12)</h3>
+          <p>Informació adicional.</p>
+        </div>
+      </div>
+      <!-- FI EXEMPLE 4 -->
+    </section>
+
+    <section id="row-span" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Ocupar múltiples files</h2>
+      <p class="text-gray-600 mb-4"><code>grid grid-cols-3 gap-4</code> amb una cel·la que ocupa 2 files.</p>
+      <!-- INICI EXEMPLE 5 -->
+      <div class="grid grid-cols-3 gap-4">
+        <div class="row-span-2 bg-blue-200 p-4 rounded">
+          <strong>Ocupa 2 files</strong><br>
+          Lorem ipsum dolor sit amet.
+        </div>
+        <div class="bg-green-200 p-4 rounded">Normal</div>
+        <div class="bg-green-200 p-4 rounded">Normal</div>
+        <div class="bg-green-200 p-4 rounded">Normal</div>
+      </div>
+      <!-- FI EXEMPLE 5 -->
+    </section>
+
+    <section id="col-start-end" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Posicionament manual (col-start / col-end)</h2>
+      <p class="text-gray-600 mb-4"><code>col-start-2 col-end-4</code> — comença a la col 2, acaba a la 4.</p>
+      <!-- INICI EXEMPLE 6 -->
+      <div class="grid grid-cols-4 gap-4">
+        <div class="bg-gray-200 p-4 rounded">Col 1</div>
+        <div class="col-start-2 col-end-4 bg-yellow-200 p-4 rounded font-bold">Comença a la col 2, acaba a la 4</div>
+        <div class="bg-gray-200 p-4 rounded">Col 4</div>
+      </div>
+      <!-- FI EXEMPLE 6 -->
+    </section>
+
+    <section id="layout-complet" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Layout de pàgina complet</h2>
+      <p class="text-gray-600 mb-4">Header, nav, main, sidebar i footer amb <code>grid-cols-12 grid-rows-[auto_1fr_auto]</code>.</p>
+      <div style="height: 500px;">
+      <!-- INICI EXEMPLE 7 -->
+      <div class="grid grid-cols-12 grid-rows-[auto_1fr_auto] h-full border border-gray-300 rounded-lg overflow-hidden">
+        <header class="col-span-12 bg-blue-600 text-white p-4 font-bold">Capçalera</header>
+        <nav class="col-span-2 bg-gray-100 p-4 border-r border-gray-300">Nav</nav>
+        <main class="col-span-8 p-4 bg-white">Contingut principal</main>
+        <aside class="col-span-2 bg-gray-50 p-4 border-l border-gray-300">Sidebar</aside>
+        <footer class="col-span-12 bg-gray-900 text-white p-4">Peu de pàgina</footer>
+      </div>
+      <!-- FI EXEMPLE 7 -->
+      </div>
+    </section>
   </div>
-  <!-- FI EXEMPLE 4 -->
-</section>
 
-<hr>
-
-<!-- EXEMPLE 5 -->
-<section id="exemple-5">
-  <h2>Exemple 5: Ocupar múltiples files (row-span)</h2>
-  <p class="text-gray-600 mb-4"><code>grid grid-cols-3 gap-4</code> amb una cel·la que ocupa 2 files.</p>
-  <!-- INICI EXEMPLE 5 -->
-  <div class="grid grid-cols-3 gap-4">
-    <div class="row-span-2 bg-blue-200 p-4 rounded">
-      <strong>Ocupa 2 files</strong><br>
-      Lorem ipsum dolor sit amet.
-    </div>
-    <div class="bg-green-200 p-4 rounded">Normal</div>
-    <div class="bg-green-200 p-4 rounded">Normal</div>
-    <div class="bg-green-200 p-4 rounded">Normal</div>
-  </div>
-  <!-- FI EXEMPLE 5 -->
-</section>
-
-<hr>
-
-<!-- EXEMPLE 6 -->
-<section id="exemple-6">
-  <h2>Exemple 6: Posicionament manual (col-start / col-end)</h2>
-  <p class="text-gray-600 mb-4"><code>col-start-2 col-end-4</code> — comença a la col 2, acaba a la 4.</p>
-  <!-- INICI EXEMPLE 6 -->
-  <div class="grid grid-cols-4 gap-4">
-    <div class="bg-gray-200 p-4 rounded">Col 1</div>
-    <div class="col-start-2 col-end-4 bg-yellow-200 p-4 rounded font-bold">Comença a la col 2, acaba a la 4</div>
-    <div class="bg-gray-200 p-4 rounded">Col 4</div>
-  </div>
-  <!-- FI EXEMPLE 6 -->
-</section>
-
-<hr>
-
-<!-- EXEMPLE 7 -->
-<section id="exemple-7">
-  <h2>Exemple 7: Layout de pàgina complet</h2>
-  <p class="text-gray-600 mb-4">Header, nav, main, sidebar i footer amb <code>grid-cols-12 grid-rows-[auto_1fr_auto]</code>.</p>
-  <div style="height: 500px;">
-  <!-- INICI EXEMPLE 7 -->
-  <div class="grid grid-cols-12 grid-rows-[auto_1fr_auto] h-full border border-gray-300 rounded-lg overflow-hidden">
-    <header class="col-span-12 bg-blue-600 text-white p-4 font-bold">Capçalera</header>
-    <nav class="col-span-2 bg-gray-100 p-4 border-r border-gray-300">Nav</nav>
-    <main class="col-span-8 p-4 bg-white">Contingut principal</main>
-    <aside class="col-span-2 bg-gray-50 p-4 border-l border-gray-300">Sidebar</aside>
-    <footer class="col-span-12 bg-gray-900 text-white p-4">Peu de pàgina</footer>
-  </div>
-  <!-- FI EXEMPLE 7 -->
-  </div>
-</section>
 
 </body>
 </html>

@@ -5,166 +5,173 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lliçó 19 - Positioning i valors arbitraris</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tabs.js"></script>
+  <link rel="stylesheet" href="../tabs.css">
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 960px; margin: 0 auto; padding: 2rem 1rem; background: #f5f5f5; }
-    nav a { margin-right: 1rem; color: #2563eb; text-decoration: underline; }
-    hr { margin: 2rem 0; border: 0; border-top: 2px solid #ccc; }
-    section { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 2rem; }
-    h2 { margin-top: 0; font-size: 1.25rem; font-weight: 700; }
     .demo-box { background: #e0e7ff; border: 2px dashed #6366f1; padding: 0.5rem; text-align: center; }
     .note { font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem; }
   </style>
 </head>
-<body>
-  <h1 class="text-2xl font-bold mb-4">Lliçó 19 - Positioning i valors arbitraris</h1>
-  <nav class="mb-8 text-sm">
-    <a href="#exemple-1">Position basics</a>
-    <a href="#exemple-2">Controls de posició</a>
-    <a href="#exemple-3">Inset shorthand</a>
-    <a href="#exemple-4">Modal</a>
-    <a href="#exemple-5">Badge</a>
-    <a href="#exemple-6">Sticky header</a>
-    <a href="#exemple-7">Valors arbitraris</a>
-    <a href="#exemple-8">Quan usar</a>
-  </nav>
+<body class="bg-gray-50 min-h-screen">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900">Lliçó 19 - Positioning i valors arbitraris</h1>
+      <p class="text-gray-600 mt-1">Exemples pràctics</p>
+    </div>
 
-  <section id="exemple-1">
-    <h2>Exemple 1: Position basics</h2>
-    <p class="text-sm text-gray-600 mb-3">relative, absolute, fixed i sticky</p>
-    <!-- INICI EXEMPLE 1 -->
-    <div class="space-y-6">
-      <div>
-        <p class="text-sm font-medium mb-1">relative (contenidor pare)</p>
-        <div class="relative h-24 demo-box">
-          <span>Contenidor relative</span>
-          <div class="absolute bottom-0 left-0 bg-indigo-500 text-white text-xs px-2 py-1">absolute</div>
+    <div class="flex flex-wrap gap-1 border-b border-gray-300 mb-6" role="tablist">
+      <a href="#position-basics"
+         onclick="obrirTab(event, 'position-basics')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Position basics</a>
+      <a href="#controls-posicio"
+         onclick="obrirTab(event, 'controls-posicio')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Controls posició</a>
+      <a href="#inset"
+         onclick="obrirTab(event, 'inset')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Inset</a>
+      <a href="#modal"
+         onclick="obrirTab(event, 'modal')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Modal</a>
+      <a href="#badge-posicio"
+         onclick="obrirTab(event, 'badge-posicio')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Badge</a>
+      <a href="#sticky-header"
+         onclick="obrirTab(event, 'sticky-header')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Sticky header</a>
+      <a href="#valors-arbitraris"
+         onclick="obrirTab(event, 'valors-arbitraris')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Valors arbitraris</a>
+      <a href="#quan-usar-arbitraris"
+         onclick="obrirTab(event, 'quan-usar-arbitraris')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Quan usar</a>
+    </div>
+
+    <section id="position-basics" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Position basics</h2>
+      <p class="text-sm text-gray-600 mb-3">relative, absolute, fixed i sticky</p>
+      <!-- INICI EXEMPLE 1 -->
+      <div class="space-y-6">
+        <div>
+          <p class="text-sm font-medium mb-1">relative (contenidor pare)</p>
+          <div class="relative h-24 demo-box">
+            <span>Contenidor relative</span>
+            <div class="absolute bottom-0 left-0 bg-indigo-500 text-white text-xs px-2 py-1">absolute</div>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm font-medium mb-1">fixed (fixat a la finestra)</p>
+          <p class="note">Nota: Un element fixed es posiciona respecte a la finestra. Exemple: botó "Torna a dalt" fixat.</p>
+        </div>
+        <div>
+          <p class="text-sm font-medium mb-1">sticky (fixat en scroll)</p>
+          <p class="note">Nota: Un element sticky es comporta com relative fins que el scroll el situa al llindar indicat (top:0), llavors es queda fixat.</p>
         </div>
       </div>
-      <div>
-        <p class="text-sm font-medium mb-1">fixed (fixat a la finestra)</p>
-        <p class="note">Nota: Un element fixed es posiciona respecte a la finestra. Exemple: botó "Torna a dalt" fixat.</p>
+      <!-- FI EXEMPLE 1 -->
+    </section>
+
+    <section id="controls-posicio" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Controls de posició</h2>
+      <p class="text-sm text-gray-600 mb-3">top, right, bottom, left amb diferents valors</p>
+      <!-- INICI EXEMPLE 2 -->
+      <div class="relative h-40 bg-gray-100 rounded border border-gray-300">
+        <div class="absolute top-0 left-0 bg-indigo-500 text-white text-xs px-2 py-1 rounded">top-0 left-0</div>
+        <div class="absolute top-4 right-4 bg-green-500 text-white text-xs px-2 py-1 rounded">top-4 right-4</div>
+        <div class="absolute bottom-0 right-0 bg-red-500 text-white text-xs px-2 py-1 rounded">bottom-0 right-0</div>
       </div>
-      <div>
-        <p class="text-sm font-medium mb-1">sticky (fixat en scroll)</p>
-        <p class="note">Nota: Un element sticky es comporta com relative fins que el scroll el situa al llindar indicat (top:0), llavors es queda fixat.</p>
+      <!-- FI EXEMPLE 2 -->
+    </section>
+
+    <section id="inset" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Inset shorthand</h2>
+      <p class="text-sm text-gray-600 mb-3">inset-0, inset-x-0, inset-y-0</p>
+      <!-- INICI EXEMPLE 3 -->
+      <div class="relative h-48 bg-gray-100 rounded border border-gray-300">
+        <div class="absolute inset-0 bg-indigo-500/20 border-2 border-indigo-500 flex items-center justify-center">inset-0</div>
+        <div class="absolute inset-x-0 top-12 h-8 bg-green-500/30 border-2 border-green-500 flex items-center justify-center text-xs">inset-x-0</div>
+        <div class="absolute inset-y-0 left-20 w-24 bg-red-500/30 border-2 border-red-500 flex items-center justify-center text-xs">inset-y-0</div>
       </div>
-    </div>
-    <!-- FI EXEMPLE 1 -->
-  </section>
+      <!-- FI EXEMPLE 3 -->
+    </section>
 
-  <hr>
-
-  <section id="exemple-2">
-    <h2>Exemple 2: Controls de posició</h2>
-    <p class="text-sm text-gray-600 mb-3">top, right, bottom, left amb diferents valors</p>
-    <!-- INICI EXEMPLE 2 -->
-    <div class="relative h-40 bg-gray-100 rounded border border-gray-300">
-      <div class="absolute top-0 left-0 bg-indigo-500 text-white text-xs px-2 py-1 rounded">top-0 left-0</div>
-      <div class="absolute top-4 right-4 bg-green-500 text-white text-xs px-2 py-1 rounded">top-4 right-4</div>
-      <div class="absolute bottom-0 right-0 bg-red-500 text-white text-xs px-2 py-1 rounded">bottom-0 right-0</div>
-    </div>
-    <!-- FI EXEMPLE 2 -->
-  </section>
-
-  <hr>
-
-  <section id="exemple-3">
-    <h2>Exemple 3: Inset shorthand</h2>
-    <p class="text-sm text-gray-600 mb-3">inset-0, inset-x-0, inset-y-0</p>
-    <!-- INICI EXEMPLE 3 -->
-    <div class="relative h-48 bg-gray-100 rounded border border-gray-300">
-      <div class="absolute inset-0 bg-indigo-500/20 border-2 border-indigo-500 flex items-center justify-center">inset-0</div>
-      <div class="absolute inset-x-0 top-12 h-8 bg-green-500/30 border-2 border-green-500 flex items-center justify-center text-xs">inset-x-0</div>
-      <div class="absolute inset-y-0 left-20 w-24 bg-red-500/30 border-2 border-red-500 flex items-center justify-center text-xs">inset-y-0</div>
-    </div>
-    <!-- FI EXEMPLE 3 -->
-  </section>
-
-  <hr>
-
-  <section id="exemple-4">
-    <h2>Exemple 4: Modal</h2>
-    <p class="text-sm text-gray-600 mb-3">Finestra modal centrada amb overlay fosc</p>
-    <!-- INICI EXEMPLE 4 -->
-    <div class="relative h-64 rounded overflow-hidden">
-      <div class="absolute inset-0 bg-gray-300 flex items-center justify-center">
-        <span class="text-gray-500 text-sm">Contingut darrere del modal</span>
-      </div>
-      <div class="absolute inset-0 z-50 flex items-center justify-center bg-black/50">
-        <div class="bg-white rounded-xl p-8 max-w-md w-full mx-4">
-          <h3 class="text-xl font-bold">Modal</h3>
-          <p class="text-gray-600 mt-2">Contingut del modal.</p>
-          <button class="mt-6 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 w-full">Tancar</button>
+    <section id="modal" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Modal</h2>
+      <p class="text-sm text-gray-600 mb-3">Finestra modal centrada amb overlay fosc</p>
+      <!-- INICI EXEMPLE 4 -->
+      <div class="relative h-64 rounded overflow-hidden">
+        <div class="absolute inset-0 bg-gray-300 flex items-center justify-center">
+          <span class="text-gray-500 text-sm">Contingut darrere del modal</span>
+        </div>
+        <div class="absolute inset-0 z-50 flex items-center justify-center bg-black/50">
+          <div class="bg-white rounded-xl p-8 max-w-md w-full mx-4">
+            <h3 class="text-xl font-bold">Modal</h3>
+            <p class="text-gray-600 mt-2">Contingut del modal.</p>
+            <button class="mt-6 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 w-full">Tancar</button>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- FI EXEMPLE 4 -->
-  </section>
+      <!-- FI EXEMPLE 4 -->
+    </section>
 
-  <hr>
-
-  <section id="exemple-5">
-    <h2>Exemple 5: Badge positioning</h2>
-    <p class="text-sm text-gray-600 mb-3">Badge de notificació sobreposat a un element</p>
-    <!-- INICI EXEMPLE 5 -->
-    <div class="relative inline-block">
-      <div class="w-16 h-16 bg-gray-300 rounded-lg"></div>
-      <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-6 h-6 rounded-full flex items-center justify-center -translate-y-1/2 translate-x-1/2">3</span>
-    </div>
-    <!-- FI EXEMPLE 5 -->
-  </section>
-
-  <hr>
-
-  <section id="exemple-6">
-    <h2>Exemple 6: Sticky header</h2>
-    <p class="text-sm text-gray-600 mb-3">Header que es queda fixat en scroll</p>
-    <!-- INICI EXEMPLE 6 -->
-    <div class="relative border rounded overflow-hidden" style="max-height: 200px; overflow-y: auto;">
-      <header class="sticky top-0 z-40 bg-white shadow px-4 py-3 font-bold text-gray-800 border-b">
-        🔝 Header sticky — es queda fixat en fer scroll
-      </header>
-      <div class="p-4 space-y-2 text-sm text-gray-600">
-        <p>Línia 1 — Fes scroll cap avall per veure l'efecte sticky.</p>
-        <p>Línia 2 — El header es manté visible.</p>
-        <p>Línia 3 — Segueix fixat a dalt.</p>
-        <p>Línia 4 — Més contingut de prova.</p>
-        <p>Línia 5 — El header no es mou.</p>
-        <p>Línia 6 — Fins al final del contenidor.</p>
-        <p>Línia 7 — Última línia.</p>
+    <section id="badge-posicio" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Badge positioning</h2>
+      <p class="text-sm text-gray-600 mb-3">Badge de notificació sobreposat a un element</p>
+      <!-- INICI EXEMPLE 5 -->
+      <div class="relative inline-block">
+        <div class="w-16 h-16 bg-gray-300 rounded-lg"></div>
+        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-6 h-6 rounded-full flex items-center justify-center -translate-y-1/2 translate-x-1/2">3</span>
       </div>
-    </div>
-    <p class="note">⚠️ Fes scroll dins del contenidor de dalt per veure l'efecte sticky.</p>
-    <!-- FI EXEMPLE 6 -->
-  </section>
+      <!-- FI EXEMPLE 5 -->
+    </section>
 
-  <hr>
-
-  <section id="exemple-7">
-    <h2>Exemple 7: Valors arbitraris []</h2>
-    <p class="text-sm text-gray-600 mb-3">Quan l'escala de Tailwind no té el valor exacte</p>
-    <!-- INICI EXEMPLE 7 -->
-    <div class="space-y-4">
-      <div class="w-[500px] bg-blue-200 text-center py-2 rounded text-sm">w-[500px]</div>
-      <div class="text-[#ff0000] font-bold">text-[#ff0000] — Color vermell personalitzat</div>
-      <div class="relative h-12 bg-gray-100 rounded">
-        <div class="absolute top-[37px] left-0 bg-green-400 text-xs px-2 py-1 rounded">top-[37px]</div>
+    <section id="sticky-header" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Sticky header</h2>
+      <p class="text-sm text-gray-600 mb-3">Header que es queda fixat en scroll</p>
+      <!-- INICI EXEMPLE 6 -->
+      <div class="relative border rounded overflow-hidden" style="max-height: 200px; overflow-y: auto;">
+        <header class="sticky top-0 z-40 bg-white shadow px-4 py-3 font-bold text-gray-800 border-b">
+          🔝 Header sticky — es queda fixat en fer scroll
+        </header>
+        <div class="p-4 space-y-2 text-sm text-gray-600">
+          <p>Línia 1 — Fes scroll cap avall per veure l'efecte sticky.</p>
+          <p>Línia 2 — El header es manté visible.</p>
+          <p>Línia 3 — Segueix fixat a dalt.</p>
+          <p>Línia 4 — Més contingut de prova.</p>
+          <p>Línia 5 — El header no es mou.</p>
+          <p>Línia 6 — Fins al final del contenidor.</p>
+          <p>Línia 7 — Última línia.</p>
+        </div>
       </div>
-    </div>
-    <!-- FI EXEMPLE 7 -->
-  </section>
+      <p class="note">⚠️ Fes scroll dins del contenidor de dalt per veure l'efecte sticky.</p>
+      <!-- FI EXEMPLE 6 -->
+    </section>
 
-  <hr>
+    <section id="valors-arbitraris" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Valors arbitraris []</h2>
+      <p class="text-sm text-gray-600 mb-3">Quan l'escala de Tailwind no té el valor exacte</p>
+      <!-- INICI EXEMPLE 7 -->
+      <div class="space-y-4">
+        <div class="w-[500px] bg-blue-200 text-center py-2 rounded text-sm">w-[500px]</div>
+        <div class="text-[#ff0000] font-bold">text-[#ff0000] — Color vermell personalitzat</div>
+        <div class="relative h-12 bg-gray-100 rounded">
+          <div class="absolute top-[37px] left-0 bg-green-400 text-xs px-2 py-1 rounded">top-[37px]</div>
+        </div>
+      </div>
+      <!-- FI EXEMPLE 7 -->
+    </section>
 
-  <section id="exemple-8">
-    <h2>Exemple 8: Quan usar valors arbitraris</h2>
-    <p class="text-sm text-gray-600 mb-3">Valor molt específic que no es repeteix</p>
-    <!-- INICI EXEMPLE 8 -->
-    <div class="w-[373px] bg-indigo-100 border border-indigo-300 text-center py-4 rounded text-sm">
-      w-[373px] — Amplada molt específica
-    </div>
-    <p class="note">Usa valors arbitraris només per a mesures puntuals que no es repeteixin.</p>
-    <!-- FI EXEMPLE 8 -->
-  </section>
+    <section id="quan-usar-arbitraris" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Quan usar valors arbitraris</h2>
+      <p class="text-sm text-gray-600 mb-3">Valor molt específic que no es repeteix</p>
+      <!-- INICI EXEMPLE 8 -->
+      <div class="w-[373px] bg-indigo-100 border border-indigo-300 text-center py-4 rounded text-sm">
+        w-[373px] — Amplada molt específica
+      </div>
+      <p class="note">Usa valors arbitraris només per a mesures puntuals que no es repeteixin.</p>
+      <!-- FI EXEMPLE 8 -->
+    </section>
+  </div>
+
+
 </body>
 </html>

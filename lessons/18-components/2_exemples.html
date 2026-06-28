@@ -5,211 +5,217 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lliçó 18 - Components pràctics</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { font-family: system-ui, sans-serif; max-width: 960px; margin: 0 auto; padding: 2rem 1rem; background: #f5f5f5; }
-    nav a { margin-right: 1rem; color: #2563eb; text-decoration: underline; }
-    hr { margin: 2rem 0; border: 0; border-top: 2px solid #ccc; }
-    section { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 2rem; }
-    h2 { margin-top: 0; font-size: 1.25rem; font-weight: 700; }
-  </style>
+  <script src="../tabs.js"></script>
+  <link rel="stylesheet" href="../tabs.css">
+
 </head>
-<body>
-  <h1 class="text-2xl font-bold mb-4">Lliçó 18 - Components pràctics</h1>
-  <nav class="mb-8 text-sm">
-    <a href="#exemple-1">Navbar responsive</a>
-    <a href="#exemple-2">Hero section</a>
-    <a href="#exemple-3">Card</a>
-    <a href="#exemple-4">Footer</a>
-    <a href="#exemple-5">Galeria</a>
-    <a href="#exemple-6">Taula responsive</a>
-    <a href="#exemple-7">Breadcrumbs</a>
-  </nav>
+<body class="bg-gray-50 min-h-screen">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900">Lliçó 18 - Components pràctics</h1>
+      <p class="text-gray-600 mt-1">Exemples pràctics</p>
+    </div>
 
-  <section id="exemple-1">
-    <h2>Exemple 1: Navbar responsive</h2>
-    <p class="text-sm text-gray-600 mb-3">Barra de navegació amb enllaços a escriptori i menú hamburger a mòbil</p>
-    <!-- INICI EXEMPLE 1 -->
-    <nav class="bg-white shadow">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="flex justify-between items-center h-16">
-          <span class="text-xl font-bold">Logo</span>
-          <div class="hidden md:flex space-x-8">
-            <a href="#" class="text-gray-700 hover:text-blue-600">Inici</a>
-            <a href="#" class="text-gray-700 hover:text-blue-600">Serveis</a>
-            <a href="#" class="text-gray-700 hover:text-blue-600">Contacte</a>
+    <div class="flex flex-wrap gap-1 border-b border-gray-300 mb-6" role="tablist">
+      <a href="#navbar-responsive"
+         onclick="obrirTab(event, 'navbar-responsive')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Navbar</a>
+      <a href="#hero-section"
+         onclick="obrirTab(event, 'hero-section')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Hero section</a>
+      <a href="#card"
+         onclick="obrirTab(event, 'card')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Card</a>
+      <a href="#footer"
+         onclick="obrirTab(event, 'footer')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Footer</a>
+      <a href="#galeria"
+         onclick="obrirTab(event, 'galeria')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Galeria</a>
+      <a href="#taula-responsive"
+         onclick="obrirTab(event, 'taula-responsive')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Taula responsive</a>
+      <a href="#breadcrumbs"
+         onclick="obrirTab(event, 'breadcrumbs')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Breadcrumbs</a>
+    </div>
+
+    <section id="navbar-responsive" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Navbar responsive</h2>
+      <p class="text-sm text-gray-600 mb-3">Barra de navegació amb enllaços a escriptori i menú hamburger a mòbil</p>
+      <!-- INICI EXEMPLE 1 -->
+      <nav class="bg-white shadow">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="flex justify-between items-center h-16">
+            <span class="text-xl font-bold">Logo</span>
+            <div class="hidden md:flex space-x-8">
+              <a href="#" class="text-gray-700 hover:text-blue-600">Inici</a>
+              <a href="#" class="text-gray-700 hover:text-blue-600">Serveis</a>
+              <a href="#" class="text-gray-700 hover:text-blue-600">Contacte</a>
+            </div>
+            <button class="md:hidden p-2 rounded-md hover:bg-gray-100">☰</button>
           </div>
-          <button class="md:hidden p-2 rounded-md hover:bg-gray-100">☰</button>
         </div>
-      </div>
-    </nav>
-    <!-- FI EXEMPLE 1 -->
-  </section>
-
-  <hr>
-
-  <section id="exemple-2">
-    <h2>Exemple 2: Hero section</h2>
-    <p class="text-sm text-gray-600 mb-3">Secció hero amb gradient, títol, descripció i CTA</p>
-    <!-- INICI EXEMPLE 2 -->
-    <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded">
-      <div class="max-w-4xl mx-auto text-center py-16 px-4">
-        <h1 class="text-3xl md:text-5xl font-bold mb-6">Crea el teu web amb Tailwind</h1>
-        <p class="text-lg md:text-xl text-blue-100 mb-8">Aprèn a maquetar de forma ràpida i consistent.</p>
-        <div class="flex justify-center space-x-4">
-          <a href="#" class="bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg hover:bg-blue-50 transition">Comença ara</a>
-          <a href="#" class="border-2 border-white text-white font-semibold px-8 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition">Més informació</a>
-        </div>
-      </div>
+      </nav>
+      <!-- FI EXEMPLE 1 -->
     </section>
-    <!-- FI EXEMPLE 2 -->
-  </section>
 
-  <hr>
-
-  <section id="exemple-3">
-    <h2>Exemple 3: Targeta (card)</h2>
-    <p class="text-sm text-gray-600 mb-3">Card amb imatge, categoria, títol, descripció i enllaç</p>
-    <!-- INICI EXEMPLE 3 -->
-    <div class="max-w-sm bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-      <img class="w-full h-48 object-cover" src="https://picsum.photos/400/300" alt="">
-      <div class="p-6">
-        <span class="text-xs text-blue-600 font-semibold uppercase tracking-wide">Categoria</span>
-        <h3 class="mt-1 text-xl font-bold text-gray-900">Títol de la targeta</h3>
-        <p class="mt-2 text-gray-600">Descripció breu del contingut.</p>
-        <a href="#" class="mt-4 inline-block text-blue-600 font-semibold hover:text-blue-800">Llegir més →</a>
-      </div>
-    </div>
-    <!-- FI EXEMPLE 3 -->
-  </section>
-
-  <hr>
-
-  <section id="exemple-4">
-    <h2>Exemple 4: Footer</h2>
-    <p class="text-sm text-gray-600 mb-3">Footer complet amb 4 columnes i copyright</p>
-    <!-- INICI EXEMPLE 4 -->
-    <footer class="bg-gray-900 text-white py-12 rounded">
-      <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div>
-          <h4 class="text-lg font-bold mb-4">Logo</h4>
-          <p class="text-gray-400 text-sm">Descripció curta de l'empresa.</p>
+    <section id="hero-section" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Hero section</h2>
+      <p class="text-sm text-gray-600 mb-3">Secció hero amb gradient, títol, descripció i CTA</p>
+      <!-- INICI EXEMPLE 2 -->
+      <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded">
+        <div class="max-w-4xl mx-auto text-center py-16 px-4">
+          <h1 class="text-3xl md:text-5xl font-bold mb-6">Crea el teu web amb Tailwind</h1>
+          <p class="text-lg md:text-xl text-blue-100 mb-8">Aprèn a maquetar de forma ràpida i consistent.</p>
+          <div class="flex justify-center space-x-4">
+            <a href="#" class="bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg hover:bg-blue-50 transition">Comença ara</a>
+            <a href="#" class="border-2 border-white text-white font-semibold px-8 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition">Més informació</a>
+          </div>
         </div>
-        <div>
-          <h5 class="font-semibold mb-3">Enllaços</h5>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="#" class="hover:text-white">Inici</a></li>
-            <li><a href="#" class="hover:text-white">Serveis</a></li>
-            <li><a href="#" class="hover:text-white">Contacte</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5 class="font-semibold mb-3">Xarxes</h5>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="#" class="hover:text-white">Twitter</a></li>
-            <li><a href="#" class="hover:text-white">LinkedIn</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5 class="font-semibold mb-3">Contacte</h5>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li>info@exemple.com</li>
-            <li>+34 123 456 789</li>
-          </ul>
+      </section>
+      <!-- FI EXEMPLE 2 -->
+    </section>
+
+    <section id="card" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Targeta (card)</h2>
+      <p class="text-sm text-gray-600 mb-3">Card amb imatge, categoria, títol, descripció i enllaç</p>
+      <!-- INICI EXEMPLE 3 -->
+      <div class="max-w-sm bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+        <img class="w-full h-48 object-cover" src="https://picsum.photos/400/300" alt="">
+        <div class="p-6">
+          <span class="text-xs text-blue-600 font-semibold uppercase tracking-wide">Categoria</span>
+          <h3 class="mt-1 text-xl font-bold text-gray-900">Títol de la targeta</h3>
+          <p class="mt-2 text-gray-600">Descripció breu del contingut.</p>
+          <a href="#" class="mt-4 inline-block text-blue-600 font-semibold hover:text-blue-800">Llegir més →</a>
         </div>
       </div>
-      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-500">
-        © 2026 Tots els drets reservats.
-      </div>
-    </footer>
-    <!-- FI EXEMPLE 4 -->
-  </section>
+      <!-- FI EXEMPLE 3 -->
+    </section>
 
-  <hr>
+    <section id="footer" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Footer</h2>
+      <p class="text-sm text-gray-600 mb-3">Footer complet amb 4 columnes i copyright</p>
+      <!-- INICI EXEMPLE 4 -->
+      <footer class="bg-gray-900 text-white py-12 rounded">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h4 class="text-lg font-bold mb-4">Logo</h4>
+            <p class="text-gray-400 text-sm">Descripció curta de l'empresa.</p>
+          </div>
+          <div>
+            <h5 class="font-semibold mb-3">Enllaços</h5>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li><a href="#" class="hover:text-white">Inici</a></li>
+              <li><a href="#" class="hover:text-white">Serveis</a></li>
+              <li><a href="#" class="hover:text-white">Contacte</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-semibold mb-3">Xarxes</h5>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li><a href="#" class="hover:text-white">Twitter</a></li>
+              <li><a href="#" class="hover:text-white">LinkedIn</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-semibold mb-3">Contacte</h5>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>info@exemple.com</li>
+              <li>+34 123 456 789</li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-500">
+          © 2026 Tots els drets reservats.
+        </div>
+      </footer>
+      <!-- FI EXEMPLE 4 -->
+    </section>
 
-  <section id="exemple-5">
-    <h2>Exemple 5: Galeria d'imatges</h2>
-    <p class="text-sm text-gray-600 mb-3">Grid d'imatges amb hover zoom</p>
-    <!-- INICI EXEMPLE 5 -->
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      <div class="overflow-hidden rounded-lg">
-        <img class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300" src="https://picsum.photos/400/300?1" alt="">
+    <section id="galeria" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Galeria d'imatges</h2>
+      <p class="text-sm text-gray-600 mb-3">Grid d'imatges amb hover zoom</p>
+      <!-- INICI EXEMPLE 5 -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="overflow-hidden rounded-lg">
+          <img class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300" src="https://picsum.photos/400/300?1" alt="">
+        </div>
+        <div class="overflow-hidden rounded-lg">
+          <img class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300" src="https://picsum.photos/400/300?2" alt="">
+        </div>
+        <div class="overflow-hidden rounded-lg">
+          <img class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300" src="https://picsum.photos/400/300?3" alt="">
+        </div>
+        <div class="overflow-hidden rounded-lg">
+          <img class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300" src="https://picsum.photos/400/300?4" alt="">
+        </div>
+        <div class="overflow-hidden rounded-lg">
+          <img class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300" src="https://picsum.photos/400/300?5" alt="">
+        </div>
+        <div class="overflow-hidden rounded-lg">
+          <img class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300" src="https://picsum.photos/400/300?6" alt="">
+        </div>
+        <div class="overflow-hidden rounded-lg">
+          <img class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300" src="https://picsum.photos/400/300?7" alt="">
+        </div>
+        <div class="overflow-hidden rounded-lg">
+          <img class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300" src="https://picsum.photos/400/300?8" alt="">
+        </div>
       </div>
-      <div class="overflow-hidden rounded-lg">
-        <img class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300" src="https://picsum.photos/400/300?2" alt="">
-      </div>
-      <div class="overflow-hidden rounded-lg">
-        <img class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300" src="https://picsum.photos/400/300?3" alt="">
-      </div>
-      <div class="overflow-hidden rounded-lg">
-        <img class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300" src="https://picsum.photos/400/300?4" alt="">
-      </div>
-      <div class="overflow-hidden rounded-lg">
-        <img class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300" src="https://picsum.photos/400/300?5" alt="">
-      </div>
-      <div class="overflow-hidden rounded-lg">
-        <img class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300" src="https://picsum.photos/400/300?6" alt="">
-      </div>
-      <div class="overflow-hidden rounded-lg">
-        <img class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300" src="https://picsum.photos/400/300?7" alt="">
-      </div>
-      <div class="overflow-hidden rounded-lg">
-        <img class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300" src="https://picsum.photos/400/300?8" alt="">
-      </div>
-    </div>
-    <!-- FI EXEMPLE 5 -->
-  </section>
+      <!-- FI EXEMPLE 5 -->
+    </section>
 
-  <hr>
+    <section id="taula-responsive" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Taula responsive</h2>
+      <p class="text-sm text-gray-600 mb-3">Taula amb scroll horitzontal a mòbil i estats hover</p>
+      <!-- INICI EXEMPLE 6 -->
+      <div class="overflow-x-auto rounded-lg shadow">
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Nom</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Rol</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Estat</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4 text-sm text-gray-900">Anna</td>
+              <td class="px-6 py-4 text-sm text-gray-600">Dissenyadora</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Actiu</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4 text-sm text-gray-900">Pau</td>
+              <td class="px-6 py-4 text-sm text-gray-600">Desenvolupador</td>
+              <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Pendent</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4 text-sm text-gray-900">Marta</td>
+              <td class="px-6 py-4 text-sm text-gray-600">Product Manager</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Actiu</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- FI EXEMPLE 6 -->
+    </section>
 
-  <section id="exemple-6">
-    <h2>Exemple 6: Taula responsive</h2>
-    <p class="text-sm text-gray-600 mb-3">Taula amb scroll horitzontal a mòbil i estats hover</p>
-    <!-- INICI EXEMPLE 6 -->
-    <div class="overflow-x-auto rounded-lg shadow">
-      <table class="min-w-full divide-y divide-gray-200">
-        <thead class="bg-gray-50">
-          <tr>
-            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Nom</th>
-            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Rol</th>
-            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Estat</th>
-          </tr>
-        </thead>
-        <tbody class="bg-white divide-y divide-gray-200">
-          <tr class="hover:bg-gray-50">
-            <td class="px-6 py-4 text-sm text-gray-900">Anna</td>
-            <td class="px-6 py-4 text-sm text-gray-600">Dissenyadora</td>
-            <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Actiu</span></td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="px-6 py-4 text-sm text-gray-900">Pau</td>
-            <td class="px-6 py-4 text-sm text-gray-600">Desenvolupador</td>
-            <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Pendent</span></td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="px-6 py-4 text-sm text-gray-900">Marta</td>
-            <td class="px-6 py-4 text-sm text-gray-600">Product Manager</td>
-            <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Actiu</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <!-- FI EXEMPLE 6 -->
-  </section>
+    <section id="breadcrumbs" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Breadcrumbs</h2>
+      <p class="text-sm text-gray-600 mb-3">Navegació de ruta amb enllaços i separadors</p>
+      <!-- INICI EXEMPLE 7 -->
+      <nav class="flex items-center space-x-2 text-sm text-gray-500">
+        <a href="#" class="hover:text-gray-700">Inici</a>
+        <span>/</span>
+        <a href="#" class="hover:text-gray-700">Categoria</a>
+        <span>/</span>
+        <span class="text-gray-900 font-medium">Pàgina actual</span>
+      </nav>
+      <!-- FI EXEMPLE 7 -->
+    </section>
+  </div>
 
-  <hr>
 
-  <section id="exemple-7">
-    <h2>Exemple 7: Breadcrumbs</h2>
-    <p class="text-sm text-gray-600 mb-3">Navegació de ruta amb enllaços i separadors</p>
-    <!-- INICI EXEMPLE 7 -->
-    <nav class="flex items-center space-x-2 text-sm text-gray-500">
-      <a href="#" class="hover:text-gray-700">Inici</a>
-      <span>/</span>
-      <a href="#" class="hover:text-gray-700">Categoria</a>
-      <span>/</span>
-      <span class="text-gray-900 font-medium">Pàgina actual</span>
-    </nav>
-    <!-- FI EXEMPLE 7 -->
-  </section>
 </body>
 </html>

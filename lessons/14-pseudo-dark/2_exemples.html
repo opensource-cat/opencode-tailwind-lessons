@@ -5,107 +5,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pseudo-classes i dark mode</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tabs.js"></script>
+  <link rel="stylesheet" href="../tabs.css">
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 0 auto; padding: 2rem; background: #f9fafb; color: #111827; }
-    nav a { margin-right: 0.75rem; color: #2563eb; text-decoration: none; }
-    nav a:hover { text-decoration: underline; }
-    section { margin: 2rem 0; padding: 1.5rem; background: white; border-radius: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-    h1 { font-size: 1.875rem; font-weight: 700; }
-    h2 { font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; }
-    hr { border: none; border-top: 2px solid #e5e7eb; margin: 2rem 0; }
     .toggle-dark { margin-bottom: 1rem; }
+    .note { background: #dbeafe; padding: 0.5rem 1rem; border-radius: 0.375rem; margin-top: 1rem; font-size: 0.875rem; }
   </style>
 </head>
-<body>
-  <h1>Pseudo-classes i dark mode</h1>
-  <nav>
-    <a href="#exemple-1">Even/odd</a>
-    <a href="#exemple-2">First-letter / first-line</a>
-    <a href="#exemple-3">Placeholder</a>
-    <a href="#exemple-4">Dark mode</a>
-    <a href="#exemple-5">Focus ring</a>
-    <a href="#exemple-6">Formulari accessible</a>
-  </nav>
+<body class="bg-gray-50 min-h-screen">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900">Pseudo-classes i dark mode</h1>
+      <p class="text-gray-600 mt-1">Exemples pràctics</p>
+    </div>
 
-  <section id="exemple-1">
-    <h2>1. Even/odd (zebra)</h2>
-    <!-- INICI EXEMPLE 1 -->
-    <ul>
-      <li class="bg-white even:bg-gray-50 px-4 py-2">Element 1</li>
-      <li class="bg-white even:bg-gray-50 px-4 py-2">Element 2</li>
-      <li class="bg-white even:bg-gray-50 px-4 py-2">Element 3</li>
-      <li class="bg-white even:bg-gray-50 px-4 py-2">Element 4</li>
-    </ul>
-    <!-- FI EXEMPLE 1 -->
-  </section>
+    <div class="flex flex-wrap gap-1 border-b border-gray-300 mb-6" role="tablist">
+      <a href="#even-odd"
+         onclick="obrirTab(event, 'even-odd')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Even/odd</a>
+      <a href="#first-letter"
+         onclick="obrirTab(event, 'first-letter')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">First-letter</a>
+      <a href="#placeholder"
+         onclick="obrirTab(event, 'placeholder')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Placeholder</a>
+      <a href="#dark-mode"
+         onclick="obrirTab(event, 'dark-mode')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Dark mode</a>
+      <a href="#focus-ring"
+         onclick="obrirTab(event, 'focus-ring')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Focus ring</a>
+      <a href="#formulari-accessible"
+         onclick="obrirTab(event, 'formulari-accessible')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Formulari accessible</a>
+    </div>
 
-  <hr>
+    <section id="even-odd" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Even/odd (zebra)</h2>
+      <!-- INICI EXEMPLE 1 -->
+      <ul>
+        <li class="bg-white even:bg-gray-50 px-4 py-2">Element 1</li>
+        <li class="bg-white even:bg-gray-50 px-4 py-2">Element 2</li>
+        <li class="bg-white even:bg-gray-50 px-4 py-2">Element 3</li>
+        <li class="bg-white even:bg-gray-50 px-4 py-2">Element 4</li>
+      </ul>
+      <!-- FI EXEMPLE 1 -->
+    </section>
 
-  <section id="exemple-2">
-    <h2>2. First-letter / first-line</h2>
-    <!-- INICI EXEMPLE 2 -->
-    <p class="first-letter:text-4xl first-letter:font-bold first-letter:text-blue-600 first-line:text-gray-700">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-    <!-- FI EXEMPLE 2 -->
-  </section>
-
-  <hr>
-
-  <section id="exemple-3">
-    <h2>3. Placeholder</h2>
-    <!-- INICI EXEMPLE 3 -->
-    <input class="border border-gray-300 rounded-md px-4 py-2 placeholder:text-gray-400 placeholder:italic"
-           type="text" placeholder="El teu nom...">
-    <!-- FI EXEMPLE 3 -->
-  </section>
-
-  <hr>
-
-  <section id="exemple-4">
-    <h2>4. Dark mode</h2>
-    <p class="text-sm text-gray-500 mb-2">Nota: dark mode requereix <code>darkMode: 'class'</code> a <code>tailwind.config.js</code>.</p>
-    <button onclick="document.getElementById('html-root').classList.toggle('dark')"
-            class="toggle-dark bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-3 py-1 rounded text-sm">
-      Toggle dark mode
-    </button>
-    <!-- INICI EXEMPLE 4 -->
-    <div class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white p-6 rounded-lg">
-      <h2 class="text-xl font-bold">Mode fosc</h2>
-      <p class="text-gray-600 dark:text-gray-300">
-        Aquest contingut s'adapta al tema.
+    <section id="first-letter" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">First-letter / first-line</h2>
+      <!-- INICI EXEMPLE 2 -->
+      <p class="first-letter:text-4xl first-letter:font-bold first-letter:text-blue-600 first-line:text-gray-700">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
-    </div>
-    <!-- FI EXEMPLE 4 -->
-  </section>
+      <!-- FI EXEMPLE 2 -->
+    </section>
 
-  <hr>
+    <section id="placeholder" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Placeholder</h2>
+      <!-- INICI EXEMPLE 3 -->
+      <input class="border border-gray-300 rounded-md px-4 py-2 placeholder:text-gray-400 placeholder:italic"
+             type="text" placeholder="El teu nom...">
+      <!-- FI EXEMPLE 3 -->
+    </section>
 
-  <section id="exemple-5">
-    <h2>5. Focus ring per accessibilitat</h2>
-    <p class="text-sm text-gray-500 mb-2">Fes clic/tab al botó per veure l'anell de focus.</p>
-    <!-- INICI EXEMPLE 5 -->
-    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-      Envia
-    </button>
-    <!-- FI EXEMPLE 5 -->
-  </section>
+    <section id="dark-mode" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Dark mode</h2>
+      <p class="text-sm text-gray-500 mb-2">Nota: dark mode requereix <code>darkMode: 'class'</code> a <code>tailwind.config.js</code>.</p>
+      <button onclick="document.getElementById('html-root').classList.toggle('dark')"
+              class="toggle-dark bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-3 py-1 rounded text-sm">
+        Toggle dark mode
+      </button>
+      <!-- INICI EXEMPLE 4 -->
+      <div class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white p-6 rounded-lg">
+        <h2 class="text-xl font-bold">Mode fosc</h2>
+        <p class="text-gray-600 dark:text-gray-300">
+          Aquest contingut s'adapta al tema.
+        </p>
+      </div>
+      <!-- FI EXEMPLE 4 -->
+    </section>
 
-  <hr>
+    <section id="focus-ring" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Focus ring per accessibilitat</h2>
+      <p class="text-sm text-gray-500 mb-2">Fes clic/tab al botó per veure l'anell de focus.</p>
+      <!-- INICI EXEMPLE 5 -->
+      <button class="bg-blue-600 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+        Envia
+      </button>
+      <!-- FI EXEMPLE 5 -->
+    </section>
 
-  <section id="exemple-6">
-    <h2>6. Formulari accessible (dark mode, focus, placeholder, disabled)</h2>
-    <!-- INICI EXEMPLE 6 -->
-    <div>
-      <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
-        Correu electrònic
-      </label>
-      <input type="email"
-             class="mt-1 block w-full border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-md px-3 py-2 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
-             placeholder="usuari@exemple.com">
-    </div>
-    <!-- FI EXEMPLE 6 -->
-  </section>
+    <section id="formulari-accessible" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Formulari accessible (dark mode, focus, placeholder, disabled)</h2>
+      <!-- INICI EXEMPLE 6 -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          Correu electrònic
+        </label>
+        <input type="email"
+               class="mt-1 block w-full border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-md px-3 py-2 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
+               placeholder="usuari@exemple.com">
+      </div>
+      <!-- FI EXEMPLE 6 -->
+    </section>
+  </div>
+
+
 </body>
 </html>

@@ -5,148 +5,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>10 - Display i visibilitat</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { font-family: system-ui, sans-serif; margin: 0; padding: 2rem; background: #f5f5f5; }
-    nav { background: #1e293b; padding: 1rem; border-radius: 0.5rem; margin-bottom: 2rem; }
-    nav a { color: white; text-decoration: none; margin-right: 1.5rem; font-size: 0.9rem; }
-    nav a:hover { text-decoration: underline; }
-    section { background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-    h2 { margin-top: 0; color: #1e293b; font-size: 1.25rem; }
-    hr { border: none; border-top: 2px dashed #cbd5e1; margin: 2rem 0; }
-  </style>
+  <script src="../tabs.js"></script>
+  <link rel="stylesheet" href="../tabs.css">
 </head>
-<body>
-
-<nav>
-  <a href="#exemple-1">Exemple 1</a>
-  <a href="#exemple-2">Exemple 2</a>
-  <a href="#exemple-3">Exemple 3</a>
-  <a href="#exemple-4">Exemple 4</a>
-  <a href="#exemple-5">Exemple 5</a>
-</nav>
-
-<h1 class="text-2xl font-bold mb-6">10 - Display i visibilitat</h1>
-
-<!-- EXEMPLE 1 -->
-<section id="exemple-1">
-  <h2>Exemple 1: Display bàsic</h2>
-  <p class="text-gray-600 mb-4"><code>block</code>, <code>inline-block</code>, <code>inline</code>, <code>hidden</code>.</p>
-  <!-- INICI EXEMPLE 1 -->
-  <div class="space-y-2">
-    <div class="block bg-sky-200 p-3 rounded">block — ocupa tota l'amplada</div>
-    <div>
-      <span class="inline-block bg-green-200 p-3 rounded w-48">inline-block — respecta w/h (amplada 12rem)</span>
-      <span class="inline-block bg-green-200 p-3 rounded">inline-block adjacent</span>
+<body class="bg-gray-50 min-h-screen">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900">10 — Display i visibilitat</h1>
+      <p class="text-gray-600 mt-1">Exemples pràctics</p>
     </div>
-    <div>
-      <span class="inline bg-yellow-200 p-3 rounded">inline — en línia</span>
-      <span class="inline bg-yellow-200 p-3 rounded">no respecta w/h</span>
-    </div>
-    <div class="flex items-center gap-2">
-      <span class="border border-gray-400 p-2">Text abans</span>
-      <div class="hidden bg-red-200 p-3 rounded">hidden — no es veu ni ocupa espai</div>
-      <span class="border border-gray-400 p-2">Text després (sense forat)</span>
-    </div>
-  </div>
-  <!-- FI EXEMPLE 1 -->
-</section>
 
-<hr>
+    <div class="flex flex-wrap gap-1 border-b border-gray-300 mb-6" role="tablist">
+      <a href="#display-basic"
+         onclick="obrirTab(event, 'display-basic')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Display bàsic</a>
+      <a href="#visibilitat"
+         onclick="obrirTab(event, 'visibilitat')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Visibilitat</a>
+      <a href="#overflow"
+         onclick="obrirTab(event, 'overflow')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Overflow</a>
+      <a href="#z-index"
+         onclick="obrirTab(event, 'z-index')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Z-index</a>
+      <a href="#badge-display"
+         onclick="obrirTab(event, 'badge-display')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Badge</a>
+    </div>
 
-<!-- EXEMPLE 2 -->
-<section id="exemple-2">
-  <h2>Exemple 2: Visibilitat vs hidden</h2>
-  <p class="text-gray-600 mb-4"><code>visible</code>, <code>invisible</code> (ocupa espai però no es veu), i <code>hidden</code> (no ocupa espai).</p>
-  <!-- INICI EXEMPLE 2 -->
-  <div class="space-y-4">
-    <div class="flex items-center gap-2">
-      <div class="visible bg-blue-200 p-4 rounded">visible</div>
-      <div class="border border-dashed border-gray-400 p-0">
-        <div class="invisible bg-blue-200 p-4 rounded">invisible — ocupa espai</div>
+    <section id="display-basic" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Display bàsic</h2>
+      <p class="text-gray-600 mb-4"><code>block</code>, <code>inline-block</code>, <code>inline</code>, <code>hidden</code>.</p>
+      <!-- INICI EXEMPLE 1 -->
+      <div class="space-y-2">
+        <div class="block bg-sky-200 p-3 rounded">block — ocupa tota l'amplada</div>
+        <div>
+          <span class="inline-block bg-green-200 p-3 rounded w-48">inline-block — respecta w/h (amplada 12rem)</span>
+          <span class="inline-block bg-green-200 p-3 rounded">inline-block adjacent</span>
+        </div>
+        <div>
+          <span class="inline bg-yellow-200 p-3 rounded">inline — en línia</span>
+          <span class="inline bg-yellow-200 p-3 rounded">no respecta w/h</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="border border-gray-400 p-2">Text abans</span>
+          <div class="hidden bg-red-200 p-3 rounded">hidden — no es veu ni ocupa espai</div>
+          <span class="border border-gray-400 p-2">Text després (sense forat)</span>
+        </div>
       </div>
-      <div class="visible bg-blue-200 p-4 rounded">visible</div>
-    </div>
-    <p class="text-sm text-gray-500">El div invisible ocupa espai (marcat amb border) però no es veu.</p>
-    <div class="flex items-center gap-2">
-      <div class="visible bg-orange-200 p-4 rounded">visible</div>
-      <div class="hidden bg-orange-200 p-4 rounded">hidden — no ocupa espai</div>
-      <div class="visible bg-orange-200 p-4 rounded">visible</div>
-    </div>
-    <p class="text-sm text-gray-500">El div hidden no ocupa gens d'espai.</p>
-  </div>
-  <!-- FI EXEMPLE 2 -->
-</section>
+      <!-- FI EXEMPLE 1 -->
+    </section>
 
-<hr>
-
-<!-- EXEMPLE 3 -->
-<section id="exemple-3">
-  <h2>Exemple 3: Overflow</h2>
-  <p class="text-gray-600 mb-4"><code>overflow-hidden</code>, <code>overflow-auto</code>, <code>overflow-scroll</code>, <code>overflow-visible</code>.</p>
-  <!-- INICI EXEMPLE 3 -->
-  <div class="grid grid-cols-2 gap-6">
-    <div>
-      <p class="font-semibold mb-1">overflow-hidden</p>
-      <div class="overflow-hidden bg-gray-100 p-2 rounded border" style="height: 80px;">
-        <div style="height: 120px;" class="bg-red-200 p-2">Contingut alt de 120px dins d'un contenidor de 80px. Aquest text es retalla.</div>
+    <section id="visibilitat" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Visibilitat vs hidden</h2>
+      <p class="text-gray-600 mb-4"><code>visible</code>, <code>invisible</code> (ocupa espai però no es veu), i <code>hidden</code> (no ocupa espai).</p>
+      <!-- INICI EXEMPLE 2 -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <div class="visible bg-blue-200 p-4 rounded">visible</div>
+          <div class="border border-dashed border-gray-400 p-0">
+            <div class="invisible bg-blue-200 p-4 rounded">invisible — ocupa espai</div>
+          </div>
+          <div class="visible bg-blue-200 p-4 rounded">visible</div>
+        </div>
+        <p class="text-sm text-gray-500">El div invisible ocupa espai (marcat amb border) però no es veu.</p>
+        <div class="flex items-center gap-2">
+          <div class="visible bg-orange-200 p-4 rounded">visible</div>
+          <div class="hidden bg-orange-200 p-4 rounded">hidden — no ocupa espai</div>
+          <div class="visible bg-orange-200 p-4 rounded">visible</div>
+        </div>
+        <p class="text-sm text-gray-500">El div hidden no ocupa gens d'espai.</p>
       </div>
-    </div>
-    <div>
-      <p class="font-semibold mb-1">overflow-auto</p>
-      <div class="overflow-auto bg-gray-100 p-2 rounded border" style="height: 80px;">
-        <div style="height: 120px;" class="bg-green-200 p-2">Contingut alt de 120px. Apareix scroll només quan cal. Lorem ipsum dolor sit amet.</div>
+      <!-- FI EXEMPLE 2 -->
+    </section>
+
+    <section id="overflow" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Overflow</h2>
+      <p class="text-gray-600 mb-4"><code>overflow-hidden</code>, <code>overflow-auto</code>, <code>overflow-scroll</code>, <code>overflow-visible</code>.</p>
+      <!-- INICI EXEMPLE 3 -->
+      <div class="grid grid-cols-2 gap-6">
+        <div>
+          <p class="font-semibold mb-1">overflow-hidden</p>
+          <div class="overflow-hidden bg-gray-100 p-2 rounded border" style="height: 80px;">
+            <div style="height: 120px;" class="bg-red-200 p-2">Contingut alt de 120px dins d'un contenidor de 80px. Aquest text es retalla.</div>
+          </div>
+        </div>
+        <div>
+          <p class="font-semibold mb-1">overflow-auto</p>
+          <div class="overflow-auto bg-gray-100 p-2 rounded border" style="height: 80px;">
+            <div style="height: 120px;" class="bg-green-200 p-2">Contingut alt de 120px. Apareix scroll només quan cal. Lorem ipsum dolor sit amet.</div>
+          </div>
+        </div>
+        <div>
+          <p class="font-semibold mb-1">overflow-scroll</p>
+          <div class="overflow-scroll bg-gray-100 p-2 rounded border" style="height: 80px;">
+            <div style="height: 120px;" class="bg-blue-200 p-2">Contingut alt de 120px. Scroll visible sempre, fins i tot si no cal.</div>
+          </div>
+        </div>
+        <div>
+          <p class="font-semibold mb-1">overflow-visible</p>
+          <div class="overflow-visible bg-gray-100 p-2 rounded border" style="height: 80px;">
+            <div style="height: 120px;" class="bg-yellow-200 p-2">Contingut alt de 120px. Es deixa veure el que sobresurt del contenidor.</div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div>
-      <p class="font-semibold mb-1">overflow-scroll</p>
-      <div class="overflow-scroll bg-gray-100 p-2 rounded border" style="height: 80px;">
-        <div style="height: 120px;" class="bg-blue-200 p-2">Contingut alt de 120px. Scroll visible sempre, fins i tot si no cal.</div>
+      <!-- FI EXEMPLE 3 -->
+    </section>
+
+    <section id="z-index" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Z-index</h2>
+      <p class="text-gray-600 mb-4"><code>z-10</code> per sobre de <code>z-0</code> dins d'un contenidor <code>relative</code>.</p>
+      <!-- INICI EXEMPLE 4 -->
+      <div class="relative h-40 w-full bg-gray-100 rounded border">
+        <div class="absolute z-10 bg-white border-2 border-blue-500 p-4 rounded shadow-lg" style="top: 10px; left: 30px;">
+          <strong>z-10</strong> — Per sobre
+        </div>
+        <div class="absolute z-0 bg-gray-300 border-2 border-gray-500 p-4 rounded" style="top: 40px; left: 60px;">
+          <strong>z-0</strong> — Per sota
+        </div>
       </div>
-    </div>
-    <div>
-      <p class="font-semibold mb-1">overflow-visible</p>
-      <div class="overflow-visible bg-gray-100 p-2 rounded border" style="height: 80px;">
-        <div style="height: 120px;" class="bg-yellow-200 p-2">Contingut alt de 120px. Es deixa veure el que sobresurt del contenidor.</div>
+      <!-- FI EXEMPLE 4 -->
+    </section>
+
+    <section id="badge-display" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Targeta amb badge</h2>
+      <p class="text-gray-600 mb-4">Combinació de <code>relative</code>, <code>absolute</code>, <code>inline-block</code> per crear un badge de notificació.</p>
+      <!-- INICI EXEMPLE 5 -->
+      <div class="relative inline-block">
+        <div class="w-24 h-24 bg-gray-300 rounded-lg"></div>
+        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-6 h-6 rounded-full flex items-center justify-center font-bold">
+          3
+        </span>
       </div>
-    </div>
+      <p class="mt-2 text-sm text-gray-500">Badge vermell amb número 3, posicionat absolutament sobre la cantonada superior dreta.</p>
+      <!-- FI EXEMPLE 5 -->
+    </section>
   </div>
-  <!-- FI EXEMPLE 3 -->
-</section>
 
-<hr>
-
-<!-- EXEMPLE 4 -->
-<section id="exemple-4">
-  <h2>Exemple 4: Z-index</h2>
-  <p class="text-gray-600 mb-4"><code>z-10</code> per sobre de <code>z-0</code> dins d'un contenidor <code>relative</code>.</p>
-  <!-- INICI EXEMPLE 4 -->
-  <div class="relative h-40 w-full bg-gray-100 rounded border">
-    <div class="absolute z-10 bg-white border-2 border-blue-500 p-4 rounded shadow-lg" style="top: 10px; left: 30px;">
-      <strong>z-10</strong> — Per sobre
-    </div>
-    <div class="absolute z-0 bg-gray-300 border-2 border-gray-500 p-4 rounded" style="top: 40px; left: 60px;">
-      <strong>z-0</strong> — Per sota
-    </div>
-  </div>
-  <!-- FI EXEMPLE 4 -->
-</section>
-
-<hr>
-
-<!-- EXEMPLE 5 -->
-<section id="exemple-5">
-  <h2>Exemple 5: Targeta amb badge</h2>
-  <p class="text-gray-600 mb-4">Combinació de <code>relative</code>, <code>absolute</code>, <code>inline-block</code> per crear un badge de notificació.</p>
-  <!-- INICI EXEMPLE 5 -->
-  <div class="relative inline-block">
-    <div class="w-24 h-24 bg-gray-300 rounded-lg"></div>
-    <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-6 h-6 rounded-full flex items-center justify-center font-bold">
-      3
-    </span>
-  </div>
-  <p class="mt-2 text-sm text-gray-500">Badge vermell amb número 3, posicionat absolutament sobre la cantonada superior dreta.</p>
-  <!-- FI EXEMPLE 5 -->
-</section>
 
 </body>
 </html>

@@ -5,125 +5,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lliçó 17 - Imatges i fons</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { font-family: system-ui, sans-serif; max-width: 960px; margin: 0 auto; padding: 2rem 1rem; background: #f5f5f5; }
-    nav a { margin-right: 1rem; color: #2563eb; text-decoration: underline; }
-    hr { margin: 2rem 0; border: 0; border-top: 2px solid #ccc; }
-    section { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 2rem; }
-    h2 { margin-top: 0; font-size: 1.25rem; font-weight: 700; }
-  </style>
+  <script src="../tabs.js"></script>
+  <link rel="stylesheet" href="../tabs.css">
+
 </head>
-<body>
-  <h1 class="text-2xl font-bold mb-4">Lliçó 17 - Imatges i fons</h1>
-  <nav class="mb-8 text-sm">
-    <a href="#exemple-1">Object-fit</a>
-    <a href="#exemple-2">Object-position</a>
-    <a href="#exemple-3">Fons d'imatge</a>
-    <a href="#exemple-4">Hero amb overlay</a>
-    <a href="#exemple-5">Card amb imatge</a>
-  </nav>
-
-  <section id="exemple-1">
-    <h2>Exemple 1: Object-fit</h2>
-    <p class="text-sm text-gray-600 mb-3">object-cover, object-contain i object-fill amb w-full h-48</p>
-    <!-- INICI EXEMPLE 1 -->
-    <div class="space-y-4">
-      <div>
-        <p class="text-sm font-medium mb-1">object-cover</p>
-        <div class="border-2 border-gray-300">
-          <img src="https://picsum.photos/400/300" alt="" class="w-full h-48 object-cover">
-        </div>
-      </div>
-      <div>
-        <p class="text-sm font-medium mb-1">object-contain</p>
-        <div class="border-2 border-gray-300">
-          <img src="https://picsum.photos/400/300" alt="" class="w-full h-48 object-contain">
-        </div>
-      </div>
-      <div>
-        <p class="text-sm font-medium mb-1">object-fill</p>
-        <div class="border-2 border-gray-300">
-          <img src="https://picsum.photos/400/300" alt="" class="w-full h-48 object-fill">
-        </div>
-      </div>
+<body class="bg-gray-50 min-h-screen">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900">Lliçó 17 - Imatges i fons</h1>
+      <p class="text-gray-600 mt-1">Exemples pràctics</p>
     </div>
-    <!-- FI EXEMPLE 1 -->
-  </section>
 
-  <hr>
-
-  <section id="exemple-2">
-    <h2>Exemple 2: Object-position</h2>
-    <p class="text-sm text-gray-600 mb-3">object-cover combinat amb object-center, object-top i object-bottom</p>
-    <!-- INICI EXEMPLE 2 -->
-    <div class="space-y-4">
-      <div>
-        <p class="text-sm font-medium mb-1">object-cover object-center</p>
-        <div class="border-2 border-gray-300">
-          <img src="https://picsum.photos/400/300?random=1" alt="" class="w-full h-48 object-cover object-center">
-        </div>
-      </div>
-      <div>
-        <p class="text-sm font-medium mb-1">object-cover object-top</p>
-        <div class="border-2 border-gray-300">
-          <img src="https://picsum.photos/400/300?random=2" alt="" class="w-full h-48 object-cover object-top">
-        </div>
-      </div>
-      <div>
-        <p class="text-sm font-medium mb-1">object-cover object-bottom</p>
-        <div class="border-2 border-gray-300">
-          <img src="https://picsum.photos/400/300?random=3" alt="" class="w-full h-48 object-cover object-bottom">
-        </div>
-      </div>
+    <div class="flex flex-wrap gap-1 border-b border-gray-300 mb-6" role="tablist">
+      <a href="#object-fit"
+         onclick="obrirTab(event, 'object-fit')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Object-fit</a>
+      <a href="#object-position"
+         onclick="obrirTab(event, 'object-position')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Object-position</a>
+      <a href="#fons-imatge"
+         onclick="obrirTab(event, 'fons-imatge')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Fons d'imatge</a>
+      <a href="#hero-overlay"
+         onclick="obrirTab(event, 'hero-overlay')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Hero overlay</a>
+      <a href="#card-imatge"
+         onclick="obrirTab(event, 'card-imatge')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Card imatge</a>
     </div>
-    <!-- FI EXEMPLE 2 -->
-  </section>
 
-  <hr>
-
-  <section id="exemple-3">
-    <h2>Exemple 3: Fons d'imatge amb CSS</h2>
-    <p class="text-sm text-gray-600 mb-3">div amb bg-cover bg-center bg-no-repeat h-64</p>
-    <!-- INICI EXEMPLE 3 -->
-    <div class="bg-cover bg-center bg-no-repeat h-64 rounded"
-         style="background-image: url('https://picsum.photos/800/400')">
-    </div>
-    <!-- FI EXEMPLE 3 -->
-  </section>
-
-  <hr>
-
-  <section id="exemple-4">
-    <h2>Exemple 4: Hero amb overlay</h2>
-    <p class="text-sm text-gray-600 mb-3">Secció amb imatge de fons, overlay fosc i contingut centrat</p>
-    <!-- INICI EXEMPLE 4 -->
-    <section class="relative bg-cover bg-center bg-no-repeat h-64 rounded overflow-hidden"
-             style="background-image: url('https://picsum.photos/800/400')">
-      <div class="absolute inset-0 bg-black/50"></div>
-      <div class="relative z-10 flex items-center justify-center h-full">
-        <h1 class="text-3xl font-bold text-white text-center px-4">
-          Benvingut al nostre web
-        </h1>
+    <section id="object-fit" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Object-fit</h2>
+      <p class="text-sm text-gray-600 mb-3">object-cover, object-contain i object-fill amb w-full h-48</p>
+      <!-- INICI EXEMPLE 1 -->
+      <div class="space-y-4">
+        <div>
+          <p class="text-sm font-medium mb-1">object-cover</p>
+          <div class="border-2 border-gray-300">
+            <img src="https://picsum.photos/400/300" alt="" class="w-full h-48 object-cover">
+          </div>
+        </div>
+        <div>
+          <p class="text-sm font-medium mb-1">object-contain</p>
+          <div class="border-2 border-gray-300">
+            <img src="https://picsum.photos/400/300" alt="" class="w-full h-48 object-contain">
+          </div>
+        </div>
+        <div>
+          <p class="text-sm font-medium mb-1">object-fill</p>
+          <div class="border-2 border-gray-300">
+            <img src="https://picsum.photos/400/300" alt="" class="w-full h-48 object-fill">
+          </div>
+        </div>
       </div>
+      <!-- FI EXEMPLE 1 -->
     </section>
-    <!-- FI EXEMPLE 4 -->
-  </section>
 
-  <hr>
-
-  <section id="exemple-5">
-    <h2>Exemple 5: Card amb imatge</h2>
-    <p class="text-sm text-gray-600 mb-3">Targeta amb imatge, títol i descripció</p>
-    <!-- INICI EXEMPLE 5 -->
-    <div class="max-w-sm bg-white rounded-xl shadow-md overflow-hidden">
-      <img class="w-full h-48 object-cover"
-           src="https://picsum.photos/400/300" alt="Foto">
-      <div class="p-6">
-        <h3 class="text-lg font-bold">Títol de la targeta</h3>
-        <p class="text-gray-600 mt-2">Descripció breu del contingut de la targeta.</p>
+    <section id="object-position" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Object-position</h2>
+      <p class="text-sm text-gray-600 mb-3">object-cover combinat amb object-center, object-top i object-bottom</p>
+      <!-- INICI EXEMPLE 2 -->
+      <div class="space-y-4">
+        <div>
+          <p class="text-sm font-medium mb-1">object-cover object-center</p>
+          <div class="border-2 border-gray-300">
+            <img src="https://picsum.photos/400/300?random=1" alt="" class="w-full h-48 object-cover object-center">
+          </div>
+        </div>
+        <div>
+          <p class="text-sm font-medium mb-1">object-cover object-top</p>
+          <div class="border-2 border-gray-300">
+            <img src="https://picsum.photos/400/300?random=2" alt="" class="w-full h-48 object-cover object-top">
+          </div>
+        </div>
+        <div>
+          <p class="text-sm font-medium mb-1">object-cover object-bottom</p>
+          <div class="border-2 border-gray-300">
+            <img src="https://picsum.photos/400/300?random=3" alt="" class="w-full h-48 object-cover object-bottom">
+          </div>
+        </div>
       </div>
-    </div>
-    <!-- FI EXEMPLE 5 -->
-  </section>
+      <!-- FI EXEMPLE 2 -->
+    </section>
+
+    <section id="fons-imatge" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Fons d'imatge amb CSS</h2>
+      <p class="text-sm text-gray-600 mb-3">div amb bg-cover bg-center bg-no-repeat h-64</p>
+      <!-- INICI EXEMPLE 3 -->
+      <div class="bg-cover bg-center bg-no-repeat h-64 rounded"
+           style="background-image: url('https://picsum.photos/800/400')">
+      </div>
+      <!-- FI EXEMPLE 3 -->
+    </section>
+
+    <section id="hero-overlay" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Hero amb overlay</h2>
+      <p class="text-sm text-gray-600 mb-3">Secció amb imatge de fons, overlay fosc i contingut centrat</p>
+      <!-- INICI EXEMPLE 4 -->
+      <section class="relative bg-cover bg-center bg-no-repeat h-64 rounded overflow-hidden"
+               style="background-image: url('https://picsum.photos/800/400')">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative z-10 flex items-center justify-center h-full">
+          <h1 class="text-3xl font-bold text-white text-center px-4">
+            Benvingut al nostre web
+          </h1>
+        </div>
+      </section>
+      <!-- FI EXEMPLE 4 -->
+    </section>
+
+    <section id="card-imatge" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Card amb imatge</h2>
+      <p class="text-sm text-gray-600 mb-3">Targeta amb imatge, títol i descripció</p>
+      <!-- INICI EXEMPLE 5 -->
+      <div class="max-w-sm bg-white rounded-xl shadow-md overflow-hidden">
+        <img class="w-full h-48 object-cover"
+             src="https://picsum.photos/400/300" alt="Foto">
+        <div class="p-6">
+          <h3 class="text-lg font-bold">Títol de la targeta</h3>
+          <p class="text-gray-600 mt-2">Descripció breu del contingut de la targeta.</p>
+        </div>
+      </div>
+      <!-- FI EXEMPLE 5 -->
+    </section>
+  </div>
+
+
 </body>
 </html>

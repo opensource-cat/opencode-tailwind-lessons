@@ -5,148 +5,153 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lliçó 12 – Responsive Design (Part 2): patterns pràctics</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tabs.js"></script>
+  <link rel="stylesheet" href="../tabs.css">
   <style>
-    body { font-family: system-ui, sans-serif; padding: 2rem; background: #f3f4f6; }
-    nav a { margin-right: 1rem; }
-    hr { margin: 2rem 0; border: 1px solid #d1d5db; }
-    section { background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 1rem; }
     .note { background: #dbeafe; padding: 0.5rem 1rem; border-radius: 0.375rem; margin-top: 1rem; font-size: 0.875rem; }
   </style>
 </head>
-<body>
-
-  <h1 class="text-3xl font-bold mb-4">Lliçó 12 – Responsive Design (Part 2): patterns pràctics</h1>
-
-  <nav class="mb-6 p-4 bg-white rounded shadow">
-    <a href="#exemple-1" class="text-blue-600 underline">Exemple 1</a>
-    <a href="#exemple-2" class="text-blue-600 underline">Exemple 2</a>
-    <a href="#exemple-3" class="text-blue-600 underline">Exemple 3</a>
-    <a href="#exemple-4" class="text-blue-600 underline">Exemple 4</a>
-    <a href="#exemple-5" class="text-blue-600 underline">Exemple 5</a>
-    <a href="#exemple-6" class="text-blue-600 underline">Exemple 6</a>
-  </nav>
-
-  <section id="exemple-1">
-    <h2 class="text-xl font-bold mb-2">Exemple 1: Columnes que s'adapten</h2>
-    <p class="mb-4 text-gray-600">Mòbil: 100% ample. Tablet: 50%. Escriptori: 33.33%.</p>
-    <!-- INICI EXEMPLE 1 -->
-    <div class="flex flex-wrap">
-      <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-        <div class="bg-blue-200 p-4 rounded">Columna 1</div>
-      </div>
-      <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-        <div class="bg-green-200 p-4 rounded">Columna 2</div>
-      </div>
-      <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-        <div class="bg-yellow-200 p-4 rounded">Columna 3</div>
-      </div>
+<body class="bg-gray-50 min-h-screen">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900">Lliçó 12 – Responsive Design (Part 2): patterns pràctics</h1>
+      <p class="text-gray-600 mt-1">Exemples pràctics</p>
     </div>
-    <!-- FI EXEMPLE 1 -->
-    <div class="note">Redueix o amplia la finestra per veure l'efecte responsive.</div>
-  </section>
 
-  <hr>
+    <div class="flex flex-wrap gap-1 border-b border-gray-300 mb-6" role="tablist">
+      <a href="#columnes-adapten"
+         onclick="obrirTab(event, 'columnes-adapten')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Columnes adaptables</a>
+      <a href="#menu-hamburguesa"
+         onclick="obrirTab(event, 'menu-hamburguesa')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Menú hamburguesa</a>
+      <a href="#grid-adaptatiu"
+         onclick="obrirTab(event, 'grid-adaptatiu')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Grid adaptatiu</a>
+      <a href="#tipografia-responsive"
+         onclick="obrirTab(event, 'tipografia-responsive')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Tipografia responsive</a>
+      <a href="#padding-margin-resp"
+         onclick="obrirTab(event, 'padding-margin-resp')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Padding/margin</a>
+      <a href="#targetes-layout"
+         onclick="obrirTab(event, 'targetes-layout')"
+         class="tab-btn px-4 py-2.5 text-sm font-medium rounded-t-lg transition-colors bg-gray-200 text-gray-700 hover:text-gray-900">Layout targetes</a>
+    </div>
 
-  <section id="exemple-2">
-    <h2 class="text-xl font-bold mb-2">Exemple 2: Menú hamburguesa</h2>
-    <p class="mb-4 text-gray-600">Botó visible només a mòbil; enllaços amagats a mòbil, horitzontals a tablet+.</p>
-    <!-- INICI EXEMPLE 2 -->
-    <nav class="bg-white shadow">
-      <div class="flex items-center justify-between p-4">
-        <span class="text-xl font-bold">Logo</span>
-        <button class="md:hidden p-2 bg-gray-200 rounded">☰</button>
-        <div class="hidden md:flex space-x-6">
-          <a href="#" class="text-blue-600">Inici</a>
-          <a href="#" class="text-blue-600">Serveis</a>
-          <a href="#" class="text-blue-600">Contacte</a>
+    <section id="columnes-adapten" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Columnes que s'adapten</h2>
+      <p class="mb-4 text-gray-600">Mòbil: 100% ample. Tablet: 50%. Escriptori: 33.33%.</p>
+      <!-- INICI EXEMPLE 1 -->
+      <div class="flex flex-wrap">
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+          <div class="bg-blue-200 p-4 rounded">Columna 1</div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+          <div class="bg-green-200 p-4 rounded">Columna 2</div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+          <div class="bg-yellow-200 p-4 rounded">Columna 3</div>
         </div>
       </div>
-    </nav>
-    <!-- FI EXEMPLE 2 -->
-    <div class="note">Redueix o amplia la finestra per veure l'efecte responsive.</div>
-  </section>
-
-  <hr>
-
-  <section id="exemple-3">
-    <h2 class="text-xl font-bold mb-2">Exemple 3: Graella adaptativa amb grid</h2>
-    <p class="mb-4 text-gray-600">De 1 a 4 columnes segons la pantalla.</p>
-    <!-- INICI EXEMPLE 3 -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-      <div class="bg-white p-4 shadow rounded">Element 1</div>
-      <div class="bg-white p-4 shadow rounded">Element 2</div>
-      <div class="bg-white p-4 shadow rounded">Element 3</div>
-      <div class="bg-white p-4 shadow rounded">Element 4</div>
-    </div>
-    <!-- FI EXEMPLE 3 -->
-    <div class="note">Redueix o amplia la finestra per veure l'efecte responsive.</div>
-  </section>
-
-  <hr>
-
-  <section id="exemple-4">
-    <h2 class="text-xl font-bold mb-2">Exemple 4: Tipografia responsive</h2>
-    <p class="mb-4 text-gray-600">Capçalera i paràgraf que creixen amb la pantalla.</p>
-    <!-- INICI EXEMPLE 4 -->
-    <h1 class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold">
-      Capçalera que creix
-    </h1>
-    <p class="text-sm sm:text-base lg:text-lg text-gray-600">
-      Paràgraf que s'adapta al dispositiu.
-    </p>
-    <!-- FI EXEMPLE 4 -->
-    <div class="note">Redueix o amplia la finestra per veure l'efecte responsive.</div>
-  </section>
-
-  <hr>
-
-  <section id="exemple-5">
-    <h2 class="text-xl font-bold mb-2">Exemple 5: Padding i margin responsive</h2>
-    <p class="mb-4 text-gray-600">Espaiat interior que s'amplia en pantalles grans.</p>
-    <!-- INICI EXEMPLE 5 -->
-    <section class="p-4 md:p-8 lg:p-12 bg-gray-100 rounded">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
-          Contingut amb espaiat adaptable
-        </h2>
-        <div class="bg-white p-6 rounded shadow">
-          <p>El padding d'aquesta secció canvia segons la mida de pantalla.</p>
-        </div>
-      </div>
+      <!-- FI EXEMPLE 1 -->
+      <div class="note">Redueix o amplia la finestra per veure l'efecte responsive.</div>
     </section>
-    <!-- FI EXEMPLE 5 -->
-    <div class="note">Redueix o amplia la finestra per veure l'efecte responsive.</div>
-  </section>
 
-  <hr>
+    <section id="menu-hamburguesa" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Menú hamburguesa</h2>
+      <p class="mb-4 text-gray-600">Botó visible només a mòbil; enllaços amagats a mòbil, horitzontals a tablet+.</p>
+      <!-- INICI EXEMPLE 2 -->
+      <nav class="bg-white shadow">
+        <div class="flex items-center justify-between p-4">
+          <span class="text-xl font-bold">Logo</span>
+          <button class="md:hidden p-2 bg-gray-200 rounded">☰</button>
+          <div class="hidden md:flex space-x-6">
+            <a href="#" class="text-blue-600">Inici</a>
+            <a href="#" class="text-blue-600">Serveis</a>
+            <a href="#" class="text-blue-600">Contacte</a>
+          </div>
+        </div>
+      </nav>
+      <!-- FI EXEMPLE 2 -->
+      <div class="note">Redueix o amplia la finestra per veure l'efecte responsive.</div>
+    </section>
 
-  <section id="exemple-6">
-    <h2 class="text-xl font-bold mb-2">Exemple 6: Layout de targetes</h2>
-    <p class="mb-4 text-gray-600">Cada targeta ocupa: 100% (mòbil) → 50% (tablet) → 33% (escriptori).</p>
-    <!-- INICI EXEMPLE 6 -->
-    <div class="flex flex-wrap -mx-2">
-      <div class="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
-        <div class="bg-white p-6 shadow rounded-lg">
-          <h3 class="text-lg font-bold">Targeta 1</h3>
-          <p class="text-gray-600 mt-2">Text descriptiu</p>
+    <section id="grid-adaptatiu" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Graella adaptativa amb grid</h2>
+      <p class="mb-4 text-gray-600">De 1 a 4 columnes segons la pantalla.</p>
+      <!-- INICI EXEMPLE 3 -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div class="bg-white p-4 shadow rounded">Element 1</div>
+        <div class="bg-white p-4 shadow rounded">Element 2</div>
+        <div class="bg-white p-4 shadow rounded">Element 3</div>
+        <div class="bg-white p-4 shadow rounded">Element 4</div>
+      </div>
+      <!-- FI EXEMPLE 3 -->
+      <div class="note">Redueix o amplia la finestra per veure l'efecte responsive.</div>
+    </section>
+
+    <section id="tipografia-responsive" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Tipografia responsive</h2>
+      <p class="mb-4 text-gray-600">Capçalera i paràgraf que creixen amb la pantalla.</p>
+      <!-- INICI EXEMPLE 4 -->
+      <h1 class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold">
+        Capçalera que creix
+      </h1>
+      <p class="text-sm sm:text-base lg:text-lg text-gray-600">
+        Paràgraf que s'adapta al dispositiu.
+      </p>
+      <!-- FI EXEMPLE 4 -->
+      <div class="note">Redueix o amplia la finestra per veure l'efecte responsive.</div>
+    </section>
+
+    <section id="padding-margin-resp" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Padding i margin responsive</h2>
+      <p class="mb-4 text-gray-600">Espaiat interior que s'amplia en pantalles grans.</p>
+      <!-- INICI EXEMPLE 5 -->
+      <section class="p-4 md:p-8 lg:p-12 bg-gray-100 rounded">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
+            Contingut amb espaiat adaptable
+          </h2>
+          <div class="bg-white p-6 rounded shadow">
+            <p>El padding d'aquesta secció canvia segons la mida de pantalla.</p>
+          </div>
+        </div>
+      </section>
+      <!-- FI EXEMPLE 5 -->
+      <div class="note">Redueix o amplia la finestra per veure l'efecte responsive.</div>
+    </section>
+
+    <section id="targetes-layout" class="tab-content bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Layout de targetes</h2>
+      <p class="mb-4 text-gray-600">Cada targeta ocupa: 100% (mòbil) → 50% (tablet) → 33% (escriptori).</p>
+      <!-- INICI EXEMPLE 6 -->
+      <div class="flex flex-wrap -mx-2">
+        <div class="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
+          <div class="bg-white p-6 shadow rounded-lg">
+            <h3 class="text-lg font-bold">Targeta 1</h3>
+            <p class="text-gray-600 mt-2">Text descriptiu</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
+          <div class="bg-white p-6 shadow rounded-lg">
+            <h3 class="text-lg font-bold">Targeta 2</h3>
+            <p class="text-gray-600 mt-2">Text descriptiu</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
+          <div class="bg-white p-6 shadow rounded-lg">
+            <h3 class="text-lg font-bold">Targeta 3</h3>
+            <p class="text-gray-600 mt-2">Text descriptiu</p>
+          </div>
         </div>
       </div>
-      <div class="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
-        <div class="bg-white p-6 shadow rounded-lg">
-          <h3 class="text-lg font-bold">Targeta 2</h3>
-          <p class="text-gray-600 mt-2">Text descriptiu</p>
-        </div>
-      </div>
-      <div class="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
-        <div class="bg-white p-6 shadow rounded-lg">
-          <h3 class="text-lg font-bold">Targeta 3</h3>
-          <p class="text-gray-600 mt-2">Text descriptiu</p>
-        </div>
-      </div>
-    </div>
-    <!-- FI EXEMPLE 6 -->
-    <div class="note">Redueix o amplia la finestra per veure l'efecte responsive.</div>
-  </section>
+      <!-- FI EXEMPLE 6 -->
+      <div class="note">Redueix o amplia la finestra per veure l'efecte responsive.</div>
+    </section>
+  </div>
+
 
 </body>
 </html>
