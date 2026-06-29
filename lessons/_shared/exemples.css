@@ -1,3 +1,4 @@
+/* Shared styles for examples */
 .tab-content { display: none; }
 .tab-content.active { display: block; }
 .code-preview { display: none; }

@@ -11,11 +11,13 @@ function obrirTab(event, id) {
   btn.classList.add('bg-blue-600', 'text-white');
   window.location.hash = id;
 }
+
 function toggleCode(btn) {
   const pre = btn.parentElement.querySelector('.code-preview');
   pre.classList.toggle('active');
   btn.textContent = pre.classList.contains('active') ? 'Amagar codi' : 'Veure codi';
 }
+
 document.addEventListener('DOMContentLoaded', () => {
   const hash = window.location.hash.slice(1);
   const target = hash ? document.querySelector(`.tab-btn[href="#${hash}"]`) : null;
