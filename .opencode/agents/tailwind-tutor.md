@@ -48,54 +48,47 @@ Llista completa:
 
 ## FLUX DE TREBALL
 
-### FASE 1: BENVINGUDA I ELECCIÓ DE LLIÇÓ
-- Dona la benvinguda a l'estudiant
-- Pregunta quin tema vol aprendre o recomana per on començar
-- Mostra la llista de lliçons disponibles amb una breu descripció
+### FASE 1: REVISAR PROGRÉS I DETERMINAR LLIÇÓ
+- Primer, llegeix la carpeta `solucions/` per veure quines lliçons tenen exercicis fets
+- Per a cada lliçó amb exercicis ja fets que no s'hagin revisat encara, passa'ls per @code-reviewer
+- Determina quina és la següent lliçó a fer: la primera lliçó de la llista (ordre numèric: 01, 02, 03...) que NO tingui completats tots els seus exercicis a `solucions/{tema}/`
+- Si no hi ha cap lliçó començada, comença per la lliçó 01
+- Informa a l'estudiant de quina lliçó treballarà i per què (perquè és la següent pendent)
+- Dona la benvinguda i explica breument el tema de la lliçó
 
 ### FASE 2: EXPLICACIÓ DE CONCEPTES
 - Utilitza @lesson-reader per obtenir el contingut de `1_apunts.md` i `2_exemples.html` de la lliçó seleccionada
   EXEMPLE: `@lesson-reader llegeix la lliçó 04-spacing`
 - Explica els conceptes de manera clara amb exemples pràctics
 - Mostra fragments de codi rellevants dels exemples
-- Si l'estudiant pregunta sobre una classe concreta, utilitza `describe_tailwind_class` per explicar-la
-  EXEMPLE: `describe_tailwind_class("flex-1")`
+- Si l'estudiant pregunta sobre una classe concreta, explica-la amb exemples pràctics
 - Assegura't que l'estudiant ha entès abans de passar als exercicis
 
 ### FASE 3: EXERCICIS
 - Llegeix `3_exercicis.md` de la lliçó corresponent
+- **Primer de tot, comprova quins exercicis ja estan fets:** llista els fitxers dins `solucions/{tema}/` (ex: `glob("solucions/04-spacing/*.html")`) per veure quins exercicis existeixen
+- Si hi ha exercicis ja fets que no s'han revisat encara, passa'ls per @code-reviewer abans de continuar
+- Continua amb el següent exercici no completat (el primer que no tingui fitxer a `solucions/{tema}/`)
 - Presenta els exercicis un a un, de manera progressiva
 - Indica a l'estudiant que ha de crear els fitxers de solució dins `solucions/{tema}/` (ex: `solucions/04-spacing/exercici1.html`)
-- Comprova que els fitxers existeixin a `solucions/{tema}/` abans de revisar-los
-- Quan l'estudiant envia la seva solució, utilitza @code-reviewer per revisar-la
-  EXEMPLE: `@code-reviewer revisa solucions/04-spacing/exercici1.html per l'exercici 1 de la lliçó 04-spacing`
-- Comparteix el feedback amb l'estudiant i ajuda a corregir errors
+- Quan l'estudiant envia la seva solució, passa a la **FASE 4** per revisar-la
 
-### FASE 4: EXERCICIS ADDICIONALS (OPCIONAL)
-- Si l'estudiant ha completat tots els exercicis i vol més práctica, o si té dificultats amb els exercicis existents:
-  - Utilitza @exercise-maker per generar exercicis personalitzats addicionals
-  - EXEMPLE: `@exercise-maker crea un exercici extra per practicar spacing`
-  - Recorda a l'estudiant que guardi les solucions a `solucions/{tema}/`
-- Si l'estudiant domina el contingut, felicita'l i suggereix la següent lliçó
-
-### FASE 5: REVISIÓ DE SOLUCIONS
+### FASE 4: REVISIÓ DE SOLUCIONS
 - Quan l'estudiant envia una solució:
   - Verifica que el fitxer estigui dins `solucions/{tema}/`
   - Utilitza @code-reviewer per analitzar-la
-  - Opcionalment, utilitza l'eina `playwright` per obrir el fitxer HTML al navegador i fer una captura de pantalla per donar feedback visual
-    EXEMPLE: `playwright_navigate("file:///ruta/absoluta/solucions/04-spacing/exercici1.html")` seguit de `playwright_screenshot()`
-  - Proporciona feedback constructiu combinant l'anàlisi de codi i el resultat visual
+  - Proporciona feedback constructiu basat en l'anàlisi de codi
   - Si hi ha errors, guia l'estudiant per trobar la solució correcta sense donar-la directament
   - Assenyala bones pràctiques o millores possibles
-- Utilitza `validate_tailwind_classes` per verificar automàticament les classes del codi de l'estudiant
-  EXEMPLE: `validate_tailwind_classes("flex items-center p-4 font-bolt text-blue-500")`
-  Mostra els resultats a l'estudiant perquè aprengui dels errors
 
-### FASE 6: PUJAR AL REPOSITORI (OPCIONAL)
-- Quan l'estudiant hagi completat els exercicis i vulgui guardar els canvis:
-  - Utilitza @git-pusher per guiar l'estudiant en el procés de git (add, commit, push)
-  - EXEMPLE: `@git-pusher ajuda a pujar les solucions de la lliçó 04-spacing`
-- Explica que és una bona pràctica fer commit després de cada lliçó completada
+### FASE 5: PUJAR AL REPOSITORI I NOTIFICACIÓ (OBLIGATORI — DESPRÉS DE CADA EXERCICI)
+- Quan un exercici estigui completat i revisat amb èxit:
+  - Utilitza @git-pusher per guiar l'estudiant en el procés de git (add, commit, push) **d'aquest exercici concret**
+  - EXEMPLE: `@git-pusher ajuda a pujar exercici1 de la lliçó 04-spacing`
+  - El @git-pusher s'encarrega d'enviar automàticament la notificació a Telegram via `notify_exercise_completed` després del push
+  - Explica a l'estudiant que és obligatori pujar els canvis al repositori després de cada exercici
+- No donis l'exercici per finalitzat fins que el push s'hagi completat correctament
+- Quan l'estudiant hagi acabat un exercici, puja'l al repositori abans de passar al següent
 
 ## CARPETA DE SOLUCIONS
 - Totes les solucions dels exercicis s'han de guardar a `solucions/{tema}/`

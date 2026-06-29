@@ -26,7 +26,12 @@ El projecte llegeix les claus d'API directament de fitxers dins la carpeta `.ope
 
    Pots obtenir una clau d'OpenCode Zen a [opencode.ai/zen](https://opencode.ai/zen) o una de DeepSeek a [platform.deepseek.com](https://platform.deepseek.com/).
 
-   > **Important**: Aquesta carpeta `.opencode/keys/` estaficada a `.gitignore` per no pujar les claus al repositori.
+    > **Important**: Aquesta carpeta `.opencode/keys/` està afegida a `.gitignore` per no pujar les claus al repositori.
+
+    - **`.opencode/keys/telegram-bot-token.txt`** — Token del bot de Telegram
+    - **`.opencode/keys/telegram-chat-id.txt`** — ID del xat de Telegram
+
+    Aquestes claus de Telegram te les proporcionarà el professorat per poder generar notificacions dels exercicis completats.
 
 ## Com començar
 
@@ -46,7 +51,7 @@ El projecte llegeix les claus d'API directament de fitxers dins la carpeta `.ope
 
 Un cop iniciat, OpenCode carregarà automàticament l'agent **tailwind-tutor**, que és el teu tutor personal. Ell t'explicarà els conceptes, et proposarà exercicis i revisarà el teu codi.
 
-Tria una lliçó per començar (recomanat: començar per la 01).
+El tutor detectarà automàticament per quina lliçó vas i et guiarà des d'allà.
 
 ## Lliçons disponibles
 
@@ -82,19 +87,19 @@ Cada lliçó conté:
 
 El projecte inclou diversos agents dins OpenCode:
 
-### Agent principal (per defecte)
+### Agents primaris (Tab per canviar)
+- **`build`** — Agent integrat d'OpenCode amb eines completes
 - **`tailwind-tutor`** — El teu tutor personal. Et guia per les lliçons, explica conceptes, proposa exercicis i revisa les solucions. És l'agent que s'activa automàticament en obrir OpenCode.
 
 ### Subagents (@mention)
 Pots esmentar aquests agents enmig de la conversa:
 - **`@lesson-reader`** — Llegeix i resumeix el contingut de les lliçons
 - **`@code-reviewer`** — Revisa el teu codi HTML/Tailwind i t'ofereix feedback
-- **`@exercise-maker`** — Crea exercicis personalitzats si necessites més pràctica
 - **`@git-pusher`** — T'ajuda a pujar les solucions al repositori Git
 
 ## Com funciona el flux d'aprenentatge
 
-1. **Tria una lliçó** — El tutor et recomana per on començar
+1. **Revisa el progrés** — El tutor detecta quina lliçó tens pendent
 2. **Aprèn els conceptes** — El tutor llegeix els apunts i te'ls explica amb exemples
 3. **Fes els exercicis** — Crea els fitxers HTML dins `solucions/{tema}/` (p. ex. `solucions/04-spacing/exercici1.html`)
 4. **Rep feedback** — El tutor revisa el teu codi i et dona suggeriments per millorar
@@ -111,28 +116,31 @@ lessons/              → Contingut de les lliçons (NO TOQUIS)
 
 solucions/            → Aquí guardes les teves solucions
   XX-tema/
+    README.md
     exercici1.html
     exercici2.html
 
 .opencode/
   agents/             → Configuració dels agents personalitzats
+  commands/           → Comandes personalitzades
   keys/               → Les teves claus d'API (NO pujar a git)
-  mcp/tailwind-validator/  → Eines de validació de Tailwind
+  mcp/
+    telegram-notifier/ → MCP per enviar notificacions a Telegram
+  skills/             → Skills personalitzats
+
 ```
+
+## MCP tools disponibles
+
+- **`notify_exercise_completed`** — Envia una notificació a Telegram quan un estudiant resol un exercici
 
 ## Regles importants
 
-- **No modiquis** els fitxers dins `lessons/`
+- **No modifiquis** els fitxers dins `lessons/`
 - **Guarda les solucions** sempre dins `solucions/{tema}/`
+- **El tutor sempre comença** amb els exercicis de `3_exercicis.md`
 - **Prova el codi** al navegador per veure el resultat
 - **Si t'encalles**, demana ajuda al tutor — ell et donarà pistes sense donar-te la solució
-
-## Eines addicionals
-
-El projecte inclou eines MCP que el tutor pot utilitzar:
-- **Validació de classes** — Comprova si les classes Tailwind que has escrit són correctes
-- **Descripció de classes** — Explica què fa una classe concreta de Tailwind
-- **Captura de pantalla** — Pot obrir el teu HTML al navegador i mostrar-te com queda
 
 ## Consells
 

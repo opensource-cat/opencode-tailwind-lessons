@@ -1,7 +1,7 @@
 {
-  "name": "tailwind-validator",
+  "name": "telegram-notifier",
   "version": "1.0.0",
-  "description": "MCP server per validar classes de Tailwind CSS",
+  "description": "MCP server per enviar notificacions a Telegram quan un estudiant resol un exercici",
   "type": "module",
   "main": "index.js",
   "dependencies": {

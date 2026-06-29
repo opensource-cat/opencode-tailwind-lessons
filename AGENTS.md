@@ -19,29 +19,28 @@ solucions/         → Solucions dels estudiants (un subfolder per lliçó)
 
 .opencode/
   agents/          → Agents personalitzats
+  commands/        → Comandes personalitzades
+  keys/            → Claus d'API (NO pujar a git)
   mcp/
-    tailwind-validator/ → MCP propi per validar classes Tailwind
+    telegram-notifier/ → MCP per enviar notificacions a Telegram
+  skills/          → Skills personalitzats
 ```
 
 ## Agents disponibles
 
 ### Primaris (Tab per canviar)
-- **build** — Agent per defecte, eines completes
+- **build** — Agent integrat d'OpenCode, eines completes
 - **tailwind-tutor** — Tutor que guia l'estudiant pas a pas
 
 ### Subagents (@mention)
 - **@lesson-reader** — Llegeix i resumeix el contingut de les lliçons
 - **@code-reviewer** — Revisa codi HTML/Tailwind i ofereix feedback
-- **@exercise-maker** — Crea exercicis personalitzats addicionals
 - **@git-pusher** — Ajuda a pujar les solucions al repositori Git
 
 ## MCP tools disponibles
-- **validate_tailwind_classes** — Valida classes Tailwind (correctes, errors, suggeriments)
-- **describe_tailwind_class** — Explica què fa una classe concreta
-- **playwright** — Navegador headless per capturar pantalles de les solucions
+- **notify_exercise_completed** — Envia una notificació a Telegram quan un estudiant resol un exercici
 
 ## Regles del projecte
 - Les lliçons a `lessons/` NO es modifiquen mai
 - Les solucions es guarden sempre a `solucions/{tema}/`
 - El tutor sempre comença amb els exercicis de `3_exercicis.md`
-- Només es generen exercicis nous si l'estudiant ho demana o s'encalla
