@@ -22,7 +22,7 @@
     "AGENTS.md"
   ],
   "agent": {
-    "build": { "disable": true },
+    "build": { "disable": false },
     "plan": { "disable": true },
     "tailwind-tutor": {
       "description": "Tutor de Tailwind CSS que guia l'estudiant a través de les lliçons",
