@@ -12,26 +12,24 @@ Aquest projecte t'ajudarà a aprendre **Tailwind CSS** des de zero a través de 
 
 El projecte llegeix les claus d'API directament de fitxers dins la carpeta `.opencode/keys/`, gràcies a la funcionalitat `{file:...}` d'OpenCode.
 
-1. Obre la carpeta del projecte a **Visual Studio Code**:
+Primer obre la carpeta del projecte a **Visual Studio Code**:
    ```bash
    code .
    ```
 
-2. A `VS Code`, crea els fitxers de claus dins la carpeta `.opencode/keys/`:
+A continuació, a `VS Code`, crea els fitxers de claus dins la carpeta `.opencode/keys/`:
 
-   - **`.opencode/keys/opencode-key.txt`** — La teva clau d'OpenCode Zen
-   - **`.opencode/keys/deepseek-key.txt`** — La teva clau de DeepSeek (opcional)
+- **`.opencode/keys/opencode-key.txt`** — La teva clau d'OpenCode Zen
+- **`.opencode/keys/deepseek-key.txt`** — La teva clau de DeepSeek (opcional)
 
-   Assegura't que cada fitxer contingui **només la clau** (sense cometes, sense espais en blanc, sense salt de línia al final).
+Pots obtenir una clau d'OpenCode Zen a [opencode.ai/zen](https://opencode.ai/zen) o una de DeepSeek a [platform.deepseek.com](https://platform.deepseek.com/). Assegura't que cada fitxer contingui **només la clau** (sense cometes, sense espais en blanc, sense salt de línia al final).
 
-   Pots obtenir una clau d'OpenCode Zen a [opencode.ai/zen](https://opencode.ai/zen) o una de DeepSeek a [platform.deepseek.com](https://platform.deepseek.com/).
+- **`.opencode/keys/telegram-bot-token.txt`** — Token del bot de Telegram
+- **`.opencode/keys/telegram-chat-id.txt`** — ID del xat de Telegram
 
-    > **Important**: Aquesta carpeta `.opencode/keys/` està afegida a `.gitignore` per no pujar les claus al repositori.
+Aquestes claus de Telegram te les proporcionarà el professorat per poder generar notificacions dels exercicis completats.
 
-    - **`.opencode/keys/telegram-bot-token.txt`** — Token del bot de Telegram
-    - **`.opencode/keys/telegram-chat-id.txt`** — ID del xat de Telegram
-
-    Aquestes claus de Telegram te les proporcionarà el professorat per poder generar notificacions dels exercicis completats.
+> **Important**: Aquesta carpeta `.opencode/keys/` està afegida a `.gitignore` per no pujar les claus al repositori.
 
 ## Com començar
 
@@ -87,11 +85,10 @@ Cada lliçó conté:
 
 El projecte inclou diversos agents dins OpenCode:
 
-### Agents primaris (Tab per canviar)
-- **`build`** — Agent integrat d'OpenCode amb eines completes
+### Agents primari
 - **`tailwind-tutor`** — El teu tutor personal. Et guia per les lliçons, explica conceptes, proposa exercicis i revisa les solucions. És l'agent que s'activa automàticament en obrir OpenCode.
 
-### Subagents (@mention)
+### Subagents
 Pots esmentar aquests agents enmig de la conversa:
 - **`@lesson-reader`** — Llegeix i resumeix el contingut de les lliçons
 - **`@code-reviewer`** — Revisa el teu codi HTML/Tailwind i t'ofereix feedback
